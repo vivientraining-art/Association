@@ -2,7 +2,6 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-25L0VD9JPE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -11,555 +10,527 @@
     gtag('config', 'G-25L0VD9JPE');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fitness Sud Essonne, préparation physique en Essonne</title>
-  <meta name="description" content="Association sportive dans le sud de l'Essonne. Squat, soulevé de terre, HIIT, EMOM, AMRAP, force et conditionnement encadrés par un préparateur physique diplômé d'État.">
+  <title>Fitness Sud Essonne, préparation physique en Gâtinais</title>
+  <meta name="description" content="Préparation physique dans le Gâtinais. Force, conditionnement, endurance encadrés par un préparateur physique diplômé d’État dans le sud de l’Essonne.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --forest: #1F3A2D;
-      --pine:   #2F5240;
-      --sand:   #F2EDE2;
-      --linen:  #FBF8F1;
-      --ink:    #22302A;
-      --muted:  #6E7B73;
-      --terra:  #C26B4A;
-      --line:   #DDD4C3;
+      --terre:   #141210;
+      --humus:   #1E1912;
+      --ocre:    #C4922A;
+      --craie:   #EDE8DD;
+      --foret:   #1C3828;
+      --mousse:  #3A5E42;
+      --pierre:  #7A736A;
+      --sable:   #F3EEE5;
+      --rouille: #9E3F1C;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Source Sans 3', system-ui, sans-serif; background: var(--sand); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.6; }
+    body { font-family: 'Source Sans 3', system-ui, sans-serif; background: var(--sable); color: var(--terre); -webkit-font-smoothing: antialiased; line-height: 1.6; }
 
     /* NAV */
-    nav { position: sticky; top: 0; z-index: 100; background: var(--forest); color: #F4F0E6; display: flex; align-items: center; gap: 1rem; padding: 0 1.2rem; height: 56px; }
-    .nav-brand { font-family: 'Libre Baskerville', Georgia, serif; font-size: 1rem; font-weight: 700; color: #F4F0E6; text-decoration: none; white-space: nowrap; line-height: 1.2; }
-    .nav-brand small { display: block; font-family: 'Source Sans 3', sans-serif; font-weight: 400; font-size: .68rem; color: #C9D4CC; letter-spacing: .05em; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; display: flex; align-items: center; padding: 0 2.5rem; height: 58px; transition: background .25s, box-shadow .25s; }
+    nav.scrolled { background: var(--terre); box-shadow: 0 1px 0 rgba(237,232,221,.07); }
+    .nav-brand { font-family: 'Libre Baskerville', Georgia, serif; font-size: .88rem; font-weight: 700; color: var(--craie); text-decoration: none; line-height: 1.2; }
+    .nav-brand small { display: block; font-family: 'Source Sans 3', sans-serif; font-weight: 400; font-size: .6rem; color: rgba(237,232,221,.38); letter-spacing: .08em; text-transform: uppercase; }
     .nav-spacer { flex: 1; }
-    .nav-links { display: flex; align-items: center; gap: .1rem; list-style: none; }
-    .nav-links a { color: #C9D4CC; text-decoration: none; font-size: .88rem; font-weight: 600; padding: .5rem .7rem; border-radius: 6px; transition: color .15s, background .15s; }
-    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.1); }
-    .nav-cta { background: var(--terra) !important; color: #fff !important; border-radius: 8px; padding: .45rem .85rem !important; }
-    .nav-cta:hover { filter: brightness(1.1); }
-    .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: #F4F0E6; font-size: 1.4rem; padding: .4rem; }
+    .nav-links { list-style: none; display: flex; align-items: center; gap: .1rem; }
+    .nav-links a { color: rgba(237,232,221,.55); text-decoration: none; font-size: .8rem; font-weight: 600; padding: .4rem .65rem; border-radius: 6px; transition: color .15s; }
+    .nav-links a:hover { color: var(--craie); }
+    .nav-cta { background: var(--ocre) !important; color: var(--terre) !important; border-radius: 8px; }
+    .nav-toggle { display: none; background: none; border: none; color: var(--craie); font-size: 1.4rem; cursor: pointer; padding: .4rem; }
 
     /* HERO */
-    .hero { background: var(--forest); color: #F4F0E6; padding: 6rem 1.2rem 5rem; text-align: center; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(47,82,64,.9) 0%, transparent 70%); }
-    .hero-content { position: relative; max-width: 720px; margin: 0 auto; }
-    .hero-tag { display: inline-block; background: rgba(194,107,74,.25); color: #F4D0C0; border: 1px solid rgba(194,107,74,.4); border-radius: 999px; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .9rem; margin-bottom: 1.2rem; }
-    .hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.15; margin-bottom: 1.1rem; color: #F4F0E6; }
-    .hero h1 em { font-style: italic; color: #C9D4CC; }
-    .hero p { font-size: 1.1rem; color: #C9D4CC; max-width: 560px; margin: 0 auto 2rem; line-height: 1.7; }
-    .hero-btns { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; gap: .4rem; font: inherit; font-weight: 700; font-size: .95rem; border: none; border-radius: 10px; padding: .75rem 1.4rem; cursor: pointer; text-decoration: none; transition: filter .15s, transform .1s; }
-    .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
-    .btn-primary { background: var(--terra); color: #fff; }
-    .btn-outline { background: rgba(255,255,255,.1); color: #F4F0E6; border: 1.5px solid rgba(255,255,255,.35); }
-    .btn-light { background: var(--linen); color: var(--ink); border: 1.5px solid var(--line); }
+    .hero { min-height: 100vh; background: var(--terre); display: flex; flex-direction: column; justify-content: center; padding: 8rem 2.5rem 0; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity: .06; pointer-events: none; }
+    .hero::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, transparent, var(--ocre) 20%, var(--ocre) 80%, transparent); }
+    .hero-inner { position: relative; max-width: 1040px; margin: 0 auto; width: 100%; }
+    .hero-eyebrow { display: block; font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ocre); margin-bottom: 1.8rem; }
+    .hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(3rem, 7vw, 5.8rem); line-height: 1.04; color: var(--craie); margin-bottom: 1.6rem; max-width: 640px; }
+    .hero h1 em { color: var(--ocre); font-style: italic; }
+    .hero-sub { font-size: 1rem; color: rgba(237,232,221,.5); max-width: 440px; line-height: 1.8; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; gap: .9rem; align-items: center; flex-wrap: wrap; }
+    .btn-ocre { display: inline-flex; align-items: center; font-family: inherit; font-weight: 700; font-size: .88rem; background: var(--ocre); color: var(--terre); border: none; border-radius: 8px; padding: .8rem 1.5rem; text-decoration: none; cursor: pointer; transition: filter .15s; }
+    .btn-ocre:hover { filter: brightness(1.08); }
+    .btn-ghost { display: inline-flex; font-family: inherit; font-weight: 600; font-size: .88rem; color: rgba(237,232,221,.45); text-decoration: none; transition: color .15s; }
+    .btn-ghost:hover { color: var(--craie); }
+    .hero-bar { position: relative; margin-top: 4rem; margin-left: -2.5rem; margin-right: -2.5rem; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(237,232,221,.07); }
+    .hbi { padding: 1.4rem 2.5rem; border-right: 1px solid rgba(237,232,221,.07); }
+    .hbi:last-child { border-right: none; }
+    .hbi-num { display: block; font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--craie); line-height: 1; }
+    .hbi-lbl { display: block; font-size: .65rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: rgba(237,232,221,.3); margin-top: .3rem; }
 
     /* SECTIONS */
-    section { padding: 4.5rem 1.2rem; }
-    .section-inner { max-width: 1000px; margin: 0 auto; }
-    .section-label { display: inline-block; background: rgba(31,58,45,.08); color: var(--pine); border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .85rem; margin-bottom: .9rem; border: 1px solid rgba(31,58,45,.15); }
-    h2 { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.25; margin-bottom: .6rem; color: var(--ink); }
-    .section-lead { color: var(--muted); font-size: 1.05rem; line-height: 1.7; max-width: 600px; margin-bottom: 2.5rem; }
+    .section { padding: 6rem 2.5rem; }
+    .inner { max-width: 1040px; margin: 0 auto; }
+    .sec-label { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ocre); margin-bottom: .7rem; }
+    .sec-label.dim { color: rgba(237,232,221,.38); }
+    h2.ttl { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(1.7rem, 3.5vw, 2.6rem); line-height: 1.15; margin-bottom: 1rem; color: inherit; }
 
-    /* ABOUT */
-    #about { background: var(--linen); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-    .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.8rem; }
-    .stat-card { background: var(--sand); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem; text-align: center; }
-    .stat-num { font-family: 'Libre Baskerville', Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--forest); line-height: 1; }
-    .stat-lbl { font-size: .82rem; color: var(--muted); margin-top: .2rem; }
-    .about-text p { color: var(--muted); line-height: 1.75; margin-bottom: 1rem; }
-    .value-list { list-style: none; margin-top: 1.2rem; }
-    .value-list li { display: flex; align-items: flex-start; gap: .6rem; padding: .5rem 0; border-top: 1px solid var(--line); font-size: .95rem; color: var(--ink); }
-    .value-list li:first-child { border-top: none; }
-    .value-list .icon { color: var(--terra); flex-shrink: 0; margin-top: .15rem; }
+    /* PROGRAMME */
+    #programme { background: var(--sable); }
+    .prog-grid { display: grid; grid-template-columns: 5fr 4fr; gap: 5rem; align-items: start; margin-top: 3rem; }
+    .prog-pull { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(1.2rem, 2vw, 1.65rem); font-style: italic; line-height: 1.5; color: var(--foret); padding-left: 1.5rem; border-left: 3px solid var(--ocre); }
+    .prog-body p { font-size: .93rem; color: var(--pierre); line-height: 1.8; margin-bottom: .9rem; }
+    .prog-list { list-style: none; margin-top: 1.5rem; border-top: 1px solid rgba(0,0,0,.08); }
+    .prog-list li { display: flex; gap: .7rem; align-items: flex-start; padding: .65rem 0; border-bottom: 1px solid rgba(0,0,0,.07); font-size: .88rem; color: var(--terre); }
+    .prog-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--ocre); flex-shrink: 0; margin-top: .58rem; }
 
-    /* ACTIVITES */
-    #activites { background: var(--sand); }
-    .activities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; }
-    .activity-card { background: var(--linen); border: 1px solid var(--line); border-radius: 14px; padding: 1.6rem; box-shadow: 0 2px 8px rgba(34,48,42,.05); transition: box-shadow .2s, transform .15s; }
-    .activity-card:hover { box-shadow: 0 4px 18px rgba(34,48,42,.1); transform: translateY(-2px); }
-    .activity-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--forest); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem; }
-    .activity-card h3 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.05rem; margin-bottom: .5rem; }
-    .activity-card p { font-size: .9rem; color: var(--muted); line-height: 1.65; }
-    .activity-exercises { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .9rem; }
-    .exercise-tag { background: rgba(31,58,45,.08); color: var(--pine); border: 1px solid rgba(31,58,45,.12); border-radius: 999px; font-size: .72rem; font-weight: 700; padding: .18rem .6rem; letter-spacing: .04em; }
+    /* DISCIPLINES */
+    #disciplines { background: var(--humus); }
+    .disc-hdr { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
+    .disc-lead { color: rgba(237,232,221,.42); font-size: .92rem; line-height: 1.7; max-width: 340px; }
+    .disc-list { margin-top: 3.5rem; }
+    .disc-item { display: grid; grid-template-columns: 90px 1fr; gap: 2rem; align-items: start; padding: 2.5rem 0; border-top: 1px solid rgba(237,232,221,.07); }
+    .disc-num { font-family: 'Libre Baskerville', serif; font-size: 4rem; font-weight: 700; color: rgba(196,146,42,.28); line-height: 1; }
+    .disc-body h3 { font-family: 'Libre Baskerville', serif; font-size: 1.4rem; color: var(--craie); margin-bottom: .5rem; }
+    .disc-body p { font-size: .88rem; color: rgba(237,232,221,.48); line-height: 1.7; max-width: 520px; margin-bottom: .9rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .3rem; }
+    .tag { border: 1px solid rgba(237,232,221,.14); color: rgba(237,232,221,.48); border-radius: 999px; font-size: .67rem; font-weight: 700; letter-spacing: .05em; padding: .12rem .52rem; }
 
     /* HORAIRES */
-    #horaires { background: var(--forest); color: #F4F0E6; }
-    #horaires .section-label { background: rgba(255,255,255,.1); color: #C9D4CC; border-color: rgba(255,255,255,.2); }
-    #horaires h2 { color: #F4F0E6; }
-    #horaires .section-lead { color: #C9D4CC; }
-    .schedule-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
-    .day-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; padding: 1.2rem; }
-    .day-name { font-weight: 700; font-size: .88rem; letter-spacing: .05em; text-transform: uppercase; color: #C9D4CC; margin-bottom: .8rem; }
-    .session-item { border-top: 1px solid rgba(255,255,255,.1); padding: .5rem 0; font-size: .9rem; }
-    .session-item:first-of-type { border-top: none; }
-    .session-time { color: var(--terra); font-weight: 700; font-size: .82rem; margin-bottom: .1rem; }
-    .session-name { color: #F4F0E6; font-weight: 600; }
-    .session-note { color: #9DB5A8; font-size: .8rem; margin-top: .15rem; }
-    .session-venue { display: inline-flex; align-items: center; gap: .3rem; color: #C9D4CC; font-size: .78rem; margin-top: .25rem; }
-    .session-venue a { color: #C9D4CC; text-decoration: none; border-bottom: 1px solid rgba(201,212,204,.35); transition: color .15s, border-color .15s; }
-    .session-venue a:hover { color: #fff; border-color: #fff; }
-    .schedule-note { margin-top: 1.5rem; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .9rem 1.1rem; font-size: .88rem; color: #C9D4CC; line-height: 1.6; }
+    #horaires { background: var(--craie); }
+    .sched-tbl { width: 100%; border-collapse: collapse; margin-top: 2.5rem; }
+    .sched-tbl tr { border-top: 1px solid rgba(0,0,0,.08); }
+    .sched-tbl tr:first-child { border-top: 2px solid var(--terre); }
+    .sched-tbl td { padding: 1.6rem 1rem 1.6rem 0; vertical-align: top; }
+    .td-day { width: 180px; }
+    .s-day { font-family: 'Libre Baskerville', serif; font-size: 1.35rem; font-weight: 700; color: var(--terre); display: block; }
+    .s-time { font-size: .76rem; font-weight: 700; color: var(--ocre); letter-spacing: .05em; margin-top: .15rem; display: block; }
+    .s-venue { font-size: .92rem; font-weight: 600; color: var(--terre); display: block; }
+    .s-map { color: var(--pierre); font-size: .8rem; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.13); display: inline-block; margin-top: .15rem; transition: color .15s; }
+    .s-map:hover { color: var(--terre); }
+    .s-type { font-size: .78rem; color: rgba(0,0,0,.32); font-style: italic; display: block; margin-top: .4rem; }
+    .sched-note { margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(0,0,0,.08); font-size: .8rem; color: var(--pierre); }
 
     /* TARIFS */
-    #tarifs { background: var(--linen); }
-    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.2rem; }
-    .pricing-card { background: var(--sand); border: 1.5px solid var(--line); border-radius: 16px; padding: 1.6rem 1.4rem; position: relative; }
-    .pricing-card.featured { background: var(--forest); border-color: var(--forest); color: #F4F0E6; box-shadow: 0 8px 30px rgba(31,58,45,.25); }
-    .pricing-badge { position: absolute; top: -.7rem; left: 50%; transform: translateX(-50%); background: var(--terra); color: #fff; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .85rem; white-space: nowrap; }
-    .pricing-name { font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.05rem; margin-bottom: .3rem; }
-    .pricing-card.featured .pricing-name { color: #F4F0E6; }
-    .pricing-desc { font-size: .85rem; color: var(--muted); margin-bottom: 1rem; }
-    .pricing-card.featured .pricing-desc { color: #C9D4CC; }
-    .pricing-price { font-family: 'Libre Baskerville', Georgia, serif; font-size: 2.2rem; font-weight: 700; color: var(--forest); line-height: 1; margin-bottom: .25rem; }
-    .pricing-card.featured .pricing-price { color: #F4F0E6; }
-    .pricing-period { font-size: .82rem; color: var(--muted); margin-bottom: 1.2rem; }
-    .pricing-card.featured .pricing-period { color: #C9D4CC; }
-    .pricing-features { list-style: none; }
-    .pricing-features li { display: flex; align-items: flex-start; gap: .5rem; font-size: .88rem; color: var(--ink); padding: .35rem 0; border-top: 1px solid var(--line); }
-    .pricing-card.featured .pricing-features li { color: #C9D4CC; border-color: rgba(255,255,255,.12); }
-    .pricing-features li:first-child { border-top: none; }
-    .pricing-features .check { color: #5F9560; flex-shrink: 0; }
-    .pricing-card.featured .pricing-features .check { color: #8FD49A; }
-    .pricing-btn { display: block; text-align: center; margin-top: 1.4rem; width: 100%; }
+    #tarifs { background: var(--sable); }
+    .tarif-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+    .tc { background: white; border: 1.5px solid rgba(0,0,0,.08); border-radius: 14px; padding: 1.6rem 1.4rem; position: relative; }
+    .tc.feat { background: var(--terre); border-color: var(--terre); }
+    .tc-badge { position: absolute; top: -.65rem; left: 1.2rem; background: var(--ocre); color: var(--terre); font-size: .61rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .17rem .6rem; border-radius: 999px; }
+    .tc-name { font-family: 'Libre Baskerville', serif; font-size: .96rem; color: var(--terre); margin-bottom: .2rem; }
+    .tc.feat .tc-name { color: var(--craie); }
+    .tc-sub { font-size: .76rem; color: var(--pierre); margin-bottom: 1rem; }
+    .tc.feat .tc-sub { color: rgba(237,232,221,.38); }
+    .tc-price { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--terre); line-height: 1; margin-bottom: .2rem; }
+    .tc.feat .tc-price { color: var(--craie); }
+    .tc-period { font-size: .74rem; color: var(--pierre); margin-bottom: 1.2rem; }
+    .tc.feat .tc-period { color: rgba(237,232,221,.38); }
+    .tc-feats { list-style: none; }
+    .tc-feats li { display: flex; gap: .4rem; font-size: .81rem; color: var(--pierre); padding: .28rem 0; border-top: 1px solid rgba(0,0,0,.06); }
+    .tc-feats li:first-child { border-top: none; }
+    .tc.feat .tc-feats li { color: rgba(237,232,221,.52); border-color: rgba(237,232,221,.07); }
+    .chk { color: #5A8A5F; flex-shrink: 0; }
+    .tc.feat .chk { color: #8FD49A; }
+    .tc-btn { display: block; text-align: center; margin-top: 1.2rem; padding: .6rem; border-radius: 8px; font-weight: 700; font-size: .81rem; text-decoration: none; transition: filter .15s; }
+    .tc-btn.lt { background: rgba(0,0,0,.05); color: var(--terre); }
+    .tc-btn.dk { background: var(--ocre); color: var(--terre); }
+    .tc-btn:hover { filter: brightness(.95); }
 
-    /* EQUIPE */
-    #equipe { background: var(--sand); }
-    .team-card { background: var(--linen); border: 1px solid var(--line); border-radius: 16px; padding: 2rem 1.6rem; max-width: 660px; display: flex; gap: 1.6rem; align-items: flex-start; }
-    .team-avatar { width: 80px; height: 80px; border-radius: 50%; background: var(--forest); display: flex; align-items: center; justify-content: center; font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.8rem; color: #F4F0E6; flex-shrink: 0; }
-    .team-info h3 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.15rem; margin-bottom: .2rem; }
-    .team-role { font-size: .82rem; color: var(--terra); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: .7rem; }
-    .team-bio { font-size: .9rem; color: var(--muted); line-height: 1.65; }
-    .team-certifs { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
-    .certif-tag { background: rgba(31,58,45,.08); color: var(--pine); border: 1px solid rgba(31,58,45,.15); border-radius: 999px; font-size: .72rem; font-weight: 700; padding: .2rem .65rem; letter-spacing: .04em; }
-    .team-links { display: flex; gap: .7rem; margin-top: .8rem; flex-wrap: wrap; }
-    .team-link { color: var(--terra); text-decoration: none; font-size: .85rem; font-weight: 600; border-bottom: 1px solid rgba(194,107,74,.3); padding-bottom: .05rem; transition: border-color .15s; }
-    .team-link:hover { border-color: var(--terra); }
+    /* COACH */
+    #coach { background: var(--foret); color: var(--craie); }
+    .coach-grid { display: grid; grid-template-columns: auto 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
+    .coach-av { width: 100px; height: 100px; border-radius: 50%; background: var(--ocre); display: flex; align-items: center; justify-content: center; font-family: 'Libre Baskerville', serif; font-size: 1.9rem; color: var(--terre); margin-bottom: 1rem; }
+    .coach-name { font-family: 'Libre Baskerville', serif; font-size: 1.5rem; color: var(--craie); }
+    .coach-role { font-size: .67rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--ocre); margin-top: .15rem; margin-bottom: 1.4rem; display: block; }
+    .coach-bio { font-size: .92rem; color: rgba(237,232,221,.58); line-height: 1.78; margin-bottom: 1.2rem; }
+    .certifs { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: 1.2rem; }
+    .certif { border: 1px solid rgba(237,232,221,.16); color: rgba(237,232,221,.52); border-radius: 999px; font-size: .67rem; font-weight: 700; padding: .14rem .58rem; letter-spacing: .04em; }
+    .coach-links { display: flex; gap: .8rem; flex-wrap: wrap; }
+    .coach-lnk { color: var(--ocre); text-decoration: none; font-size: .82rem; font-weight: 600; border-bottom: 1px solid rgba(196,146,42,.28); padding-bottom: .05rem; transition: border-color .15s; }
+    .coach-lnk:hover { border-color: var(--ocre); }
 
     /* APP */
-    #app { background: var(--linen); }
-    .app-banner { background: var(--forest); border-radius: 16px; padding: 2.5rem 2rem; color: #F4F0E6; display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; }
-    .app-banner-text { flex: 1; min-width: 260px; }
-    .app-new-badge { display: inline-block; background: var(--terra); color: #fff; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .28rem .85rem; margin-bottom: .8rem; }
-    .app-banner h3 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.4rem; color: #F4F0E6; margin-bottom: .6rem; line-height: 1.25; }
-    .app-banner p { color: #C9D4CC; font-size: .95rem; line-height: 1.7; max-width: 440px; }
-    .app-features { display: flex; flex-direction: column; gap: .5rem; margin-top: 1.1rem; }
-    .app-feat { display: flex; align-items: center; gap: .6rem; font-size: .88rem; color: #C9D4CC; }
-    .app-feat-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--terra); flex-shrink: 0; }
-    .app-banner-action { flex-shrink: 0; text-align: center; }
-    .app-banner-action .btn-outline { display: inline-flex; margin-top: .5rem; }
-    .app-coming { font-size: .8rem; color: #9DB5A8; margin-top: .6rem; }
+    #app { background: var(--sable); }
+    .app-box { background: var(--terre); border-radius: 16px; padding: 2.5rem 2.5rem; margin-top: 2rem; display: flex; gap: 3rem; align-items: center; flex-wrap: wrap; }
+    .app-txt { flex: 1; min-width: 240px; }
+    .app-badge { display: inline-block; background: var(--ocre); color: var(--terre); border-radius: 999px; font-size: .62rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .18rem .68rem; margin-bottom: .8rem; }
+    .app-txt h3 { font-family: 'Libre Baskerville', serif; font-size: 1.3rem; color: var(--craie); line-height: 1.25; margin-bottom: .6rem; }
+    .app-txt p { font-size: .87rem; color: rgba(237,232,221,.52); line-height: 1.7; }
+    .app-feats { margin-top: .9rem; display: flex; flex-direction: column; gap: .35rem; }
+    .app-feat { font-size: .8rem; color: rgba(237,232,221,.42); display: flex; gap: .5rem; align-items: center; }
+    .app-feat::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--ocre); flex-shrink: 0; }
+    .app-act { flex-shrink: 0; text-align: center; }
+    .btn-outline { display: inline-flex; font-family: inherit; font-weight: 700; font-size: .85rem; color: var(--craie); border: 1.5px solid rgba(237,232,221,.22); border-radius: 8px; padding: .7rem 1.3rem; text-decoration: none; transition: border-color .15s; }
+    .btn-outline:hover { border-color: rgba(237,232,221,.55); }
+    .app-sub { font-size: .72rem; color: rgba(237,232,221,.28); margin-top: .5rem; text-align: center; }
 
     /* CONTACT */
-    #contact { background: var(--sand); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
-    .contact-info-list { list-style: none; margin-top: .5rem; }
-    .contact-info-list li { display: flex; align-items: flex-start; gap: .8rem; padding: .8rem 0; border-top: 1px solid var(--line); font-size: .95rem; }
-    .contact-info-list li:first-child { border-top: none; padding-top: 0; }
-    .contact-icon { color: var(--terra); flex-shrink: 0; margin-top: .15rem; }
-    .contact-label { font-weight: 600; display: block; margin-bottom: .1rem; }
-    .contact-val { color: var(--muted); font-size: .9rem; line-height: 1.6; }
-    .contact-val a { color: var(--terra); text-decoration: none; }
-    .contact-val a:hover { text-decoration: underline; }
-    .maps-link { display: inline-flex; align-items: center; gap: .25rem; margin-top: .3rem; color: var(--terra); font-size: .82rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(194,107,74,.3); padding-bottom: .05rem; transition: border-color .15s; }
-    .maps-link:hover { border-color: var(--terra); }
-    .contact-form { display: flex; flex-direction: column; gap: .85rem; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
-    .field { display: flex; flex-direction: column; gap: .3rem; }
-    label { font-size: .82rem; font-weight: 600; color: var(--muted); }
-    input, textarea, select { font: inherit; color: var(--ink); background: #fff; border: 1.5px solid var(--line); border-radius: 9px; padding: .65rem .75rem; font-size: .95rem; transition: border-color .15s; resize: vertical; }
-    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--pine); }
+    #contact { background: var(--craie); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 2.5rem; }
+    .ci-list { list-style: none; }
+    .ci { display: flex; gap: .8rem; padding: .85rem 0; border-top: 1px solid rgba(0,0,0,.08); font-size: .9rem; }
+    .ci:first-child { border-top: none; padding-top: 0; }
+    .ci-icon { color: var(--ocre); flex-shrink: 0; margin-top: .1rem; }
+    .ci-lbl { display: block; font-weight: 700; font-size: .75rem; color: var(--terre); margin-bottom: .1rem; letter-spacing: .02em; }
+    .ci-val { font-size: .84rem; color: var(--pierre); line-height: 1.6; }
+    .ci-val a { color: var(--rouille); text-decoration: none; }
+    .ci-val a:hover { text-decoration: underline; }
+    .maps-lnk { display: inline-flex; gap: .25rem; margin-top: .28rem; font-size: .74rem; font-weight: 600; color: var(--pierre); text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.12); padding-bottom: .04rem; transition: color .15s; }
+    .maps-lnk:hover { color: var(--terre); }
+    .cf { display: flex; flex-direction: column; gap: .75rem; }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+    .field { display: flex; flex-direction: column; gap: .22rem; }
+    label { font-size: .67rem; font-weight: 700; color: var(--pierre); letter-spacing: .07em; text-transform: uppercase; }
+    input, textarea, select { font: inherit; color: var(--terre); background: white; border: 1.5px solid rgba(0,0,0,.1); border-radius: 8px; padding: .62rem .72rem; font-size: .9rem; transition: border-color .15s; resize: vertical; }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--foret); }
+    .sub-btn { background: var(--terre); color: var(--craie); border: none; border-radius: 8px; padding: .78rem; font: inherit; font-weight: 700; font-size: .88rem; cursor: pointer; transition: background .15s; }
+    .sub-btn:hover { background: var(--humus); }
 
     /* FOOTER */
-    footer { background: var(--forest); color: #C9D4CC; padding: 2.5rem 1.2rem; }
-    .footer-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
-    .footer-brand { font-family: 'Libre Baskerville', Georgia, serif; color: #F4F0E6; font-size: .95rem; }
-    .footer-brand small { display: block; font-family: 'Source Sans 3', sans-serif; font-size: .75rem; color: #9DB5A8; margin-top: .15rem; }
-    .footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
-    .footer-links a { color: #9DB5A8; text-decoration: none; font-size: .85rem; transition: color .15s; }
-    .footer-links a:hover { color: #F4F0E6; }
-    .footer-copy { font-size: .8rem; color: #6E7B73; width: 100%; text-align: center; margin-top: .5rem; }
+    footer { background: var(--terre); color: rgba(237,232,221,.32); padding: 1.8rem 2.5rem; }
+    .fi { max-width: 1040px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
+    .fb { font-family: 'Libre Baskerville', serif; color: var(--craie); font-size: .86rem; }
+    .fb small { display: block; font-family: 'Source Sans 3', sans-serif; font-size: .62rem; color: rgba(237,232,221,.28); margin-top: .1rem; letter-spacing: .05em; }
+    .fn { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .fn a { color: rgba(237,232,221,.32); font-size: .78rem; text-decoration: none; transition: color .15s; }
+    .fn a:hover { color: var(--craie); }
+    .fc { font-size: .7rem; width: 100%; text-align: center; border-top: 1px solid rgba(237,232,221,.06); padding-top: .9rem; margin-top: .4rem; }
 
     /* RESPONSIVE */
     @media (max-width: 760px) {
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--forest); padding: .8rem 1rem 1rem; gap: .2rem; border-top: 1px solid rgba(255,255,255,.1); }
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 58px; left: 0; right: 0; background: var(--terre); padding: .8rem 1.5rem 1.2rem; gap: .2rem; border-top: 1px solid rgba(237,232,221,.07); }
       .nav-links.open { display: flex; }
       .nav-toggle { display: block; }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .form-row { grid-template-columns: 1fr; }
-      .team-card { flex-direction: column; gap: 1rem; }
-      .schedule-grid { grid-template-columns: 1fr; }
-      .app-banner { flex-direction: column; gap: 1.5rem; }
+      .hero { padding: 6rem 1.4rem 0; }
+      .hero-bar { margin-left: -1.4rem; margin-right: -1.4rem; grid-template-columns: 1fr 1fr; }
+      .hbi:nth-child(n+3) { border-top: 1px solid rgba(237,232,221,.07); }
+      .section { padding: 4rem 1.4rem; }
+      .prog-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+      .disc-item { grid-template-columns: 60px 1fr; gap: 1rem; }
+      .disc-num { font-size: 2.8rem; }
+      .sched-tbl, .sched-tbl tbody, .sched-tbl tr, .sched-tbl td { display: block; width: 100%; }
+      .sched-tbl tr { padding: 1.4rem 0; border-top: 1px solid rgba(0,0,0,.08); }
+      .sched-tbl tr:first-child { border-top: none; }
+      .sched-tbl td { padding: .25rem 0; }
+      .coach-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .frow { grid-template-columns: 1fr; }
+      .app-box { flex-direction: column; gap: 1.5rem; }
+      footer { padding: 1.8rem 1.4rem; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="top">
-  <a class="nav-brand" href="#top">Fitness Sud Essonne<small>Association sportive, Essonne (91)</small></a>
+<nav id="mainNav">
+  <a class="nav-brand" href="#top">Fitness Sud Essonne<small>Gâtinais · Essonne (91)</small></a>
   <div class="nav-spacer"></div>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#about">L'association</a></li>
-    <li><a href="#activites">Activités</a></li>
+    <li><a href="#programme">Programme</a></li>
     <li><a href="#horaires">Horaires</a></li>
     <li><a href="#tarifs">Tarifs</a></li>
-    <li><a href="#equipe">Équipe</a></li>
+    <li><a href="#coach">Vivien</a></li>
     <li><a href="#contact" class="nav-cta">Nous rejoindre</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-content">
-    <span class="hero-tag">Préparation physique, Essonne (91)</span>
-    <h1>S'entraîner sérieusement,<br><em>à son niveau</em></h1>
-    <p>Squat, soulevé de terre, développé couché, HIIT, EMOM, AMRAP : des séances structurées encadrées par un préparateur physique diplômé d'État, dans un groupe de 12 personnes. Pour progresser à son rythme et construire une condition physique durable.</p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn btn-primary">Nous rejoindre</a>
-      <a href="#activites" class="btn btn-outline">Voir les séances</a>
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <span class="hero-eyebrow">Préparation physique dans le Gâtinais</span>
+    <h1>Force.<br><em>Endurance.</em><br>Durée.</h1>
+    <p class="hero-sub">Squat, soulevé de terre, développé couché, HIIT, EMOM : des séances encadrées par un préparateur physique diplômé d’État dans trois salles du sud de l’Essonne.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-ocre">Nous rejoindre</a>
+      <a href="#programme" class="btn-ghost">Voir le programme ↓</a>
     </div>
+  </div>
+  <div class="hero-bar">
+    <div class="hbi"><span class="hbi-num">3</span><span class="hbi-lbl">Séances par semaine</span></div>
+    <div class="hbi"><span class="hbi-num">12</span><span class="hbi-lbl">Participants max</span></div>
+    <div class="hbi"><span class="hbi-num">1h</span><span class="hbi-lbl">Par séance</span></div>
+    <div class="hbi"><span class="hbi-num">7 ans</span><span class="hbi-lbl">D’expérience</span></div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner about-grid">
-    <div>
-      <span class="section-label">L'association</span>
-      <h2>Un programme de préparation physique,<br>adapté à chacun</h2>
-      <div class="about-stats">
-        <div class="stat-card"><div class="stat-num">3</div><div class="stat-lbl">Cours par semaine</div></div>
-        <div class="stat-card"><div class="stat-num">3</div><div class="stat-lbl">Salles dans l'Essonne</div></div>
-        <div class="stat-card"><div class="stat-num">1h</div><div class="stat-lbl">Par séance</div></div>
-        <div class="stat-card"><div class="stat-num">12</div><div class="stat-lbl">Participants max par créneau</div></div>
+<section class="section" id="programme">
+  <div class="inner">
+    <span class="sec-label">L’association</span>
+    <div class="prog-grid">
+      <div class="prog-pull">
+        Un programme de préparation physique dans le Gâtinais, adapté à chacun, construit pour durer.
       </div>
-    </div>
-    <div class="about-text">
-      <p>Fitness Sud Essonne propose un programme de force et de conditionnement dans trois communes du sud de l'Essonne. Chaque séance combine des mouvements de force fondamentaux et des formats cardio structurés.</p>
-      <p>L'idée est de progresser régulièrement, à son niveau, en travaillant à la fois la force et l'endurance. Une condition physique qui s'entretient dans la durée.</p>
-      <ul class="value-list">
-        <li><span class="icon">❖</span> Mouvements polyarticulaires : squat, soulevé de terre, développé couché, tirage</li>
-        <li><span class="icon">❖</span> Formats cardio structurés : HIIT, LIT, EMOM, AMRAP</li>
-        <li><span class="icon">❖</span> Groupes limités à 12 participants, chacun à son niveau</li>
-        <li><span class="icon">❖</span> Encadrement diplômé d'État (BPJEPS, DEJEPS, Licence STAPS)</li>
-        <li><span class="icon">❖</span> Cotisations accessibles, ouvert à tous les niveaux</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ACTIVITES -->
-<section id="activites">
-  <div class="section-inner">
-    <span class="section-label">Les séances</span>
-    <h2>Force &amp; conditionnement</h2>
-    <p class="section-lead">Chaque séance mêle travail de force et conditionnement métabolique. La charge et l'intensité s'adaptent au niveau de chacun.</p>
-    <div class="activities-grid">
-      <div class="activity-card">
-        <div class="activity-icon">🏋️</div>
-        <h3>Force fondamentale</h3>
-        <p>Les mouvements polyarticulaires qui construisent une force durable et utile au quotidien. Travail technique avec progression de charge, accessible à tous les niveaux.</p>
-        <div class="activity-exercises">
-          <span class="exercise-tag">Squat</span>
-          <span class="exercise-tag">Soulevé de terre</span>
-          <span class="exercise-tag">Développé couché</span>
-          <span class="exercise-tag">Tirage barre</span>
-          <span class="exercise-tag">Pompes</span>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-icon">🔥</div>
-        <h3>Conditionnement métabolique</h3>
-        <p>Des formats d'intensité variée pour développer l'endurance, la puissance et la récupération.</p>
-        <div class="activity-exercises">
-          <span class="exercise-tag">HIIT</span>
-          <span class="exercise-tag">LIT</span>
-          <span class="exercise-tag">EMOM</span>
-          <span class="exercise-tag">AMRAP</span>
-        </div>
-      </div>
-      <div class="activity-card">
-        <div class="activity-icon">📈</div>
-        <h3>Performance adaptée</h3>
-        <p>Pas de comparaison entre participants. Chacun part de son niveau et progresse à son rythme, séance après séance.</p>
-        <div class="activity-exercises">
-          <span class="exercise-tag">Tous niveaux</span>
-          <span class="exercise-tag">Progression individuelle</span>
-          <span class="exercise-tag">Longévité</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HORAIRES -->
-<section id="horaires">
-  <div class="section-inner">
-    <span class="section-label">Planning</span>
-    <h2>Horaires &amp; lieux</h2>
-    <p class="section-lead">Trois créneaux par semaine, dans trois salles du sud de l'Essonne. Groupes limités à 12 participants.</p>
-    <div class="schedule-grid">
-      <div class="day-card">
-        <div class="day-name">Lundi</div>
-        <div class="session-item">
-          <div class="session-time">20h00 – 21h00</div>
-          <div class="session-name">Force &amp; conditionnement</div>
-          <div class="session-note">Force et cardio métabolique</div>
-          <div class="session-venue">📍 <a href="https://maps.google.com/?q=Stade+Clovis+Lelong+Milly-la-For%C3%AAt+91490" target="_blank" rel="noopener">Stade Clovis Lelong, Milly-la-Forêt</a></div>
-        </div>
-      </div>
-      <div class="day-card">
-        <div class="day-name">Mardi</div>
-        <div class="session-item">
-          <div class="session-time">20h30 – 21h30</div>
-          <div class="session-name">Force &amp; conditionnement</div>
-          <div class="session-note">Force et cardio métabolique</div>
-          <div class="session-venue">📍 <a href="https://maps.google.com/?q=Gymnase+des+Singes+Verts+Boutigny-sur-Essonne+91660" target="_blank" rel="noopener">Gymnase des Singes Verts, Boutigny-sur-Essonne</a></div>
-        </div>
-      </div>
-      <div class="day-card">
-        <div class="day-name">Jeudi</div>
-        <div class="session-item">
-          <div class="session-time">20h30 – 21h30</div>
-          <div class="session-name">Force &amp; conditionnement</div>
-          <div class="session-note">Force et cardio métabolique</div>
-          <div class="session-venue">📍 <a href="https://maps.google.com/?q=Salle+des+F%C3%AAtes+Gironville-sur-Essonne+91690" target="_blank" rel="noopener">Salle des fêtes, Gironville-sur-Essonne</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="schedule-note">
-      👥 Places limitées à <strong>12 participants par créneau</strong> pour garantir un encadrement de qualité. Le planning peut évoluer en cours d'année, contactez-nous pour confirmer.
-    </div>
-  </div>
-</section>
-
-<!-- TARIFS -->
-<section id="tarifs">
-  <div class="section-inner">
-    <span class="section-label">Cotisations</span>
-    <h2>Des tarifs accessibles à tous</h2>
-    <p class="section-lead">L'adhésion est par salle. Choisissez le créneau qui vous convient. La 1ère séance est offerte pour essayer avant de vous engager.</p>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <div class="pricing-name">Découverte</div>
-        <div class="pricing-desc">Séance à l'essai, sans engagement</div>
-        <div class="pricing-price">Gratuit</div>
-        <div class="pricing-period">1ʳᵉ séance offerte</div>
-        <ul class="pricing-features">
-          <li><span class="check">✓</span> Accès à un cours au choix</li>
-          <li><span class="check">✓</span> Accueil par l'encadrant</li>
-          <li><span class="check">✓</span> Sans inscription préalable</li>
+      <div>
+        <p class="prog-body" style="font-size:.93rem;color:var(--pierre);line-height:1.8;margin-bottom:.9rem">Fitness Sud Essonne propose des séances de force et de conditionnement dans trois communes du sud de l’Essonne. Chaque séance combine des mouvements de force fondamentaux et des formats cardio structurés.</p>
+        <p style="font-size:.93rem;color:var(--pierre);line-height:1.8">L’idée est de progresser régulièrement, à son niveau, en travaillant à la fois la force et l’endurance. Une condition physique qui s’entretient dans la durée.</p>
+        <ul class="prog-list">
+          <li><span class="prog-dot"></span>Mouvements polyarticulaires : squat, soulevé de terre, développé couché, tirage</li>
+          <li><span class="prog-dot"></span>Formats cardio structurés : HIIT, LIT, EMOM, AMRAP</li>
+          <li><span class="prog-dot"></span>Groupes limités à 12 participants, chacun à son niveau</li>
+          <li><span class="prog-dot"></span>Encadrement diplômé d’État (BPJEPS, DEJEPS, Licence STAPS)</li>
         </ul>
-        <a href="#contact" class="btn btn-light pricing-btn">Réserver</a>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-name">Milly-la-Forêt</div>
-        <div class="pricing-desc">Lundi, Stade Clovis Lelong</div>
-        <div class="pricing-price">275 €</div>
-        <div class="pricing-period">par an, 35 séances, sept. à juin</div>
-        <ul class="pricing-features">
-          <li><span class="check">✓</span> Lundi 20h00 – 21h00</li>
-          <li><span class="check">✓</span> 12 participants max par créneau</li>
-          <li><span class="check">✓</span> Encadrement professionnel</li>
-          <li><span class="check">✓</span> Suivi numérique inclus dès 2025–2026</li>
-        </ul>
-        <a href="#contact" class="btn btn-light pricing-btn">S'inscrire</a>
-      </div>
-      <div class="pricing-card">
-        <div class="pricing-name">Boutigny-sur-Essonne</div>
-        <div class="pricing-desc">Mardi, Gymnase des Singes Verts</div>
-        <div class="pricing-price">275 €</div>
-        <div class="pricing-period">par an, 35 séances, sept. à juin</div>
-        <ul class="pricing-features">
-          <li><span class="check">✓</span> Mardi 20h30 – 21h30</li>
-          <li><span class="check">✓</span> 12 participants max par créneau</li>
-          <li><span class="check">✓</span> Encadrement professionnel</li>
-          <li><span class="check">✓</span> Suivi numérique inclus dès 2025–2026</li>
-        </ul>
-        <a href="#contact" class="btn btn-light pricing-btn">S'inscrire</a>
-      </div>
-      <div class="pricing-card featured">
-        <span class="pricing-badge">Plus de séances</span>
-        <div class="pricing-name">Gironville-sur-Essonne</div>
-        <div class="pricing-desc">Jeudi, Salle des fêtes</div>
-        <div class="pricing-price">300 €</div>
-        <div class="pricing-period">par an, 39 séances, sept. à juin</div>
-        <ul class="pricing-features">
-          <li><span class="check">✓</span> Jeudi 20h30 – 21h30</li>
-          <li><span class="check">✓</span> 12 participants max par créneau</li>
-          <li><span class="check">✓</span> Encadrement professionnel</li>
-          <li><span class="check">✓</span> Suivi numérique inclus dès 2025–2026</li>
-        </ul>
-        <a href="#contact" class="btn btn-primary pricing-btn">S'inscrire</a>
       </div>
     </div>
-    <p style="margin-top:1.4rem;font-size:.88rem;color:var(--muted);text-align:center;">
-      💡 Chèque, virement ou espèces acceptés. Chèques vacances et coupon sport bienvenus. Contactez-nous pour les formules famille.
-    </p>
   </div>
 </section>
 
-<!-- EQUIPE -->
-<section id="equipe">
-  <div class="section-inner">
-    <span class="section-label">Équipe</span>
-    <h2>Votre encadrant</h2>
-    <p class="section-lead">Préparateur physique diplômé d'État, Vivien accompagne des groupes dans le sud de l'Essonne depuis plusieurs années.</p>
-    <div class="team-card">
-      <div class="team-avatar">VS</div>
-      <div class="team-info">
-        <h3>Vivien Strudel</h3>
-        <div class="team-role">Préparateur physique, fondateur</div>
-        <p class="team-bio">Ancien auditeur financier (KPMG France, Croix-Rouge), Vivien a basculé vers la préparation physique en 2017. Depuis 7 ans, il accompagne en individuel et en collectif des profils variés : dirigeants, chercheurs, enseignants, athlètes amateurs. Il a encadré des centaines de personnes en cours collectifs, dont plus de 40 en séances monitorées, et a été coach d'une équipe de volley-ball en Nationale 3.</p>
-        <div class="team-certifs">
-          <span class="certif-tag">BPJEPS</span>
-          <span class="certif-tag">DEJEPS Perfectionnement Sportif</span>
-          <span class="certif-tag">Licence STAPS, Univ. Paris-Saclay</span>
-          <span class="certif-tag">7 ans d'expérience</span>
+<section class="section" id="disciplines">
+  <div class="inner">
+    <div class="disc-hdr">
+      <div>
+        <span class="sec-label dim">Les séances</span>
+        <h2 class="ttl" style="color:var(--craie)">Ce qu’on fait</h2>
+      </div>
+      <p class="disc-lead">La charge et l’intensité s’adaptent au niveau de chacun. Le contenu est le même pour tout le groupe.</p>
+    </div>
+    <div class="disc-list">
+      <div class="disc-item">
+        <div class="disc-num">01</div>
+        <div class="disc-body">
+          <h3>Force fondamentale</h3>
+          <p>Les mouvements polyarticulaires qui construisent une force durable et utile au quotidien. Travail technique avec progression de charge, accessible à tous les niveaux.</p>
+          <div class="tags"><span class="tag">Squat</span><span class="tag">Soulevé de terre</span><span class="tag">Développé couché</span><span class="tag">Tirage barre</span><span class="tag">Pompes</span></div>
         </div>
-        <div class="team-links">
-          <a href="https://www.vivienstrudel.com" target="_blank" rel="noopener" class="team-link">vivienstrudel.com</a>
-          <a href="https://www.vivientraining.com" target="_blank" rel="noopener" class="team-link">vivientraining.com</a>
+      </div>
+      <div class="disc-item">
+        <div class="disc-num">02</div>
+        <div class="disc-body">
+          <h3>Conditionnement métabolique</h3>
+          <p>Des formats d’intensité variée pour développer l’endurance, la puissance et la récupération.</p>
+          <div class="tags"><span class="tag">HIIT</span><span class="tag">LIT</span><span class="tag">EMOM</span><span class="tag">AMRAP</span></div>
+        </div>
+      </div>
+      <div class="disc-item">
+        <div class="disc-num">03</div>
+        <div class="disc-body">
+          <h3>Performance adaptée</h3>
+          <p>Pas de comparaison entre participants. Chacun part de son niveau et progresse à son rythme, séance après séance.</p>
+          <div class="tags"><span class="tag">Tous niveaux</span><span class="tag">Progression individuelle</span><span class="tag">Longévité</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- APP -->
-<section id="app">
-  <div class="section-inner">
-    <div class="app-banner">
-      <div class="app-banner-text">
-        <span class="app-new-badge">Nouveauté 2025–2026</span>
-        <h3>Suivez votre progression<br>avec une application dédiée</h3>
-        <p>Dès la prochaine année sportive, les adhérents auront accès à un espace personnel en ligne pour mesurer et visualiser leur évolution au fil des séances.</p>
-        <div class="app-features">
-          <div class="app-feat"><span class="app-feat-dot"></span>Fréquence cardiaque en temps réel (capteur Bluetooth)</div>
-          <div class="app-feat"><span class="app-feat-dot"></span>Suivi de la force (charges, répétitions, 1RM estimée)</div>
-          <div class="app-feat"><span class="app-feat-dot"></span>VO2max et récupération cardiaque</div>
-          <div class="app-feat"><span class="app-feat-dot"></span>Historique et courbes de progression</div>
-        </div>
+<section class="section" id="horaires">
+  <div class="inner">
+    <span class="sec-label">Planning</span>
+    <h2 class="ttl">Horaires et lieux</h2>
+    <table class="sched-tbl">
+      <tbody>
+        <tr>
+          <td class="td-day"><span class="s-day">Lundi</span><span class="s-time">20h00 – 21h00</span></td>
+          <td>
+            <span class="s-venue">Stade Clovis Lelong</span>
+            <a class="s-map" href="https://maps.google.com/?q=Stade+Clovis+Lelong+Milly-la-For%C3%AAt+91490" target="_blank" rel="noopener">Milly-la-Forêt (91), voir sur Maps</a>
+            <span class="s-type">Force et conditionnement</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-day"><span class="s-day">Mardi</span><span class="s-time">20h30 – 21h30</span></td>
+          <td>
+            <span class="s-venue">Gymnase des Singes Verts</span>
+            <a class="s-map" href="https://maps.google.com/?q=Gymnase+des+Singes+Verts+Boutigny-sur-Essonne+91660" target="_blank" rel="noopener">Boutigny-sur-Essonne (91), voir sur Maps</a>
+            <span class="s-type">Force et conditionnement</span>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-day"><span class="s-day">Jeudi</span><span class="s-time">20h30 – 21h30</span></td>
+          <td>
+            <span class="s-venue">Salle des fêtes</span>
+            <a class="s-map" href="https://maps.google.com/?q=Salle+des+F%C3%AAtes+Gironville-sur-Essonne+91690" target="_blank" rel="noopener">Gironville-sur-Essonne (91), voir sur Maps</a>
+            <span class="s-type">Force et conditionnement</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="sched-note">12 participants max par créneau. Le planning peut évoluer en cours d’année, contactez-nous pour confirmer.</p>
+  </div>
+</section>
+
+<section class="section" id="tarifs">
+  <div class="inner">
+    <span class="sec-label">Cotisations</span>
+    <h2 class="ttl">Tarifs</h2>
+    <p style="color:var(--pierre);font-size:.93rem;margin-bottom:0">L’adhésion est par salle. La première séance est offerte pour essayer.</p>
+    <div class="tarif-grid">
+      <div class="tc">
+        <div class="tc-name">Découverte</div>
+        <div class="tc-sub">Séance à l’essai, sans engagement</div>
+        <div class="tc-price" style="font-size:1.5rem;margin-top:.3rem">Gratuit</div>
+        <div class="tc-period">1ʳᵉ séance offerte</div>
+        <ul class="tc-feats">
+          <li><span class="chk">✓</span> Accès à un cours au choix</li>
+          <li><span class="chk">✓</span> Accueil par le préparateur</li>
+          <li><span class="chk">✓</span> Sans inscription préalable</li>
+        </ul>
+        <a href="#contact" class="tc-btn lt">Réserver</a>
       </div>
-      <div class="app-banner-action">
-        <a href="#contact" class="btn btn-outline">Nous contacter</a>
-        <div class="app-coming">Disponible à la rentrée 2025–2026</div>
+      <div class="tc">
+        <div class="tc-name">Milly-la-Forêt</div>
+        <div class="tc-sub">Lundi, Stade Clovis Lelong</div>
+        <div class="tc-price">275 €</div>
+        <div class="tc-period">par an, 35 séances, sept. à juin</div>
+        <ul class="tc-feats">
+          <li><span class="chk">✓</span> Lundi 20h00 – 21h00</li>
+          <li><span class="chk">✓</span> 12 participants max</li>
+          <li><span class="chk">✓</span> Suivi numérique dès 2025–2026</li>
+        </ul>
+        <a href="#contact" class="tc-btn lt">S’inscrire</a>
+      </div>
+      <div class="tc">
+        <div class="tc-name">Boutigny-sur-Essonne</div>
+        <div class="tc-sub">Mardi, Gymnase des Singes Verts</div>
+        <div class="tc-price">275 €</div>
+        <div class="tc-period">par an, 35 séances, sept. à juin</div>
+        <ul class="tc-feats">
+          <li><span class="chk">✓</span> Mardi 20h30 – 21h30</li>
+          <li><span class="chk">✓</span> 12 participants max</li>
+          <li><span class="chk">✓</span> Suivi numérique dès 2025–2026</li>
+        </ul>
+        <a href="#contact" class="tc-btn lt">S’inscrire</a>
+      </div>
+      <div class="tc feat">
+        <span class="tc-badge">Plus de séances</span>
+        <div class="tc-name">Gironville-sur-Essonne</div>
+        <div class="tc-sub">Jeudi, Salle des fêtes</div>
+        <div class="tc-price">300 €</div>
+        <div class="tc-period">par an, 39 séances, sept. à juin</div>
+        <ul class="tc-feats">
+          <li><span class="chk">✓</span> Jeudi 20h30 – 21h30</li>
+          <li><span class="chk">✓</span> 12 participants max</li>
+          <li><span class="chk">✓</span> Suivi numérique dès 2025–2026</li>
+        </ul>
+        <a href="#contact" class="tc-btn dk">S’inscrire</a>
+      </div>
+    </div>
+    <p style="margin-top:1.2rem;font-size:.78rem;color:var(--pierre);text-align:center">Èque, virement ou espèces. Chèques vacances et coupon sport bienvenus. Contactez-nous pour les formules famille.</p>
+  </div>
+</section>
+
+<section class="section" id="coach">
+  <div class="inner">
+    <span class="sec-label dim">Équipe</span>
+    <h2 class="ttl" style="color:var(--craie)">Votre préparateur physique</h2>
+    <div class="coach-grid">
+      <div>
+        <div class="coach-av">VS</div>
+        <div class="coach-name">Vivien Strudel</div>
+        <span class="coach-role">Préparateur physique, fondateur</span>
+      </div>
+      <div>
+        <p class="coach-bio">Ancien auditeur financier (KPMG France, Croix-Rouge), Vivien a basculé vers la préparation physique en 2017. Depuis 7 ans, il accompagne en individuel et en collectif des profils variés : dirigeants, chercheurs, enseignants, athlètes amateurs. Il a encadré des centaines de personnes en cours collectifs, dont plus de 40 en séances monitorées, et a été coach d’une équipe de volley-ball en Nationale 3.</p>
+        <div class="certifs">
+          <span class="certif">BPJEPS</span>
+          <span class="certif">DEJEPS Perfectionnement Sportif</span>
+          <span class="certif">Licence STAPS, Univ. Paris-Saclay</span>
+          <span class="certif">7 ans d’expérience</span>
+        </div>
+        <div class="coach-links">
+          <a href="https://www.vivienstrudel.com" target="_blank" rel="noopener" class="coach-lnk">vivienstrudel.com</a>
+          <a href="https://www.vivientraining.com" target="_blank" rel="noopener" class="coach-lnk">vivientraining.com</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner contact-grid">
-    <div>
-      <span class="section-label">Nous rejoindre</span>
-      <h2>Contact &amp; Inscription</h2>
-      <p class="section-lead">Une question ? Envie de tester un cours ? Contactez-nous par WhatsApp ou par e-mail.</p>
-      <ul class="contact-info-list">
-        <li>
-          <span class="contact-icon">📍</span>
-          <div>
-            <span class="contact-label">Lundi, 20h00–21h00</span>
-            <span class="contact-val">Stade Clovis Lelong, Milly-la-Forêt (91)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Stade+Clovis+Lelong+Milly-la-For%C3%AAt+91490" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a>
-          </div>
+<section class="section" id="app">
+  <div class="inner">
+    <span class="sec-label">Nouveauté</span>
+    <h2 class="ttl">Suivez votre progression</h2>
+    <div class="app-box">
+      <div class="app-txt">
+        <span class="app-badge">2025–2026</span>
+        <h3>Une application dédiée aux adhérents</h3>
+        <p>Dès la prochaine année sportive, un espace personnel en ligne pour mesurer et visualiser votre évolution au fil des séances.</p>
+        <div class="app-feats">
+          <div class="app-feat">Fréquence cardiaque en temps réel (capteur Bluetooth)</div>
+          <div class="app-feat">Suivi de la force (charges, répétitions, 1RM estimée)</div>
+          <div class="app-feat">VO2max et récupération cardiaque</div>
+          <div class="app-feat">Historique et courbes de progression</div>
+        </div>
+      </div>
+      <div class="app-act">
+        <a href="#contact" class="btn-outline">Nous contacter</a>
+        <div class="app-sub">Disponible à la rentrée 2025–2026</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="inner">
+    <span class="sec-label">Nous rejoindre</span>
+    <h2 class="ttl">Contact et inscription</h2>
+    <div class="contact-grid">
+      <ul class="ci-list">
+        <li class="ci">
+          <span class="ci-icon">📍</span>
+          <div><span class="ci-lbl">Lundi, 20h00–21h00</span><span class="ci-val">Stade Clovis Lelong, Milly-la-Forêt (91)</span><a class="maps-lnk" href="https://maps.google.com/?q=Stade+Clovis+Lelong+Milly-la-For%C3%AAt+91490" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a></div>
         </li>
-        <li>
-          <span class="contact-icon">📍</span>
-          <div>
-            <span class="contact-label">Mardi, 20h30–21h30</span>
-            <span class="contact-val">Gymnase des Singes Verts, Boutigny-sur-Essonne (91)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Gymnase+des+Singes+Verts+Boutigny-sur-Essonne+91660" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a>
-          </div>
+        <li class="ci">
+          <span class="ci-icon">📍</span>
+          <div><span class="ci-lbl">Mardi, 20h30–21h30</span><span class="ci-val">Gymnase des Singes Verts, Boutigny-sur-Essonne (91)</span><a class="maps-lnk" href="https://maps.google.com/?q=Gymnase+des+Singes+Verts+Boutigny-sur-Essonne+91660" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a></div>
         </li>
-        <li>
-          <span class="contact-icon">📍</span>
-          <div>
-            <span class="contact-label">Jeudi, 20h30–21h30</span>
-            <span class="contact-val">Salle des fêtes, Gironville-sur-Essonne (91)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Salle+des+F%C3%AAtes+Gironville-sur-Essonne+91690" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a>
-          </div>
+        <li class="ci">
+          <span class="ci-icon">📍</span>
+          <div><span class="ci-lbl">Jeudi, 20h30–21h30</span><span class="ci-val">Salle des fêtes, Gironville-sur-Essonne (91)</span><a class="maps-lnk" href="https://maps.google.com/?q=Salle+des+F%C3%AAtes+Gironville-sur-Essonne+91690" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a></div>
         </li>
-        <li>
-          <span class="contact-icon">💬</span>
-          <div>
-            <span class="contact-label">WhatsApp</span>
-            <span class="contact-val"><a href="https://wa.me/33648918609" target="_blank" rel="noopener">06 48 91 86 09</a></span>
-          </div>
+        <li class="ci">
+          <span class="ci-icon">💬</span>
+          <div><span class="ci-lbl">WhatsApp</span><span class="ci-val"><a href="https://wa.me/33648918609" target="_blank" rel="noopener">06 48 91 86 09</a></span></div>
         </li>
-        <li>
-          <span class="contact-icon">✉️</span>
-          <div>
-            <span class="contact-label">E-mail</span>
-            <span class="contact-val"><a href="mailto:contact@fitnesssudessonne.fr">contact@fitnesssudessonne.fr</a></span>
-          </div>
+        <li class="ci">
+          <span class="ci-icon">✉️</span>
+          <div><span class="ci-lbl">E-mail</span><span class="ci-val"><a href="mailto:contact@fitnesssudessonne.fr">contact@fitnesssudessonne.fr</a></span></div>
         </li>
       </ul>
-    </div>
-    <div>
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <div class="field"><label for="cPrenom">Prénom</label><input type="text" id="cPrenom" placeholder="Marie" autocomplete="given-name" required></div>
-          <div class="field"><label for="cNom">Nom</label><input type="text" id="cNom" placeholder="Dupont" autocomplete="family-name" required></div>
+      <form class="cf" id="contactForm">
+        <div class="frow">
+          <div class="field"><label for="cP">Prénom</label><input type="text" id="cP" placeholder="Marie" autocomplete="given-name" required></div>
+          <div class="field"><label for="cN">Nom</label><input type="text" id="cN" placeholder="Dupont" autocomplete="family-name" required></div>
         </div>
-        <div class="field"><label for="cEmail">E-mail</label><input type="email" id="cEmail" placeholder="marie@email.fr" autocomplete="email" required></div>
+        <div class="field"><label for="cE">E-mail</label><input type="email" id="cE" placeholder="marie@email.fr" autocomplete="email" required></div>
         <div class="field">
-          <label for="cSujet">Sujet</label>
-          <select id="cSujet">
-            <option value="">-- Choisir --</option>
-            <option>Inscription à l'association</option>
+          <label for="cS">Sujet</label>
+          <select id="cS">
+            <option value="">Choisir</option>
+            <option>Inscription à l’association</option>
             <option>Renseignements tarifs</option>
-            <option>Planning &amp; horaires</option>
+            <option>Planning et horaires</option>
             <option>Séance découverte</option>
-            <option>Informations sur l'application</option>
+            <option>Application</option>
             <option>Autre</option>
           </select>
         </div>
-        <div class="field"><label for="cMessage">Message</label><textarea id="cMessage" rows="4" placeholder="Votre message…"></textarea></div>
-        <button type="submit" class="btn btn-primary" style="justify-content:center;">Envoyer le message</button>
-        <p id="formMsg" style="font-size:.85rem;color:var(--pine);display:none;margin-top:.3rem"></p>
+        <div class="field"><label for="cM">Message</label><textarea id="cM" rows="4" placeholder="Votre message…"></textarea></div>
+        <button type="submit" class="sub-btn">Envoyer</button>
+        <p id="formMsg" style="font-size:.82rem;color:var(--foret);display:none;margin-top:.2rem"></p>
       </form>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-brand">Fitness Sud Essonne<small>Association loi 1901, Essonne (91)</small></div>
-    <nav class="footer-links">
-      <a href="#about">L'association</a>
-      <a href="#activites">Activités</a>
+  <div class="fi">
+    <div class="fb">Fitness Sud Essonne<small>Association loi 1901, Essonne (91)</small></div>
+    <nav class="fn">
+      <a href="#programme">Programme</a>
       <a href="#horaires">Horaires</a>
       <a href="#tarifs">Tarifs</a>
-      <a href="#equipe">Équipe</a>
+      <a href="#coach">Équipe</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="footer-copy">© 2025 Fitness Sud Essonne. Tous droits réservés.</div>
+    <div class="fc">© 2025 Fitness Sud Essonne. Tous droits réservés.</div>
   </div>
 </footer>
 
 <script>
-  document.getElementById('navToggle').addEventListener('click', () => {
-    document.getElementById('navLinks').classList.toggle('open');
-  });
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
-  });
-  document.getElementById('contactForm').addEventListener('submit', (e) => {
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+  document.getElementById('navToggle').addEventListener('click', () => document.getElementById('navLinks').classList.toggle('open'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open')));
+  document.getElementById('contactForm').addEventListener('submit', e => {
     e.preventDefault();
-    const msg = document.getElementById('formMsg');
-    msg.style.display = 'block';
-    msg.textContent = '✔ Message envoyé ! Nous vous répondrons dans les 48 h.';
+    const m = document.getElementById('formMsg');
+    m.style.display = 'block';
+    m.textContent = '✔ Message envoyé. Nous vous répondrons dans les 48 h.';
     e.target.reset();
   });
 </script>
