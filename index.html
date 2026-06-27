@@ -102,6 +102,8 @@
     .session-name { color: #F4F0E6; font-weight: 600; }
     .session-note { color: #9DB5A8; font-size: .8rem; margin-top: .15rem; }
     .session-venue { display: inline-flex; align-items: center; gap: .3rem; color: #C9D4CC; font-size: .78rem; margin-top: .25rem; }
+    .session-venue a { color: #C9D4CC; text-decoration: none; border-bottom: 1px solid rgba(201,212,204,.35); transition: color .15s, border-color .15s; }
+    .session-venue a:hover { color: #fff; border-color: #fff; }
     .schedule-note { margin-top: 1.5rem; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12); border-radius: 10px; padding: .9rem 1.1rem; font-size: .88rem; color: #C9D4CC; line-height: 1.6; }
 
     /* TARIFS */
@@ -164,6 +166,8 @@
     .contact-val { color: var(--muted); font-size: .9rem; line-height: 1.6; }
     .contact-val a { color: var(--terra); text-decoration: none; }
     .contact-val a:hover { text-decoration: underline; }
+    .maps-link { display: inline-flex; align-items: center; gap: .25rem; margin-top: .3rem; color: var(--terra); font-size: .82rem; font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(194,107,74,.3); padding-bottom: .05rem; transition: border-color .15s; }
+    .maps-link:hover { border-color: var(--terra); }
     .contact-form { display: flex; flex-direction: column; gap: .85rem; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
     .field { display: flex; flex-direction: column; gap: .3rem; }
@@ -293,7 +297,7 @@
           <div class="session-time">20h00 – 21h00</div>
           <div class="session-name">Entraînement fonctionnel</div>
           <div class="session-note">Cardio + renforcement musculaire</div>
-          <div class="session-venue">📍 Salle Clovis Lelong · Milly-la-Forêt</div>
+          <div class="session-venue">📍 <a href="https://maps.google.com/?q=Stade+Clovis+Lelong+Milly-la-For%C3%AAt+91490" target="_blank" rel="noopener">Stade Clovis Lelong · Milly-la-Forêt</a></div>
         </div>
       </div>
       <div class="day-card">
@@ -302,7 +306,7 @@
           <div class="session-time">20h30 – 21h30</div>
           <div class="session-name">Entraînement fonctionnel</div>
           <div class="session-note">Cardio + renforcement musculaire</div>
-          <div class="session-venue">📍 Salle de la Bergerie · Boutigny-sur-Essonne</div>
+          <div class="session-venue">📍 <a href="https://maps.google.com/?q=Gymnase+des+Singes+Verts+Boutigny-sur-Essonne+91660" target="_blank" rel="noopener">Gymnase des Singes Verts · Boutigny-sur-Essonne</a></div>
         </div>
       </div>
       <div class="day-card">
@@ -311,7 +315,7 @@
           <div class="session-time">20h30 – 21h30</div>
           <div class="session-name">Entraînement fonctionnel</div>
           <div class="session-note">Cardio + renforcement musculaire</div>
-          <div class="session-venue">📍 Salle communale · Gironville-sur-Essonne</div>
+          <div class="session-venue">📍 <a href="https://maps.google.com/?q=Salle+communale+Gironville-sur-Essonne+91690" target="_blank" rel="noopener">Salle communale · Gironville-sur-Essonne</a></div>
         </div>
       </div>
     </div>
@@ -342,7 +346,7 @@
       </div>
       <div class="pricing-card">
         <div class="pricing-name">Milly-la-Forêt</div>
-        <div class="pricing-desc">Lundi · Salle Clovis Lelong</div>
+        <div class="pricing-desc">Lundi · Stade Clovis Lelong</div>
         <div class="pricing-price">275 €</div>
         <div class="pricing-period">par an · 35 séances · sept. à juin</div>
         <ul class="pricing-features">
@@ -355,7 +359,7 @@
       </div>
       <div class="pricing-card">
         <div class="pricing-name">Boutigny-sur-Essonne</div>
-        <div class="pricing-desc">Mardi · Salle de la Bergerie</div>
+        <div class="pricing-desc">Mardi · Gymnase des Singes Verts</div>
         <div class="pricing-price">275 €</div>
         <div class="pricing-period">par an · 35 séances · sept. à juin</div>
         <ul class="pricing-features">
@@ -430,8 +434,8 @@
         </div>
       </div>
       <div class="app-banner-action">
-        <a href="#contact" class="btn btn-outline">Rejoindre la liste d'attente</a>
-        <div class="app-coming">Disponible à la rentrée 2025</div>
+        <a href="#contact" class="btn btn-outline">Nous contacter</a>
+        <div class="app-coming">Disponible à la rentrée 2025–2026</div>
       </div>
     </div>
   </div>
@@ -449,21 +453,24 @@
           <span class="contact-icon">📍</span>
           <div>
             <span class="contact-label">Lundi · 20h00–21h00</span>
-            <span class="contact-val">Salle Clovis Lelong<br>Milly-la-Forêt (91)</span>
+            <span class="contact-val">Stade Clovis Lelong · Milly-la-Forêt (91)</span>
+            <a class="maps-link" href="https://maps.google.com/?q=Stade+Clovis+Lelong+Milly-la-For%C3%AAt+91490" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a>
           </div>
         </li>
         <li>
           <span class="contact-icon">📍</span>
           <div>
             <span class="contact-label">Mardi · 20h30–21h30</span>
-            <span class="contact-val">Salle de la Bergerie — Gymnase des Singes Verts<br>Boutigny-sur-Essonne (91)</span>
+            <span class="contact-val">Gymnase des Singes Verts · Boutigny-sur-Essonne (91)</span>
+            <a class="maps-link" href="https://maps.google.com/?q=Gymnase+des+Singes+Verts+Boutigny-sur-Essonne+91660" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a>
           </div>
         </li>
         <li>
           <span class="contact-icon">📍</span>
           <div>
             <span class="contact-label">Jeudi · 20h30–21h30</span>
-            <span class="contact-val">Salle communale<br>Gironville-sur-Essonne (91)</span>
+            <span class="contact-val">Salle communale · Gironville-sur-Essonne (91)</span>
+            <a class="maps-link" href="https://maps.google.com/?q=Salle+communale+Gironville-sur-Essonne+91690" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a>
           </div>
         </li>
         <li>
@@ -487,10 +494,10 @@
           <select id="cSujet">
             <option value="">-- Choisir --</option>
             <option>Inscription à l'association</option>
-            <option>Liste d'attente application</option>
             <option>Renseignements tarifs</option>
             <option>Planning &amp; horaires</option>
             <option>Séance découverte</option>
+            <option>Informations sur l'application</option>
             <option>Autre</option>
           </select>
         </div>
