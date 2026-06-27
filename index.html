@@ -11,8 +11,8 @@
     gtag('config', 'G-25L0VD9JPE');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fitness Sud Essonne — Association sportive</title>
-  <meta name="description" content="Association sportive Fitness Sud Essonne — entraînement fonctionnel, cardio et renforcement musculaire dans l'Essonne.">
+  <title>Fitness Sud Essonne — Force &amp; Conditionnement</title>
+  <meta name="description" content="Association sportive dans le sud de l'Essonne. Squat, soulevé de terre, HIIT, EMOM, AMRAP — force et conditionnement adaptés à chacun, encadrés par un coach diplômé.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
     .hero-tag { display: inline-block; background: rgba(194,107,74,.25); color: #F4D0C0; border: 1px solid rgba(194,107,74,.4); border-radius: 999px; font-size: .78rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .3rem .9rem; margin-bottom: 1.2rem; }
     .hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.15; margin-bottom: 1.1rem; color: #F4F0E6; }
     .hero h1 em { font-style: italic; color: #C9D4CC; }
-    .hero p { font-size: 1.1rem; color: #C9D4CC; max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; }
+    .hero p { font-size: 1.1rem; color: #C9D4CC; max-width: 560px; margin: 0 auto 2rem; line-height: 1.7; }
     .hero-btns { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
     .btn { display: inline-flex; align-items: center; gap: .4rem; font: inherit; font-weight: 700; font-size: .95rem; border: none; border-radius: 10px; padding: .75rem 1.4rem; cursor: pointer; text-decoration: none; transition: filter .15s, transform .1s; }
     .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
@@ -63,7 +63,7 @@
     .section-inner { max-width: 1000px; margin: 0 auto; }
     .section-label { display: inline-block; background: rgba(31,58,45,.08); color: var(--pine); border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .28rem .85rem; margin-bottom: .9rem; border: 1px solid rgba(31,58,45,.15); }
     h2 { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.25; margin-bottom: .6rem; color: var(--ink); }
-    .section-lead { color: var(--muted); font-size: 1.05rem; line-height: 1.7; max-width: 580px; margin-bottom: 2.5rem; }
+    .section-lead { color: var(--muted); font-size: 1.05rem; line-height: 1.7; max-width: 600px; margin-bottom: 2.5rem; }
 
     /* ABOUT */
     #about { background: var(--linen); }
@@ -78,6 +78,11 @@
     .value-list li:first-child { border-top: none; }
     .value-list .icon { color: var(--terra); flex-shrink: 0; margin-top: .15rem; }
 
+    /* PHILOSOPHY BANNER */
+    .philosophy-banner { background: var(--forest); border-radius: 16px; padding: 2rem 2.2rem; margin-bottom: 2.5rem; }
+    .philosophy-banner blockquote { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(1.1rem, 3vw, 1.4rem); color: #F4F0E6; line-height: 1.5; font-style: italic; }
+    .philosophy-banner cite { display: block; margin-top: .7rem; font-size: .82rem; color: #9DB5A8; font-style: normal; letter-spacing: .04em; }
+
     /* ACTIVITES */
     #activites { background: var(--sand); }
     .activities-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; }
@@ -86,7 +91,8 @@
     .activity-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--forest); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem; }
     .activity-card h3 { font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.05rem; margin-bottom: .5rem; }
     .activity-card p { font-size: .9rem; color: var(--muted); line-height: 1.65; }
-    .activity-tag { display: inline-block; margin-top: .9rem; background: rgba(31,58,45,.08); color: var(--pine); border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .06em; padding: .2rem .65rem; text-transform: uppercase; }
+    .activity-exercises { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .9rem; }
+    .exercise-tag { background: rgba(31,58,45,.08); color: var(--pine); border: 1px solid rgba(31,58,45,.12); border-radius: 999px; font-size: .72rem; font-weight: 700; padding: .18rem .6rem; letter-spacing: .04em; }
 
     /* HORAIRES */
     #horaires { background: var(--forest); color: #F4F0E6; }
@@ -218,12 +224,12 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <span class="hero-tag">Association sportive · Essonne (91)</span>
-    <h1>Entraînement fonctionnel,<br><em>cardio &amp; renforcement</em></h1>
-    <p>Cours collectifs encadrés dans le sud de l'Essonne — un mix efficace de cardio et de renforcement musculaire, accessible à tous les niveaux.</p>
+    <span class="hero-tag">Force &amp; conditionnement · Essonne (91)</span>
+    <h1>S’entraîner sérieusement,<br><em>à son niveau</em></h1>
+    <p>Squat, soulevé de terre, développé couché, HIIT, EMOM, AMRAP — des séances structurées encadrées par un coach diplômé, dans un groupe de 12 personnes. Ce que vous construisez aujourd’hui, vous le vivez dans 20 ans.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-primary">Nous rejoindre</a>
-      <a href="#horaires" class="btn btn-outline">Voir les horaires</a>
+      <a href="#activites" class="btn btn-outline">Voir les séances</a>
     </div>
   </div>
 </section>
@@ -233,7 +239,7 @@
   <div class="section-inner about-grid">
     <div>
       <span class="section-label">L'association</span>
-      <h2>Une association locale,<br>un esprit de groupe</h2>
+      <h2>Un programme sérieux,<br>adapté à chacun</h2>
       <div class="about-stats">
         <div class="stat-card"><div class="stat-num">3</div><div class="stat-lbl">Cours par semaine</div></div>
         <div class="stat-card"><div class="stat-num">3</div><div class="stat-lbl">Salles dans l'Essonne</div></div>
@@ -242,14 +248,14 @@
       </div>
     </div>
     <div class="about-text">
-      <p>Fitness Sud Essonne est une association loi 1901 qui propose des cours d'entraînement fonctionnel dans trois communes du sud de l'Essonne : Milly-la-Forêt, Boutigny-sur-Essonne et Gironville-sur-Essonne.</p>
-      <p>Chaque séance allie travail cardiovasculaire et renforcement musculaire, dans une ambiance conviviale et bienveillante, encadrée par un professionnel diplômé.</p>
+      <p>Fitness Sud Essonne propose un programme de force et de conditionnement dans trois communes du sud de l’Essonne. Pas de gadget, pas d’improvisation : chaque séance combine des mouvements de force fondamentaux et des formats cardio éprouvés.</p>
+      <p>L’objectif n’est pas de transpirer pour transpirer. C’est de progresser — mesurer, dépasser, consolider. Un corps plus fort et plus endurant à 40 ans qu’à 30, à 50 ans qu’à 40.</p>
       <ul class="value-list">
-        <li><span class="icon">❖</span> Encadrement diplômé d'État</li>
-        <li><span class="icon">❖</span> Groupes limités à 12 personnes pour un suivi personnalisé</li>
-        <li><span class="icon">❖</span> Accessible à tous les niveaux, débutants bienvenus</li>
-        <li><span class="icon">❖</span> Séances équilibrées : cardio + renforcement</li>
-        <li><span class="icon">❖</span> Cotisations accessibles</li>
+        <li><span class="icon">❖</span> Mouvements polyarticulaires : squat, soulévé de terre, développé couché, tirage</li>
+        <li><span class="icon">❖</span> Formats cardio structurés : HIIT, LIT, EMOM, AMRAP</li>
+        <li><span class="icon">❖</span> Groupes limités à 12 — chacun progresse à son niveau</li>
+        <li><span class="icon">❖</span> Encadrement diplômé d’État (BPJEPS, DEJEPS, Licence STAPS)</li>
+        <li><span class="icon">❖</span> Cotisations accessibles, accessible à tous les niveaux</li>
       </ul>
     </div>
   </div>
@@ -258,27 +264,46 @@
 <!-- ACTIVITES -->
 <section id="activites">
   <div class="section-inner">
-    <span class="section-label">Activités</span>
-    <h2>Entraînement fonctionnel</h2>
-    <p class="section-lead">Chaque cours est conçu comme un entraînement complet : vous repartez avec le souffle travaillé et les muscles sollicités, quel que soit votre niveau de départ.</p>
+    <span class="section-label">Les séances</span>
+    <h2>Force &amp; conditionnement</h2>
+    <div class="philosophy-banner">
+      <blockquote>« La longévité commence maintenant. Ce que vous bâtissez aujourd’hui dans votre corps, vous le vivez pendant les 20 prochaines années. »</blockquote>
+      <cite>— Vivien Strudel, fondateur</cite>
+    </div>
+    <p class="section-lead">Chaque séance est équilibrée entre travail de force et conditionnement métabolique. Le contenu est le même pour tout le groupe — la charge et l’intensité s’adaptent à chacun.</p>
     <div class="activities-grid">
       <div class="activity-card">
-        <div class="activity-icon">💨</div>
-        <h3>Cardio &amp; endurance</h3>
-        <p>Travail du système cardiovasculaire par des exercices dynamiques et enchaînés. Améliorez votre souffle, brûlez des calories et gagnez en énergie au quotidien.</p>
-        <span class="activity-tag">Tous niveaux</span>
+        <div class="activity-icon">🏋️</div>
+        <h3>Force fondamentale</h3>
+        <p>Les mouvements polyarticulaires qui construisent une force durable et utile au quotidien. Technique, charge progressive, aucun raccourci. Accessible à partir de zéro, exigeant pour les avancés.</p>
+        <div class="activity-exercises">
+          <span class="exercise-tag">Squat</span>
+          <span class="exercise-tag">Soulévé de terre</span>
+          <span class="exercise-tag">Développé couché</span>
+          <span class="exercise-tag">Tirage barre</span>
+          <span class="exercise-tag">Pompes</span>
+        </div>
       </div>
       <div class="activity-card">
-        <div class="activity-icon">💪</div>
-        <h3>Renforcement musculaire</h3>
-        <p>Exercices de gainage, de force et de stabilité pour tonifier le corps, améliorer la posture et prévenir les blessures. Sans matériel lourd, accessible à tous.</p>
-        <span class="activity-tag">Tous niveaux</span>
+        <div class="activity-icon">🔥</div>
+        <h3>Conditionnement métabolique</h3>
+        <p>Des formats d’intensité variée pour développer l’endurance, la puissance et la récupération. Chaque format a sa logique et son objectif précis.</p>
+        <div class="activity-exercises">
+          <span class="exercise-tag">HIIT</span>
+          <span class="exercise-tag">LIT</span>
+          <span class="exercise-tag">EMOM</span>
+          <span class="exercise-tag">AMRAP</span>
+        </div>
       </div>
       <div class="activity-card">
-        <div class="activity-icon">⚡</div>
-        <h3>Circuits fonctionnels</h3>
-        <p>Enchaînés sous forme de circuits, les exercices combinent les deux composantes en une séance fluide et progressive. Chacun avance à son rythme.</p>
-        <span class="activity-tag">Collectif</span>
+        <div class="activity-icon">📈</div>
+        <h3>Performance adaptée</h3>
+        <p>Pas de comparaison, pas de compétition entre participants. Chacun part de son niveau et progresse à son rythme. L’objectif : se dépasser soi-même, séance après séance, année après année.</p>
+        <div class="activity-exercises">
+          <span class="exercise-tag">Tous niveaux</span>
+          <span class="exercise-tag">Progression individuelle</span>
+          <span class="exercise-tag">Longévité</span>
+        </div>
       </div>
     </div>
   </div>
@@ -295,8 +320,8 @@
         <div class="day-name">Lundi</div>
         <div class="session-item">
           <div class="session-time">20h00 – 21h00</div>
-          <div class="session-name">Entraînement fonctionnel</div>
-          <div class="session-note">Cardio + renforcement musculaire</div>
+          <div class="session-name">Force &amp; conditionnement</div>
+          <div class="session-note">Force + cardio métabolique</div>
           <div class="session-venue">📍 <a href="https://maps.google.com/?q=Stade+Clovis+Lelong+Milly-la-For%C3%AAt+91490" target="_blank" rel="noopener">Stade Clovis Lelong · Milly-la-Forêt</a></div>
         </div>
       </div>
@@ -304,8 +329,8 @@
         <div class="day-name">Mardi</div>
         <div class="session-item">
           <div class="session-time">20h30 – 21h30</div>
-          <div class="session-name">Entraînement fonctionnel</div>
-          <div class="session-note">Cardio + renforcement musculaire</div>
+          <div class="session-name">Force &amp; conditionnement</div>
+          <div class="session-note">Force + cardio métabolique</div>
           <div class="session-venue">📍 <a href="https://maps.google.com/?q=Gymnase+des+Singes+Verts+Boutigny-sur-Essonne+91660" target="_blank" rel="noopener">Gymnase des Singes Verts · Boutigny-sur-Essonne</a></div>
         </div>
       </div>
@@ -313,8 +338,8 @@
         <div class="day-name">Jeudi</div>
         <div class="session-item">
           <div class="session-time">20h30 – 21h30</div>
-          <div class="session-name">Entraînement fonctionnel</div>
-          <div class="session-note">Cardio + renforcement musculaire</div>
+          <div class="session-name">Force &amp; conditionnement</div>
+          <div class="session-note">Force + cardio métabolique</div>
           <div class="session-venue">📍 <a href="https://maps.google.com/?q=Salle+des+F%C3%AAtes+Gironville-sur-Essonne+91690" target="_blank" rel="noopener">Salle des fêtes · Gironville-sur-Essonne</a></div>
         </div>
       </div>
@@ -396,7 +421,7 @@
   <div class="section-inner">
     <span class="section-label">Équipe</span>
     <h2>Votre encadrant</h2>
-    <p class="section-lead">Un professionnel diplômé, formé à l'université Paris-Saclay, passionné par la performance physique et intellectuelle.</p>
+    <p class="section-lead">Ancien auditeur financier converti en coach S&amp;C — parce qu’il a compris que la performance intellectuelle repose sur une base physiologique solide.</p>
     <div class="team-card">
       <div class="team-avatar">VS</div>
       <div class="team-info">
@@ -447,7 +472,7 @@
     <div>
       <span class="section-label">Nous rejoindre</span>
       <h2>Contact &amp; Inscription</h2>
-      <p class="section-lead">Une question ? Envie de tester un cours ? Contactez-nous par e-mail ou directement sur WhatsApp.</p>
+      <p class="section-lead">Une question ? Envie de tester un cours ? Contactez-nous par WhatsApp ou par e-mail.</p>
       <ul class="contact-info-list">
         <li>
           <span class="contact-icon">📍</span>
