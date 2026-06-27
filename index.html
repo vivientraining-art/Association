@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Fitness Sud Essonne — Association sportive</title>
-  <meta name="description" content="Association sportive Fitness Sud Essonne — cours collectifs, musculation, cardio et suivi personnalisé dans l’Essonne.">
+  <meta name="description" content="Association sportive Fitness Sud Essonne — entraînement fonctionnel, cardio et renforcement musculaire dans l’Essonne.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -228,27 +228,27 @@
     #activites { background: var(--sand); }
     .activities-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 1.2rem;
     }
     .activity-card {
       background: var(--linen);
       border: 1px solid var(--line);
       border-radius: 14px;
-      padding: 1.4rem;
+      padding: 1.6rem;
       box-shadow: 0 2px 8px rgba(34,48,42,.05);
       transition: box-shadow .2s, transform .15s;
     }
     .activity-card:hover { box-shadow: 0 4px 18px rgba(34,48,42,.1); transform: translateY(-2px); }
     .activity-icon {
-      width: 46px;
-      height: 46px;
+      width: 48px;
+      height: 48px;
       border-radius: 12px;
       background: var(--forest);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       margin-bottom: 1rem;
     }
     .activity-card h3 {
@@ -256,10 +256,10 @@
       font-size: 1.05rem;
       margin-bottom: .5rem;
     }
-    .activity-card p { font-size: .9rem; color: var(--muted); line-height: 1.6; }
+    .activity-card p { font-size: .9rem; color: var(--muted); line-height: 1.65; }
     .activity-tag {
       display: inline-block;
-      margin-top: .8rem;
+      margin-top: .9rem;
       background: rgba(31,58,45,.08);
       color: var(--pine);
       border-radius: 999px;
@@ -277,14 +277,14 @@
     #horaires .section-lead { color: #C9D4CC; }
     .schedule-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
       gap: 1rem;
     }
     .day-card {
       background: rgba(255,255,255,.07);
       border: 1px solid rgba(255,255,255,.12);
       border-radius: 12px;
-      padding: 1.1rem;
+      padding: 1.2rem;
     }
     .day-name {
       font-weight: 700;
@@ -292,17 +292,25 @@
       letter-spacing: .05em;
       text-transform: uppercase;
       color: #C9D4CC;
-      margin-bottom: .7rem;
+      margin-bottom: .8rem;
     }
     .session-item {
       border-top: 1px solid rgba(255,255,255,.1);
-      padding: .45rem 0;
-      font-size: .88rem;
+      padding: .5rem 0;
+      font-size: .9rem;
     }
     .session-item:first-of-type { border-top: none; }
-    .session-time { color: var(--terra); font-weight: 700; font-size: .8rem; }
-    .session-name { color: #F4F0E6; }
-    .session-note { color: #9DB5A8; font-size: .78rem; }
+    .session-time { color: var(--terra); font-weight: 700; font-size: .82rem; margin-bottom: .1rem; }
+    .session-name { color: #F4F0E6; font-weight: 600; }
+    .session-note { color: #9DB5A8; font-size: .8rem; margin-top: .15rem; }
+    .session-venue {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      color: #C9D4CC;
+      font-size: .78rem;
+      margin-top: .25rem;
+    }
     .schedule-note {
       margin-top: 1.5rem;
       background: rgba(255,255,255,.07);
@@ -391,7 +399,7 @@
       border: 1px solid var(--line);
       border-radius: 16px;
       padding: 2rem 1.6rem;
-      max-width: 560px;
+      max-width: 600px;
       display: flex;
       gap: 1.6rem;
       align-items: flex-start;
@@ -416,17 +424,20 @@
     }
     .team-role { font-size: .82rem; color: var(--terra); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: .7rem; }
     .team-bio { font-size: .9rem; color: var(--muted); line-height: 1.65; }
-    .team-certifs { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
-    .certif-tag {
-      background: rgba(31,58,45,.08);
-      color: var(--pine);
-      border: 1px solid rgba(31,58,45,.15);
-      border-radius: 999px;
-      font-size: .72rem;
-      font-weight: 700;
-      padding: .2rem .65rem;
-      letter-spacing: .04em;
+    .team-links { display: flex; gap: .7rem; margin-top: 1rem; flex-wrap: wrap; }
+    .team-link {
+      color: var(--terra);
+      text-decoration: none;
+      font-size: .85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      border-bottom: 1px solid rgba(194,107,74,.3);
+      padding-bottom: .05rem;
+      transition: border-color .15s;
     }
+    .team-link:hover { border-color: var(--terra); }
 
     /* ── Contact ── */
     #contact { background: var(--linen); }
@@ -448,7 +459,7 @@
     .contact-info-list li:first-child { border-top: none; padding-top: 0; }
     .contact-icon { color: var(--terra); flex-shrink: 0; margin-top: .15rem; }
     .contact-label { font-weight: 600; display: block; margin-bottom: .1rem; }
-    .contact-val { color: var(--muted); font-size: .9rem; }
+    .contact-val { color: var(--muted); font-size: .9rem; line-height: 1.6; }
     .contact-val a { color: var(--terra); text-decoration: none; }
     .contact-val a:hover { text-decoration: underline; }
     .contact-form { display: flex; flex-direction: column; gap: .85rem; }
@@ -498,9 +509,6 @@
       .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
       .form-row { grid-template-columns: 1fr; }
       .team-card { flex-direction: column; gap: 1rem; }
-      .schedule-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 480px) {
       .schedule-grid { grid-template-columns: 1fr; }
     }
   </style>
@@ -520,8 +528,7 @@
     <li><a href="#horaires">Horaires</a></li>
     <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#equipe">Équipe</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="espace-adherent.html" class="nav-cta">Espace adhérent</a></li>
+    <li><a href="#contact" class="nav-cta">Nous rejoindre</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
 </nav>
@@ -529,12 +536,12 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <span class="hero-tag">Association sportive · Essonne</span>
-    <h1>Bougez, progressez,<br><em>prenez soin de vous</em></h1>
-    <p>Cours collectifs, musculation et suivi personnalisé dans une association à taille humaine au cœur du sud de l’Essonne.</p>
+    <span class="hero-tag">Association sportive · Essonne (91)</span>
+    <h1>Entraînement fonctionnel,<br><em>cardio &amp; renforcement</em></h1>
+    <p>Cours collectifs encadrés dans le sud de l’Essonne — un mix efficace de cardio et de renforcement musculaire, accessible à tous les niveaux.</p>
     <div class="hero-btns">
       <a href="#contact" class="btn btn-primary">Nous rejoindre</a>
-      <a href="#activites" class="btn btn-outline">Découvrir les activités</a>
+      <a href="#horaires" class="btn btn-outline">Voir les horaires</a>
     </div>
   </div>
 </section>
@@ -544,22 +551,22 @@
   <div class="section-inner about-grid">
     <div>
       <span class="section-label">L’association</span>
-      <h2>Une structure locale,<br>un esprit de groupe</h2>
+      <h2>Une association locale,<br>un esprit de groupe</h2>
       <div class="about-stats">
-        <div class="stat-card"><div class="stat-num">+150</div><div class="stat-lbl">Adhérents</div></div>
-        <div class="stat-card"><div class="stat-num">8</div><div class="stat-lbl">Activités</div></div>
-        <div class="stat-card"><div class="stat-num">5</div><div class="stat-lbl">Créneaux / semaine</div></div>
-        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-lbl">Ans d’existence</div></div>
+        <div class="stat-card"><div class="stat-num">3</div><div class="stat-lbl">Cours par semaine</div></div>
+        <div class="stat-card"><div class="stat-num">2</div><div class="stat-lbl">Salles dans l’Essonne</div></div>
+        <div class="stat-card"><div class="stat-num">1h</div><div class="stat-lbl">Par séance</div></div>
+        <div class="stat-card"><div class="stat-num">Tous</div><div class="stat-lbl">Niveaux acceptés</div></div>
       </div>
     </div>
     <div class="about-text">
-      <p>Fitness Sud Essonne est une association loi 1901 fondée pour rendre le sport accessible à tous. Nous proposons des cours adaptés à tous les niveaux, dans une ambiance conviviale et bienveillante.</p>
-      <p>Notre encadrement diplômé vous accompagne à votre rythme, que vous débutiez ou cherchiez à aller plus loin dans votre pratique sportive.</p>
+      <p>Fitness Sud Essonne est une association loi 1901 qui propose des cours d’entraînement fonctionnel dans deux communes du sud de l’Essonne : Gironville-sur-Essonne et Boutigny-sur-Essonne.</p>
+      <p>Chaque séance allie travail cardiovasculaire et renforcement musculaire, dans une ambiance conviviale et bienveillante, encadrée par un professionnel diplômé.</p>
       <ul class="value-list">
         <li><span class="icon">❖</span> Encadrement diplômé d’État</li>
-        <li><span class="icon">❖</span> Cours adaptés à tous les niveaux</li>
-        <li><span class="icon">❖</span> Suivi personnalisé de votre progression</li>
-        <li><span class="icon">❖</span> Ambiance conviviale et bienveillante</li>
+        <li><span class="icon">❖</span> Accessible à tous les niveaux, débutants bienvenus</li>
+        <li><span class="icon">❖</span> Séances équilibrées : cardio + renforcement</li>
+        <li><span class="icon">❖</span> Ambiance de groupe motivante</li>
         <li><span class="icon">❖</span> Cotisations accessibles</li>
       </ul>
     </div>
@@ -570,44 +577,26 @@
 <section id="activites">
   <div class="section-inner">
     <span class="section-label">Activités</span>
-    <h2>Ce que nous proposons</h2>
-    <p class="section-lead">Des disciplines variées pour répondre à tous vos objectifs : perte de poids, renforcement musculaire, souplesse ou bien-être.</p>
+    <h2>Entraînement fonctionnel</h2>
+    <p class="section-lead">Chaque cours est conçu comme un entraînement complet : vous repartez avec le souffle travaillé et les muscles sollicités, quel que soit votre niveau de départ.</p>
     <div class="activities-grid">
       <div class="activity-card">
+        <div class="activity-icon">💨</div>
+        <h3>Cardio &amp; endurance</h3>
+        <p>Travail du système cardiovasculaire par des exercices dynamiques et enchaînés. Améliorez votre souffle, brûlez des calories et gagnez en énergie au quotidien.</p>
+        <span class="activity-tag">Tous niveaux</span>
+      </div>
+      <div class="activity-card">
         <div class="activity-icon">💪</div>
-        <h3>Musculation</h3>
-        <p>Renforcement musculaire progressif avec suivi des charges et de la technique. Idéal pour gagner en force et en posture.</p>
+        <h3>Renforcement musculaire</h3>
+        <p>Exercices de gainage, de force et de stabilité pour tonifier le corps, améliorer la posture et prévenir les blessures. Sans matériel lourd, accessible à tous.</p>
         <span class="activity-tag">Tous niveaux</span>
       </div>
       <div class="activity-card">
-        <div class="activity-icon">🏃</div>
-        <h3>Cardio &amp; Endurance</h3>
-        <p>Travail cardiovasculaire adapté à votre fréquence cardiaque. Améliorez votre souffle et votre condition physique générale.</p>
-        <span class="activity-tag">Tous niveaux</span>
-      </div>
-      <div class="activity-card">
-        <div class="activity-icon">🤸</div>
-        <h3>Fitness collectif</h3>
-        <p>Cours dynamiques en groupe : step, aérobic, HIIT… Une heure pour se dépenser et se motiver ensemble.</p>
+        <div class="activity-icon">⚡</div>
+        <h3>Circuits fonctionnels</h3>
+        <p>Enchaînés sous forme de circuits, les exercices combinent les deux composantes en une séance fluide et progressive. Chacun avance à son rythme.</p>
         <span class="activity-tag">Collectif</span>
-      </div>
-      <div class="activity-card">
-        <div class="activity-icon">🧘</div>
-        <h3>Stretching &amp; Relaxation</h3>
-        <p>Séances d’étirements et de relaxation pour améliorer votre souplesse et récupérer après l’effort.</p>
-        <span class="activity-tag">Récupération</span>
-      </div>
-      <div class="activity-card">
-        <div class="activity-icon">⚖️</div>
-        <h3>Remise en forme</h3>
-        <p>Programme personnalisé pour retrouver la forme : bilan initial, objectifs ciblés et progression sur mesure.</p>
-        <span class="activity-tag">Suivi individuel</span>
-      </div>
-      <div class="activity-card">
-        <div class="activity-icon">🧠</div>
-        <h3>Forme &amp; Bien-être</h3>
-        <p>Une approche globale alliant exercice physique, respiration et équilibre corps-esprit pour une santé durable.</p>
-        <span class="activity-tag">Bien-être</span>
       </div>
     </div>
   </div>
@@ -617,85 +606,39 @@
 <section id="horaires">
   <div class="section-inner">
     <span class="section-label">Planning</span>
-    <h2>Horaires des cours</h2>
-    <p class="section-lead">Des créneaux en semaine et le weekend pour s’adapter à votre emploi du temps.</p>
+    <h2>Horaires &amp; lieux</h2>
+    <p class="section-lead">Trois créneaux par semaine, dans deux salles du sud de l’Essonne. Les cours durent 1 heure.</p>
     <div class="schedule-grid">
       <div class="day-card">
         <div class="day-name">Lundi</div>
         <div class="session-item">
-          <div class="session-time">09:30 – 10:30</div>
-          <div class="session-name">Fitness collectif</div>
-          <div class="session-note">Tous niveaux</div>
-        </div>
-        <div class="session-item">
-          <div class="session-time">18:30 – 19:30</div>
-          <div class="session-name">Musculation</div>
-          <div class="session-note">Suivi individuel</div>
+          <div class="session-time">20h30 – 21h30</div>
+          <div class="session-name">Entraînement fonctionnel</div>
+          <div class="session-note">Cardio + renforcement musculaire</div>
+          <div class="session-venue">📍 Salle communale · Gironville-sur-Essonne</div>
         </div>
       </div>
       <div class="day-card">
         <div class="day-name">Mardi</div>
         <div class="session-item">
-          <div class="session-time">10:00 – 11:00</div>
-          <div class="session-name">Stretching</div>
-          <div class="session-note">Tous niveaux</div>
-        </div>
-        <div class="session-item">
-          <div class="session-time">19:00 – 20:00</div>
-          <div class="session-name">Cardio &amp; Endurance</div>
-          <div class="session-note">Intermédiaire</div>
-        </div>
-      </div>
-      <div class="day-card">
-        <div class="day-name">Mercredi</div>
-        <div class="session-item">
-          <div class="session-time">09:30 – 10:30</div>
-          <div class="session-name">Remise en forme</div>
-          <div class="session-note">Débutants</div>
-        </div>
-        <div class="session-item">
-          <div class="session-time">17:30 – 18:30</div>
-          <div class="session-name">Fitness collectif</div>
-          <div class="session-note">Tous niveaux</div>
+          <div class="session-time">20h30 – 21h30</div>
+          <div class="session-name">Entraînement fonctionnel</div>
+          <div class="session-note">Cardio + renforcement musculaire</div>
+          <div class="session-venue">📍 Salle de la Bergerie · Boutigny-sur-Essonne</div>
         </div>
       </div>
       <div class="day-card">
         <div class="day-name">Jeudi</div>
         <div class="session-item">
-          <div class="session-time">18:30 – 19:30</div>
-          <div class="session-name">Musculation</div>
-          <div class="session-note">Tous niveaux</div>
-        </div>
-        <div class="session-item">
-          <div class="session-time">19:30 – 20:30</div>
-          <div class="session-name">Cardio HIIT</div>
-          <div class="session-note">Intermédiaire</div>
-        </div>
-      </div>
-      <div class="day-card">
-        <div class="day-name">Vendredi</div>
-        <div class="session-item">
-          <div class="session-time">09:30 – 10:30</div>
-          <div class="session-name">Fitness collectif</div>
-          <div class="session-note">Tous niveaux</div>
-        </div>
-        <div class="session-item">
-          <div class="session-time">18:00 – 19:00</div>
-          <div class="session-name">Forme &amp; Bien-être</div>
-          <div class="session-note">Tous niveaux</div>
-        </div>
-      </div>
-      <div class="day-card">
-        <div class="day-name">Samedi</div>
-        <div class="session-item">
-          <div class="session-time">09:00 – 10:30</div>
-          <div class="session-name">Séance libre</div>
-          <div class="session-note">Encadré</div>
+          <div class="session-time">20h30 – 21h30</div>
+          <div class="session-name">Entraînement fonctionnel</div>
+          <div class="session-note">Cardio + renforcement musculaire</div>
+          <div class="session-venue">📍 Salle communale · Gironville-sur-Essonne</div>
         </div>
       </div>
     </div>
     <div class="schedule-note">
-      📅 Le planning peut évoluer selon les périodes scolaires. Consultez notre page contact ou l’espace adhérent pour les dernières mises à jour.
+      📅 Le planning peut évoluer en cours d’année. Contactez-nous pour confirmer les créneaux ou en cas de doute.
     </div>
   </div>
 </section>
@@ -711,25 +654,25 @@
         <div class="pricing-name">Découverte</div>
         <div class="pricing-desc">Séance à l’essai, sans engagement</div>
         <div class="pricing-price">Gratuit</div>
-        <div class="pricing-period">1re séance offerte</div>
+        <div class="pricing-period">1ʳᵉ séance offerte</div>
         <ul class="pricing-features">
           <li><span class="check">✓</span> Accès à un cours au choix</li>
-          <li><span class="check">✓</span> Bilan avec l’encadrant</li>
-          <li><span class="check">✓</span> Sans inscription requise</li>
+          <li><span class="check">✓</span> Accueil par l’encadrant</li>
+          <li><span class="check">✓</span> Sans inscription préalable</li>
         </ul>
         <a href="#contact" class="btn btn-light pricing-btn">Réserver</a>
       </div>
       <div class="pricing-card featured">
         <span class="pricing-badge">Le plus populaire</span>
         <div class="pricing-name">Adhésion annuelle</div>
-        <div class="pricing-desc">Accès illimité à toutes les activités</div>
+        <div class="pricing-desc">Accès illimité aux 3 créneaux hebdomadaires</div>
         <div class="pricing-price">180 €</div>
         <div class="pricing-period">par an · sept. à juin</div>
         <ul class="pricing-features">
-          <li><span class="check">✓</span> Tous les créneaux inclus</li>
-          <li><span class="check">✓</span> Suivi personnalisé</li>
-          <li><span class="check">✓</span> Espace adhérent en ligne</li>
-          <li><span class="check">✓</span> Bilan de forme inclus</li>
+          <li><span class="check">✓</span> Lundi, mardi et jeudi inclus</li>
+          <li><span class="check">✓</span> Les deux salles accessibles</li>
+          <li><span class="check">✓</span> Encadrement professionnel</li>
+          <li><span class="check">✓</span> Ambiance de groupe</li>
         </ul>
         <a href="#contact" class="btn btn-primary pricing-btn">S’inscrire</a>
       </div>
@@ -757,17 +700,16 @@
   <div class="section-inner">
     <span class="section-label">Équipe</span>
     <h2>Votre encadrant</h2>
-    <p class="section-lead">Un professionnel diplômé à votre service, passionné par le sport et le bien-être.</p>
+    <p class="section-lead">Un professionnel diplômé passionné par le mouvement et la performance.</p>
     <div class="team-card">
       <div class="team-avatar">VS</div>
       <div class="team-info">
         <h3>Vivien Strudel</h3>
         <div class="team-role">Éducateur sportif · Fondateur</div>
-        <p class="team-bio">Passionné de sport et de performance, Vivien accompagne les adhérents avec rigueur et bienveillance depuis plus de 10 ans. Sa pédagogie s’adapte à chaque profil pour vous aider à atteindre vos objectifs en toute sécurité.</p>
-        <div class="team-certifs">
-          <span class="certif-tag">BPJEPS Activités Physiques</span>
-          <span class="certif-tag">Musculation &amp; Fitness</span>
-          <span class="certif-tag">Suivi personnalisé</span>
+        <p class="team-bio">Coach sportif diplômé, Vivien conçoit et anime des séances d’entraînement fonctionnel alliant cardio et renforcement musculaire. Sa pédagogie bienveillante s’adapte à chaque profil pour vous permettre de progresser à votre rythme, en toute sécurité.</p>
+        <div class="team-links">
+          <a href="https://www.vivienstrudel.com" target="_blank" rel="noopener" class="team-link">🔗 vivienstrudel.com</a>
+          <a href="https://www.vivientraining.com" target="_blank" rel="noopener" class="team-link">🔗 vivientraining.com</a>
         </div>
       </div>
     </div>
@@ -780,20 +722,20 @@
     <div>
       <span class="section-label">Nous rejoindre</span>
       <h2>Contact &amp; Inscription</h2>
-      <p class="section-lead">Une question ? Envie de vous inscrire ? Contactez-nous, nous vous répondrons rapidement.</p>
+      <p class="section-lead">Une question ? Envie de tester un cours ? Contactez-nous, nous vous répondrons rapidement.</p>
       <ul class="contact-info-list">
         <li>
           <span class="contact-icon">📍</span>
           <div>
-            <span class="contact-label">Adresse</span>
-            <span class="contact-val">À compléter<br>Essonne (91)</span>
+            <span class="contact-label">Lundi &amp; Jeudi</span>
+            <span class="contact-val">Salle communale<br>Gironville-sur-Essonne (91)</span>
           </div>
         </li>
         <li>
-          <span class="contact-icon">📞</span>
+          <span class="contact-icon">📍</span>
           <div>
-            <span class="contact-label">Téléphone</span>
-            <span class="contact-val"><a href="tel:+33600000000">À compléter</a></span>
+            <span class="contact-label">Mardi</span>
+            <span class="contact-val">Salle de la Bergerie — Gymnase des Singes Verts<br>Boutigny-sur-Essonne (91)</span>
           </div>
         </li>
         <li>
@@ -806,8 +748,8 @@
         <li>
           <span class="contact-icon">🕐</span>
           <div>
-            <span class="contact-label">Accueil</span>
-            <span class="contact-val">Lun – Sam selon planning<br>Réponse e-mail sous 48 h</span>
+            <span class="contact-label">Horaires des cours</span>
+            <span class="contact-val">Lundi, Mardi &amp; Jeudi<br>20h30 – 21h30</span>
           </div>
         </li>
       </ul>
@@ -860,9 +802,9 @@
     <nav class="footer-links">
       <a href="#about">L’association</a>
       <a href="#activites">Activités</a>
+      <a href="#horaires">Horaires</a>
       <a href="#tarifs">Tarifs</a>
       <a href="#contact">Contact</a>
-      <a href="espace-adherent.html">Espace adhérent</a>
     </nav>
     <div class="footer-copy">© 2025 Fitness Sud Essonne · Tous droits réservés</div>
   </div>
