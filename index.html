@@ -17,15 +17,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --terre:   #141210;
-      --humus:   #1E1912;
-      --ocre:    #C4922A;
-      --craie:   #EDE8DD;
-      --foret:   #1C3828;
-      --mousse:  #3A5E42;
-      --pierre:  #7A736A;
-      --sable:   #F3EEE5;
-      --rouille: #9E3F1C;
+      --terre:   #1D2F14;   /* vert pin profond — remplace le noir */
+      --humus:   #283E1A;   /* sous-bois pin */
+      --ocre:    #C4922A;   /* or du blé */
+      --craie:   #EDE8DD;   /* craie calcaire */
+      --foret:   #3D6030;   /* canopée de pin, plus clair */
+      --mousse:  #5E7A4A;   /* mousse, plus vive */
+      --pierre:  #7A6E60;   /* pierre chaude */
+      --sable:   #F0E8D6;   /* sable régional, plus chaud */
+      --rouille: #9E3F1C;   /* rouille */
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -67,7 +67,7 @@
     .section { padding: 6rem 2.5rem; }
     .inner { max-width: 1040px; margin: 0 auto; }
     .sec-label { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ocre); margin-bottom: .7rem; }
-    .sec-label.dim { color: rgba(237,232,221,.38); }
+    .sec-label.dim { color: rgba(237,232,221,.55); }
     h2.ttl { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(1.7rem, 3.5vw, 2.6rem); line-height: 1.15; margin-bottom: 1rem; color: inherit; }
 
     /* PROGRAMME */
@@ -82,14 +82,14 @@
     /* DISCIPLINES */
     #disciplines { background: var(--humus); }
     .disc-hdr { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
-    .disc-lead { color: rgba(237,232,221,.42); font-size: .92rem; line-height: 1.7; max-width: 340px; }
+    .disc-lead { color: rgba(237,232,221,.52); font-size: .92rem; line-height: 1.7; max-width: 340px; }
     .disc-list { margin-top: 3.5rem; }
-    .disc-item { display: grid; grid-template-columns: 90px 1fr; gap: 2rem; align-items: start; padding: 2.5rem 0; border-top: 1px solid rgba(237,232,221,.07); }
-    .disc-num { font-family: 'Libre Baskerville', serif; font-size: 4rem; font-weight: 700; color: rgba(196,146,42,.28); line-height: 1; }
+    .disc-item { display: grid; grid-template-columns: 90px 1fr; gap: 2rem; align-items: start; padding: 2.5rem 0; border-top: 1px solid rgba(237,232,221,.09); }
+    .disc-num { font-family: 'Libre Baskerville', serif; font-size: 4rem; font-weight: 700; color: rgba(196,146,42,.3); line-height: 1; }
     .disc-body h3 { font-family: 'Libre Baskerville', serif; font-size: 1.4rem; color: var(--craie); margin-bottom: .5rem; }
-    .disc-body p { font-size: .88rem; color: rgba(237,232,221,.48); line-height: 1.7; max-width: 520px; margin-bottom: .9rem; }
+    .disc-body p { font-size: .88rem; color: rgba(237,232,221,.52); line-height: 1.7; max-width: 520px; margin-bottom: .9rem; }
     .tags { display: flex; flex-wrap: wrap; gap: .3rem; }
-    .tag { border: 1px solid rgba(237,232,221,.14); color: rgba(237,232,221,.48); border-radius: 999px; font-size: .67rem; font-weight: 700; letter-spacing: .05em; padding: .12rem .52rem; }
+    .tag { border: 1px solid rgba(237,232,221,.16); color: rgba(237,232,221,.52); border-radius: 999px; font-size: .67rem; font-weight: 700; letter-spacing: .05em; padding: .12rem .52rem; }
 
     /* HORAIRES */
     #horaires { background: var(--craie); }
@@ -103,7 +103,7 @@
     .s-venue { font-size: .92rem; font-weight: 600; color: var(--terre); display: block; }
     .s-map { color: var(--pierre); font-size: .8rem; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.13); display: inline-block; margin-top: .15rem; transition: color .15s; }
     .s-map:hover { color: var(--terre); }
-    .s-type { font-size: .78rem; color: rgba(0,0,0,.32); font-style: italic; display: block; margin-top: .4rem; }
+    .s-type { font-size: .78rem; color: rgba(0,0,0,.35); font-style: italic; display: block; margin-top: .4rem; }
     .sched-note { margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(0,0,0,.08); font-size: .8rem; color: var(--pierre); }
 
     /* TARIFS */
@@ -115,15 +115,15 @@
     .tc-name { font-family: 'Libre Baskerville', serif; font-size: .96rem; color: var(--terre); margin-bottom: .2rem; }
     .tc.feat .tc-name { color: var(--craie); }
     .tc-sub { font-size: .76rem; color: var(--pierre); margin-bottom: 1rem; }
-    .tc.feat .tc-sub { color: rgba(237,232,221,.38); }
+    .tc.feat .tc-sub { color: rgba(237,232,221,.42); }
     .tc-price { font-family: 'Libre Baskerville', serif; font-size: 2.2rem; font-weight: 700; color: var(--terre); line-height: 1; margin-bottom: .2rem; }
     .tc.feat .tc-price { color: var(--craie); }
     .tc-period { font-size: .74rem; color: var(--pierre); margin-bottom: 1.2rem; }
-    .tc.feat .tc-period { color: rgba(237,232,221,.38); }
+    .tc.feat .tc-period { color: rgba(237,232,221,.42); }
     .tc-feats { list-style: none; }
     .tc-feats li { display: flex; gap: .4rem; font-size: .81rem; color: var(--pierre); padding: .28rem 0; border-top: 1px solid rgba(0,0,0,.06); }
     .tc-feats li:first-child { border-top: none; }
-    .tc.feat .tc-feats li { color: rgba(237,232,221,.52); border-color: rgba(237,232,221,.07); }
+    .tc.feat .tc-feats li { color: rgba(237,232,221,.55); border-color: rgba(237,232,221,.09); }
     .chk { color: #5A8A5F; flex-shrink: 0; }
     .tc.feat .chk { color: #8FD49A; }
     .tc-btn { display: block; text-align: center; margin-top: 1.2rem; padding: .6rem; border-radius: 8px; font-weight: 700; font-size: .81rem; text-decoration: none; transition: filter .15s; }
@@ -137,18 +137,18 @@
     .coach-av { width: 100px; height: 100px; border-radius: 50%; background: var(--ocre); display: flex; align-items: center; justify-content: center; font-family: 'Libre Baskerville', serif; font-size: 1.9rem; color: var(--terre); margin-bottom: 1rem; }
     .coach-name { font-family: 'Libre Baskerville', serif; font-size: 1.5rem; color: var(--craie); }
     .coach-role { font-size: .67rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--ocre); margin-top: .15rem; margin-bottom: 1.4rem; display: block; }
-    .coach-bio { font-size: .92rem; color: rgba(237,232,221,.58); line-height: 1.78; margin-bottom: 1.2rem; }
+    .coach-bio { font-size: .92rem; color: rgba(237,232,221,.65); line-height: 1.78; margin-bottom: 1.2rem; }
     .certifs { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: 1.2rem; }
-    .certif { border: 1px solid rgba(237,232,221,.16); color: rgba(237,232,221,.52); border-radius: 999px; font-size: .67rem; font-weight: 700; padding: .14rem .58rem; letter-spacing: .04em; }
+    .certif { border: 1px solid rgba(237,232,221,.2); color: rgba(237,232,221,.58); border-radius: 999px; font-size: .67rem; font-weight: 700; padding: .14rem .58rem; letter-spacing: .04em; }
     .coach-links { display: flex; gap: .8rem; flex-wrap: wrap; }
-    .coach-lnk { color: var(--ocre); text-decoration: none; font-size: .82rem; font-weight: 600; border-bottom: 1px solid rgba(196,146,42,.28); padding-bottom: .05rem; transition: border-color .15s; }
+    .coach-lnk { color: var(--ocre); text-decoration: none; font-size: .82rem; font-weight: 600; border-bottom: 1px solid rgba(196,146,42,.3); padding-bottom: .05rem; transition: border-color .15s; }
     .coach-lnk:hover { border-color: var(--ocre); }
 
     /* VALEURS */
     #valeurs { background: var(--sable); }
     .val-intro { font-size: .97rem; color: var(--pierre); line-height: 1.8; max-width: 540px; margin: .5rem 0 3.5rem; }
     .val-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-bottom: 3.5rem; }
-    .val-card { padding-top: 1.5rem; border-top: 2px solid rgba(0,0,0,.12); }
+    .val-card { padding-top: 1.5rem; border-top: 2px solid rgba(29,47,20,.15); }
     .val-word { font-family: 'Libre Baskerville', Georgia, serif; font-size: 1.65rem; color: var(--terre); display: block; margin-bottom: .85rem; }
     .val-desc { font-size: .87rem; color: var(--pierre); line-height: 1.78; }
     .val-statement { padding: 0 0 0 1.8rem; border-left: 3px solid var(--ocre); }
@@ -160,14 +160,14 @@
     .app-txt { flex: 1; min-width: 240px; }
     .app-badge { display: inline-block; background: var(--ocre); color: var(--terre); border-radius: 999px; font-size: .62rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: .18rem .68rem; margin-bottom: .8rem; }
     .app-txt h3 { font-family: 'Libre Baskerville', serif; font-size: 1.3rem; color: var(--craie); line-height: 1.25; margin-bottom: .6rem; }
-    .app-txt p { font-size: .87rem; color: rgba(237,232,221,.52); line-height: 1.7; }
+    .app-txt p { font-size: .87rem; color: rgba(237,232,221,.55); line-height: 1.7; }
     .app-feats { margin-top: .9rem; display: flex; flex-direction: column; gap: .35rem; }
-    .app-feat { font-size: .8rem; color: rgba(237,232,221,.42); display: flex; gap: .5rem; align-items: center; }
+    .app-feat { font-size: .8rem; color: rgba(237,232,221,.45); display: flex; gap: .5rem; align-items: center; }
     .app-feat::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--ocre); flex-shrink: 0; }
     .app-act { flex-shrink: 0; text-align: center; }
     .btn-outline { display: inline-flex; font-family: inherit; font-weight: 700; font-size: .85rem; color: var(--craie); border: 1.5px solid rgba(237,232,221,.22); border-radius: 8px; padding: .7rem 1.3rem; text-decoration: none; transition: border-color .15s; }
     .btn-outline:hover { border-color: rgba(237,232,221,.55); }
-    .app-sub { font-size: .72rem; color: rgba(237,232,221,.28); margin-top: .5rem; text-align: center; }
+    .app-sub { font-size: .72rem; color: rgba(237,232,221,.3); margin-top: .5rem; text-align: center; }
 
     /* CONTACT */
     #contact { background: var(--craie); }
@@ -218,8 +218,8 @@
       .sched-tbl tr:first-child { border-top: none; }
       .sched-tbl td { padding: .25rem 0; }
       .val-trio { grid-template-columns: 1fr; gap: 0; }
-      .val-card { padding: 1.5rem 0; border-top: 1px solid rgba(0,0,0,.08); }
-      .val-card:first-child { border-top: 2px solid rgba(0,0,0,.12); }
+      .val-card { padding: 1.5rem 0; border-top: 1px solid rgba(29,47,20,.1); }
+      .val-card:first-child { border-top: 2px solid rgba(29,47,20,.15); }
       .coach-grid { grid-template-columns: 1fr; gap: 2rem; }
       .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .frow { grid-template-columns: 1fr; }
