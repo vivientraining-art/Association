@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fitness Sud Essonne — Association sportive</title>
+  <meta name="description" content="Association sportive Fitness Sud Essonne — cours collectifs, musculation, cardio et suivi personnalisé dans l’Essonne.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --forest: #1F3A2D;
+      --pine:   #2F5240;
+      --sand:   #F2EDE2;
+      --linen:  #FBF8F1;
+      --ink:    #22302A;
+      --muted:  #6E7B73;
+      --terra:  #C26B4A;
+      --line:   #DDD4C3;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Source Sans 3', system-ui, sans-serif;
+      background: var(--sand);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--forest);
+      color: #F4F0E6;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0 1.2rem;
+      height: 56px;
+    }
+    .nav-brand {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: #F4F0E6;
+      text-decoration: none;
+      white-space: nowrap;
+      line-height: 1.2;
+    }
+    .nav-brand small {
+      display: block;
+      font-family: 'Source Sans 3', sans-serif;
+      font-weight: 400;
+      font-size: .68rem;
+      color: #C9D4CC;
+      letter-spacing: .05em;
+    }
+    .nav-spacer { flex: 1; }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: .1rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: #C9D4CC;
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 600;
+      padding: .5rem .7rem;
+      border-radius: 6px;
+      transition: color .15s, background .15s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,.1); }
+    .nav-cta {
+      background: var(--terra) !important;
+      color: #fff !important;
+      border-radius: 8px;
+      padding: .45rem .85rem !important;
+    }
+    .nav-cta:hover { filter: brightness(1.1); }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; color: #F4F0E6; font-size: 1.4rem; padding: .4rem; }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--forest);
+      color: #F4F0E6;
+      padding: 6rem 1.2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(47,82,64,.9) 0%, transparent 70%);
+    }
+    .hero-content { position: relative; max-width: 720px; margin: 0 auto; }
+    .hero-tag {
+      display: inline-block;
+      background: rgba(194,107,74,.25);
+      color: #F4D0C0;
+      border: 1px solid rgba(194,107,74,.4);
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .3rem .9rem;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      line-height: 1.15;
+      margin-bottom: 1.1rem;
+      color: #F4F0E6;
+    }
+    .hero h1 em { font-style: italic; color: #C9D4CC; }
+    .hero p {
+      font-size: 1.1rem;
+      color: #C9D4CC;
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+    }
+    .hero-btns { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font: inherit;
+      font-weight: 700;
+      font-size: .95rem;
+      border: none;
+      border-radius: 10px;
+      padding: .75rem 1.4rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: filter .15s, transform .1s;
+    }
+    .btn:hover { filter: brightness(1.08); transform: translateY(-1px); }
+    .btn-primary { background: var(--terra); color: #fff; }
+    .btn-outline { background: rgba(255,255,255,.1); color: #F4F0E6; border: 1.5px solid rgba(255,255,255,.35); }
+    .btn-light { background: var(--linen); color: var(--ink); border: 1.5px solid var(--line); }
+
+    /* ── Sections ── */
+    section { padding: 4.5rem 1.2rem; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-label {
+      display: inline-block;
+      background: rgba(31,58,45,.08);
+      color: var(--pine);
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .28rem .85rem;
+      margin-bottom: .9rem;
+      border: 1px solid rgba(31,58,45,.15);
+    }
+    h2 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      line-height: 1.25;
+      margin-bottom: .6rem;
+      color: var(--ink);
+    }
+    .section-lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── About ── */
+    #about { background: var(--linen); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.8rem;
+    }
+    .stat-card {
+      background: var(--sand);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1.1rem;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--forest);
+      line-height: 1;
+    }
+    .stat-lbl { font-size: .82rem; color: var(--muted); margin-top: .2rem; }
+    .about-text p { color: var(--muted); line-height: 1.75; margin-bottom: 1rem; }
+    .value-list { list-style: none; margin-top: 1.2rem; }
+    .value-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      padding: .5rem 0;
+      border-top: 1px solid var(--line);
+      font-size: .95rem;
+      color: var(--ink);
+    }
+    .value-list li:first-child { border-top: none; }
+    .value-list .icon { color: var(--terra); flex-shrink: 0; margin-top: .15rem; }
+
+    /* ── Activities ── */
+    #activites { background: var(--sand); }
+    .activities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+    .activity-card {
+      background: var(--linen);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 1.4rem;
+      box-shadow: 0 2px 8px rgba(34,48,42,.05);
+      transition: box-shadow .2s, transform .15s;
+    }
+    .activity-card:hover { box-shadow: 0 4px 18px rgba(34,48,42,.1); transform: translateY(-2px); }
+    .activity-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .activity-card h3 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.05rem;
+      margin-bottom: .5rem;
+    }
+    .activity-card p { font-size: .9rem; color: var(--muted); line-height: 1.6; }
+    .activity-tag {
+      display: inline-block;
+      margin-top: .8rem;
+      background: rgba(31,58,45,.08);
+      color: var(--pine);
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      padding: .2rem .65rem;
+      text-transform: uppercase;
+    }
+
+    /* ── Schedule ── */
+    #horaires { background: var(--forest); color: #F4F0E6; }
+    #horaires .section-label { background: rgba(255,255,255,.1); color: #C9D4CC; border-color: rgba(255,255,255,.2); }
+    #horaires h2 { color: #F4F0E6; }
+    #horaires .section-lead { color: #C9D4CC; }
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .day-card {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      padding: 1.1rem;
+    }
+    .day-name {
+      font-weight: 700;
+      font-size: .88rem;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: #C9D4CC;
+      margin-bottom: .7rem;
+    }
+    .session-item {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding: .45rem 0;
+      font-size: .88rem;
+    }
+    .session-item:first-of-type { border-top: none; }
+    .session-time { color: var(--terra); font-weight: 700; font-size: .8rem; }
+    .session-name { color: #F4F0E6; }
+    .session-note { color: #9DB5A8; font-size: .78rem; }
+    .schedule-note {
+      margin-top: 1.5rem;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px;
+      padding: .9rem 1.1rem;
+      font-size: .88rem;
+      color: #C9D4CC;
+      line-height: 1.6;
+    }
+
+    /* ── Pricing ── */
+    #tarifs { background: var(--linen); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
+    .pricing-card {
+      background: var(--sand);
+      border: 1.5px solid var(--line);
+      border-radius: 16px;
+      padding: 1.6rem 1.4rem;
+      position: relative;
+    }
+    .pricing-card.featured {
+      background: var(--forest);
+      border-color: var(--forest);
+      color: #F4F0E6;
+      box-shadow: 0 8px 30px rgba(31,58,45,.25);
+    }
+    .pricing-badge {
+      position: absolute;
+      top: -.7rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--terra);
+      color: #fff;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .25rem .85rem;
+      white-space: nowrap;
+    }
+    .pricing-name {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.05rem;
+      margin-bottom: .3rem;
+    }
+    .pricing-card.featured .pricing-name { color: #F4F0E6; }
+    .pricing-desc { font-size: .85rem; color: var(--muted); margin-bottom: 1rem; }
+    .pricing-card.featured .pricing-desc { color: #C9D4CC; }
+    .pricing-price {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--forest);
+      line-height: 1;
+      margin-bottom: .25rem;
+    }
+    .pricing-card.featured .pricing-price { color: #F4F0E6; }
+    .pricing-period { font-size: .82rem; color: var(--muted); margin-bottom: 1.2rem; }
+    .pricing-card.featured .pricing-period { color: #C9D4CC; }
+    .pricing-features { list-style: none; }
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: .5rem;
+      font-size: .88rem;
+      color: var(--ink);
+      padding: .35rem 0;
+      border-top: 1px solid var(--line);
+    }
+    .pricing-card.featured .pricing-features li { color: #C9D4CC; border-color: rgba(255,255,255,.12); }
+    .pricing-features li:first-child { border-top: none; }
+    .pricing-features .check { color: #5F9560; flex-shrink: 0; }
+    .pricing-card.featured .pricing-features .check { color: #8FD49A; }
+    .pricing-btn { display: block; text-align: center; margin-top: 1.4rem; width: 100%; }
+
+    /* ── Team ── */
+    #equipe { background: var(--sand); }
+    .team-card {
+      background: var(--linen);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 2rem 1.6rem;
+      max-width: 560px;
+      display: flex;
+      gap: 1.6rem;
+      align-items: flex-start;
+    }
+    .team-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.8rem;
+      color: #F4F0E6;
+      flex-shrink: 0;
+    }
+    .team-info h3 {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      font-size: 1.15rem;
+      margin-bottom: .2rem;
+    }
+    .team-role { font-size: .82rem; color: var(--terra); font-weight: 700; letter-spacing: .05em; text-transform: uppercase; margin-bottom: .7rem; }
+    .team-bio { font-size: .9rem; color: var(--muted); line-height: 1.65; }
+    .team-certifs { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+    .certif-tag {
+      background: rgba(31,58,45,.08);
+      color: var(--pine);
+      border: 1px solid rgba(31,58,45,.15);
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: .2rem .65rem;
+      letter-spacing: .04em;
+    }
+
+    /* ── Contact ── */
+    #contact { background: var(--linen); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .contact-info-list { list-style: none; margin-top: .5rem; }
+    .contact-info-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: .8rem;
+      padding: .8rem 0;
+      border-top: 1px solid var(--line);
+      font-size: .95rem;
+    }
+    .contact-info-list li:first-child { border-top: none; padding-top: 0; }
+    .contact-icon { color: var(--terra); flex-shrink: 0; margin-top: .15rem; }
+    .contact-label { font-weight: 600; display: block; margin-bottom: .1rem; }
+    .contact-val { color: var(--muted); font-size: .9rem; }
+    .contact-val a { color: var(--terra); text-decoration: none; }
+    .contact-val a:hover { text-decoration: underline; }
+    .contact-form { display: flex; flex-direction: column; gap: .85rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; }
+    .field { display: flex; flex-direction: column; gap: .3rem; }
+    label { font-size: .82rem; font-weight: 600; color: var(--muted); }
+    input, textarea, select {
+      font: inherit;
+      color: var(--ink);
+      background: #fff;
+      border: 1.5px solid var(--line);
+      border-radius: 9px;
+      padding: .65rem .75rem;
+      font-size: .95rem;
+      transition: border-color .15s;
+      resize: vertical;
+    }
+    input:focus, textarea:focus, select:focus { outline: none; border-color: var(--pine); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--forest);
+      color: #C9D4CC;
+      padding: 2.5rem 1.2rem;
+    }
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .footer-brand { font-family: 'Libre Baskerville', Georgia, serif; color: #F4F0E6; font-size: .95rem; }
+    .footer-brand small { display: block; font-family: 'Source Sans 3', sans-serif; font-size: .75rem; color: #9DB5A8; margin-top: .15rem; }
+    .footer-links { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+    .footer-links a { color: #9DB5A8; text-decoration: none; font-size: .85rem; transition: color .15s; }
+    .footer-links a:hover { color: #F4F0E6; }
+    .footer-copy { font-size: .8rem; color: #6E7B73; width: 100%; text-align: center; margin-top: .5rem; }
+
+    /* ── Responsive ── */
+    @media (max-width: 760px) {
+      .nav-links { display: none; flex-direction: column; position: absolute; top: 56px; left: 0; right: 0; background: var(--forest); padding: .8rem 1rem 1rem; gap: .2rem; border-top: 1px solid rgba(255,255,255,.1); }
+      .nav-links.open { display: flex; }
+      .nav-toggle { display: block; }
+      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .team-card { flex-direction: column; gap: 1rem; }
+      .schedule-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .schedule-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="top">
+  <a class="nav-brand" href="#top">
+    Fitness Sud Essonne
+    <small>Association sportive</small>
+  </a>
+  <div class="nav-spacer"></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">L’association</a></li>
+    <li><a href="#activites">Activités</a></li>
+    <li><a href="#horaires">Horaires</a></li>
+    <li><a href="#tarifs">Tarifs</a></li>
+    <li><a href="#equipe">Équipe</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="espace-adherent.html" class="nav-cta">Espace adhérent</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <span class="hero-tag">Association sportive · Essonne</span>
+    <h1>Bougez, progressez,<br><em>prenez soin de vous</em></h1>
+    <p>Cours collectifs, musculation et suivi personnalisé dans une association à taille humaine au cœur du sud de l’Essonne.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-primary">Nous rejoindre</a>
+      <a href="#activites" class="btn btn-outline">Découvrir les activités</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner about-grid">
+    <div>
+      <span class="section-label">L’association</span>
+      <h2>Une structure locale,<br>un esprit de groupe</h2>
+      <div class="about-stats">
+        <div class="stat-card"><div class="stat-num">+150</div><div class="stat-lbl">Adhérents</div></div>
+        <div class="stat-card"><div class="stat-num">8</div><div class="stat-lbl">Activités</div></div>
+        <div class="stat-card"><div class="stat-num">5</div><div class="stat-lbl">Créneaux / semaine</div></div>
+        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-lbl">Ans d’existence</div></div>
+      </div>
+    </div>
+    <div class="about-text">
+      <p>Fitness Sud Essonne est une association loi 1901 fondée pour rendre le sport accessible à tous. Nous proposons des cours adaptés à tous les niveaux, dans une ambiance conviviale et bienveillante.</p>
+      <p>Notre encadrement diplômé vous accompagne à votre rythme, que vous débutiez ou cherchiez à aller plus loin dans votre pratique sportive.</p>
+      <ul class="value-list">
+        <li><span class="icon">❖</span> Encadrement diplômé d’État</li>
+        <li><span class="icon">❖</span> Cours adaptés à tous les niveaux</li>
+        <li><span class="icon">❖</span> Suivi personnalisé de votre progression</li>
+        <li><span class="icon">❖</span> Ambiance conviviale et bienveillante</li>
+        <li><span class="icon">❖</span> Cotisations accessibles</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITES -->
+<section id="activites">
+  <div class="section-inner">
+    <span class="section-label">Activités</span>
+    <h2>Ce que nous proposons</h2>
+    <p class="section-lead">Des disciplines variées pour répondre à tous vos objectifs : perte de poids, renforcement musculaire, souplesse ou bien-être.</p>
+    <div class="activities-grid">
+      <div class="activity-card">
+        <div class="activity-icon">💪</div>
+        <h3>Musculation</h3>
+        <p>Renforcement musculaire progressif avec suivi des charges et de la technique. Idéal pour gagner en force et en posture.</p>
+        <span class="activity-tag">Tous niveaux</span>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🏃</div>
+        <h3>Cardio &amp; Endurance</h3>
+        <p>Travail cardiovasculaire adapté à votre fréquence cardiaque. Améliorez votre souffle et votre condition physique générale.</p>
+        <span class="activity-tag">Tous niveaux</span>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🤸</div>
+        <h3>Fitness collectif</h3>
+        <p>Cours dynamiques en groupe : step, aérobic, HIIT… Une heure pour se dépenser et se motiver ensemble.</p>
+        <span class="activity-tag">Collectif</span>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🧘</div>
+        <h3>Stretching &amp; Relaxation</h3>
+        <p>Séances d’étirements et de relaxation pour améliorer votre souplesse et récupérer après l’effort.</p>
+        <span class="activity-tag">Récupération</span>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">⚖️</div>
+        <h3>Remise en forme</h3>
+        <p>Programme personnalisé pour retrouver la forme : bilan initial, objectifs ciblés et progression sur mesure.</p>
+        <span class="activity-tag">Suivi individuel</span>
+      </div>
+      <div class="activity-card">
+        <div class="activity-icon">🧠</div>
+        <h3>Forme &amp; Bien-être</h3>
+        <p>Une approche globale alliant exercice physique, respiration et équilibre corps-esprit pour une santé durable.</p>
+        <span class="activity-tag">Bien-être</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HORAIRES -->
+<section id="horaires">
+  <div class="section-inner">
+    <span class="section-label">Planning</span>
+    <h2>Horaires des cours</h2>
+    <p class="section-lead">Des créneaux en semaine et le weekend pour s’adapter à votre emploi du temps.</p>
+    <div class="schedule-grid">
+      <div class="day-card">
+        <div class="day-name">Lundi</div>
+        <div class="session-item">
+          <div class="session-time">09:30 – 10:30</div>
+          <div class="session-name">Fitness collectif</div>
+          <div class="session-note">Tous niveaux</div>
+        </div>
+        <div class="session-item">
+          <div class="session-time">18:30 – 19:30</div>
+          <div class="session-name">Musculation</div>
+          <div class="session-note">Suivi individuel</div>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Mardi</div>
+        <div class="session-item">
+          <div class="session-time">10:00 – 11:00</div>
+          <div class="session-name">Stretching</div>
+          <div class="session-note">Tous niveaux</div>
+        </div>
+        <div class="session-item">
+          <div class="session-time">19:00 – 20:00</div>
+          <div class="session-name">Cardio &amp; Endurance</div>
+          <div class="session-note">Intermédiaire</div>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Mercredi</div>
+        <div class="session-item">
+          <div class="session-time">09:30 – 10:30</div>
+          <div class="session-name">Remise en forme</div>
+          <div class="session-note">Débutants</div>
+        </div>
+        <div class="session-item">
+          <div class="session-time">17:30 – 18:30</div>
+          <div class="session-name">Fitness collectif</div>
+          <div class="session-note">Tous niveaux</div>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Jeudi</div>
+        <div class="session-item">
+          <div class="session-time">18:30 – 19:30</div>
+          <div class="session-name">Musculation</div>
+          <div class="session-note">Tous niveaux</div>
+        </div>
+        <div class="session-item">
+          <div class="session-time">19:30 – 20:30</div>
+          <div class="session-name">Cardio HIIT</div>
+          <div class="session-note">Intermédiaire</div>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Vendredi</div>
+        <div class="session-item">
+          <div class="session-time">09:30 – 10:30</div>
+          <div class="session-name">Fitness collectif</div>
+          <div class="session-note">Tous niveaux</div>
+        </div>
+        <div class="session-item">
+          <div class="session-time">18:00 – 19:00</div>
+          <div class="session-name">Forme &amp; Bien-être</div>
+          <div class="session-note">Tous niveaux</div>
+        </div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">Samedi</div>
+        <div class="session-item">
+          <div class="session-time">09:00 – 10:30</div>
+          <div class="session-name">Séance libre</div>
+          <div class="session-note">Encadré</div>
+        </div>
+      </div>
+    </div>
+    <div class="schedule-note">
+      📅 Le planning peut évoluer selon les périodes scolaires. Consultez notre page contact ou l’espace adhérent pour les dernières mises à jour.
+    </div>
+  </div>
+</section>
+
+<!-- TARIFS -->
+<section id="tarifs">
+  <div class="section-inner">
+    <span class="section-label">Cotisations</span>
+    <h2>Des tarifs accessibles à tous</h2>
+    <p class="section-lead">Année sportive de septembre à juin. Réductions disponibles pour les jeunes, étudiants et familles.</p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-name">Découverte</div>
+        <div class="pricing-desc">Séance à l’essai, sans engagement</div>
+        <div class="pricing-price">Gratuit</div>
+        <div class="pricing-period">1re séance offerte</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Accès à un cours au choix</li>
+          <li><span class="check">✓</span> Bilan avec l’encadrant</li>
+          <li><span class="check">✓</span> Sans inscription requise</li>
+        </ul>
+        <a href="#contact" class="btn btn-light pricing-btn">Réserver</a>
+      </div>
+      <div class="pricing-card featured">
+        <span class="pricing-badge">Le plus populaire</span>
+        <div class="pricing-name">Adhésion annuelle</div>
+        <div class="pricing-desc">Accès illimité à toutes les activités</div>
+        <div class="pricing-price">180 €</div>
+        <div class="pricing-period">par an · sept. à juin</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Tous les créneaux inclus</li>
+          <li><span class="check">✓</span> Suivi personnalisé</li>
+          <li><span class="check">✓</span> Espace adhérent en ligne</li>
+          <li><span class="check">✓</span> Bilan de forme inclus</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary pricing-btn">S’inscrire</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-name">Tarif réduit</div>
+        <div class="pricing-desc">Jeunes (–26 ans), étudiants, demandeurs d’emploi</div>
+        <div class="pricing-price">120 €</div>
+        <div class="pricing-period">par an · sur justificatif</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Mêmes avantages que l’adhésion</li>
+          <li><span class="check">✓</span> Justificatif à fournir</li>
+          <li><span class="check">✓</span> Paiement en 3× possible</li>
+        </ul>
+        <a href="#contact" class="btn btn-light pricing-btn">S’inscrire</a>
+      </div>
+    </div>
+    <p style="margin-top:1.4rem;font-size:.88rem;color:var(--muted);text-align:center;">
+      💡 Chèque, virement ou espèces acceptés · Chèques vacances et coupon sport bienvenus · Contactez-nous pour les formules famille.
+    </p>
+  </div>
+</section>
+
+<!-- EQUIPE -->
+<section id="equipe">
+  <div class="section-inner">
+    <span class="section-label">Équipe</span>
+    <h2>Votre encadrant</h2>
+    <p class="section-lead">Un professionnel diplômé à votre service, passionné par le sport et le bien-être.</p>
+    <div class="team-card">
+      <div class="team-avatar">VS</div>
+      <div class="team-info">
+        <h3>Vivien Strudel</h3>
+        <div class="team-role">Éducateur sportif · Fondateur</div>
+        <p class="team-bio">Passionné de sport et de performance, Vivien accompagne les adhérents avec rigueur et bienveillance depuis plus de 10 ans. Sa pédagogie s’adapte à chaque profil pour vous aider à atteindre vos objectifs en toute sécurité.</p>
+        <div class="team-certifs">
+          <span class="certif-tag">BPJEPS Activités Physiques</span>
+          <span class="certif-tag">Musculation &amp; Fitness</span>
+          <span class="certif-tag">Suivi personnalisé</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner contact-grid">
+    <div>
+      <span class="section-label">Nous rejoindre</span>
+      <h2>Contact &amp; Inscription</h2>
+      <p class="section-lead">Une question ? Envie de vous inscrire ? Contactez-nous, nous vous répondrons rapidement.</p>
+      <ul class="contact-info-list">
+        <li>
+          <span class="contact-icon">📍</span>
+          <div>
+            <span class="contact-label">Adresse</span>
+            <span class="contact-val">À compléter<br>Essonne (91)</span>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon">📞</span>
+          <div>
+            <span class="contact-label">Téléphone</span>
+            <span class="contact-val"><a href="tel:+33600000000">À compléter</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon">✉️</span>
+          <div>
+            <span class="contact-label">E-mail</span>
+            <span class="contact-val"><a href="mailto:contact@fitnesssudessonne.fr">contact@fitnesssudessonne.fr</a></span>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon">🕐</span>
+          <div>
+            <span class="contact-label">Accueil</span>
+            <span class="contact-val">Lun – Sam selon planning<br>Réponse e-mail sous 48 h</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="cPrenom">Prénom</label>
+            <input type="text" id="cPrenom" placeholder="Marie" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="cNom">Nom</label>
+            <input type="text" id="cNom" placeholder="Dupont" autocomplete="family-name" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cEmail">E-mail</label>
+          <input type="email" id="cEmail" placeholder="marie@email.fr" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="cSujet">Sujet</label>
+          <select id="cSujet">
+            <option value="">-- Choisir --</option>
+            <option>Inscription à l’association</option>
+            <option>Renseignements tarifs</option>
+            <option>Planning &amp; horaires</option>
+            <option>Séance découverte</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cMessage">Message</label>
+          <textarea id="cMessage" rows="4" placeholder="Votre message…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="justify-content:center;">Envoyer le message</button>
+        <p id="formMsg" style="font-size:.85rem;color:var(--pine);display:none;margin-top:.3rem"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      Fitness Sud Essonne
+      <small>Association loi 1901 · Essonne (91)</small>
+    </div>
+    <nav class="footer-links">
+      <a href="#about">L’association</a>
+      <a href="#activites">Activités</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#contact">Contact</a>
+      <a href="espace-adherent.html">Espace adhérent</a>
+    </nav>
+    <div class="footer-copy">© 2025 Fitness Sud Essonne · Tous droits réservés</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const msg = document.getElementById('formMsg');
+    msg.style.display = 'block';
+    msg.textContent = '✔ Message envoyé ! Nous vous répondrons dans les 48 h.';
+    e.target.reset();
+  });
+</script>
+</body>
+</html>
