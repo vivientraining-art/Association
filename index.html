@@ -17,14 +17,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --terre:   #1D2F14;   /* vert pin profond — remplace le noir */
+      --terre:   #1D2F14;   /* vert pin profond */
       --humus:   #283E1A;   /* sous-bois pin */
       --ocre:    #C4922A;   /* or du blé */
       --craie:   #EDE8DD;   /* craie calcaire */
-      --foret:   #3D6030;   /* canopée de pin, plus clair */
-      --mousse:  #5E7A4A;   /* mousse, plus vive */
+      --foret:   #3D6030;   /* canopée de pin */
+      --mousse:  #5E7A4A;   /* mousse */
       --pierre:  #7A6E60;   /* pierre chaude */
-      --sable:   #F0E8D6;   /* sable régional, plus chaud */
+      --sable:   #F0E8D6;   /* sable du Gâtinais */
       --rouille: #9E3F1C;   /* rouille */
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -43,11 +43,39 @@
     .nav-cta { background: var(--ocre) !important; color: var(--terre) !important; border-radius: 8px; }
     .nav-toggle { display: none; background: none; border: none; color: var(--craie); font-size: 1.4rem; cursor: pointer; padding: .4rem; }
 
-    /* HERO */
-    .hero { min-height: 100vh; background: var(--terre); display: flex; flex-direction: column; justify-content: center; padding: 8rem 2.5rem 0; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E"); opacity: .06; pointer-events: none; }
-    .hero::after { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, transparent, var(--ocre) 20%, var(--ocre) 80%, transparent); }
-    .hero-inner { position: relative; max-width: 1040px; margin: 0 auto; width: 100%; }
+    /* HERO — flex column, pas d'overflow:hidden, padding sur hero-inner */
+    .hero {
+      min-height: 100vh;
+      background: var(--terre);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: .06; pointer-events: none; z-index: 0;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+      background: linear-gradient(to bottom, transparent, var(--ocre) 20%, var(--ocre) 80%, transparent);
+      z-index: 1;
+    }
+    /* hero-inner prend tout l'espace disponible et centre son contenu */
+    .hero-inner {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      max-width: 1040px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 8rem 2.5rem 4rem;
+    }
     .hero-eyebrow { display: block; font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ocre); margin-bottom: 1.8rem; }
     .hero h1 { font-family: 'Libre Baskerville', Georgia, serif; font-size: clamp(3rem, 7vw, 5.8rem); line-height: 1.04; color: var(--craie); margin-bottom: 1.6rem; max-width: 640px; }
     .hero h1 em { color: var(--ocre); font-style: italic; }
@@ -57,14 +85,21 @@
     .btn-ocre:hover { filter: brightness(1.08); }
     .btn-ghost { display: inline-flex; font-family: inherit; font-weight: 600; font-size: .88rem; color: rgba(237,232,221,.45); text-decoration: none; transition: color .15s; }
     .btn-ghost:hover { color: var(--craie); }
-    .hero-bar { position: relative; margin-top: 4rem; margin-left: -2.5rem; margin-right: -2.5rem; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid rgba(237,232,221,.07); }
+    /* hero-bar : pleine largeur, pas de marges négatives */
+    .hero-bar {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(237,232,221,.07);
+    }
     .hbi { padding: 1.4rem 2.5rem; border-right: 1px solid rgba(237,232,221,.07); }
     .hbi:last-child { border-right: none; }
     .hbi-num { display: block; font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--craie); line-height: 1; }
     .hbi-lbl { display: block; font-size: .65rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: rgba(237,232,221,.3); margin-top: .3rem; }
 
-    /* SECTIONS */
-    .section { padding: 6rem 2.5rem; }
+    /* SECTIONS — scroll-margin-top compense la nav fixe */
+    .section { padding: 6rem 2.5rem; scroll-margin-top: 58px; }
     .inner { max-width: 1040px; margin: 0 auto; }
     .sec-label { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ocre); margin-bottom: .7rem; }
     .sec-label.dim { color: rgba(237,232,221,.55); }
@@ -206,8 +241,9 @@
       .nav-links { display: none; flex-direction: column; position: absolute; top: 58px; left: 0; right: 0; background: var(--terre); padding: .8rem 1.5rem 1.2rem; gap: .2rem; border-top: 1px solid rgba(237,232,221,.07); }
       .nav-links.open { display: flex; }
       .nav-toggle { display: block; }
-      .hero { padding: 6rem 1.4rem 0; }
-      .hero-bar { margin-left: -1.4rem; margin-right: -1.4rem; grid-template-columns: 1fr 1fr; }
+      .hero-inner { padding: 5rem 1.4rem 3rem; }
+      .hero-bar { grid-template-columns: 1fr 1fr; }
+      .hbi { padding: 1.1rem 1.4rem; }
       .hbi:nth-child(n+3) { border-top: 1px solid rgba(237,232,221,.07); }
       .section { padding: 4rem 1.4rem; }
       .prog-grid { grid-template-columns: 1fr; gap: 2.2rem; }
