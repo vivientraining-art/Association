@@ -17,15 +17,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --terre:   #1D2F14;   /* vert pin profond */
-      --humus:   #283E1A;   /* sous-bois pin */
-      --ocre:    #C4922A;   /* or du blé */
-      --craie:   #EDE8DD;   /* craie calcaire */
-      --foret:   #3D6030;   /* canopée de pin */
-      --mousse:  #5E7A4A;   /* mousse */
-      --pierre:  #7A6E60;   /* pierre chaude */
-      --sable:   #F0E8D6;   /* sable du Gâtinais */
-      --rouille: #9E3F1C;   /* rouille */
+      --terre:   #1D2F14;
+      --humus:   #283E1A;
+      --ocre:    #C4922A;
+      --craie:   #EDE8DD;
+      --foret:   #3D6030;
+      --mousse:  #5E7A4A;
+      --pierre:  #7A6E60;
+      --sable:   #F0E8D6;
+      --rouille: #9E3F1C;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
@@ -43,7 +43,7 @@
     .nav-cta { background: var(--ocre) !important; color: var(--terre) !important; border-radius: 8px; }
     .nav-toggle { display: none; background: none; border: none; color: var(--craie); font-size: 1.4rem; cursor: pointer; padding: .4rem; }
 
-    /* HERO — flex column, pas d'overflow:hidden, padding sur hero-inner */
+    /* HERO */
     .hero {
       min-height: 100vh;
       background: var(--terre);
@@ -63,7 +63,6 @@
       background: linear-gradient(to bottom, transparent, var(--ocre) 20%, var(--ocre) 80%, transparent);
       z-index: 1;
     }
-    /* hero-inner prend tout l'espace disponible et centre son contenu */
     .hero-inner {
       flex: 1;
       display: flex;
@@ -85,7 +84,6 @@
     .btn-ocre:hover { filter: brightness(1.08); }
     .btn-ghost { display: inline-flex; font-family: inherit; font-weight: 600; font-size: .88rem; color: rgba(237,232,221,.45); text-decoration: none; transition: color .15s; }
     .btn-ghost:hover { color: var(--craie); }
-    /* hero-bar : pleine largeur, pas de marges négatives */
     .hero-bar {
       position: relative;
       z-index: 2;
@@ -98,7 +96,7 @@
     .hbi-num { display: block; font-family: 'Libre Baskerville', serif; font-size: 2rem; font-weight: 700; color: var(--craie); line-height: 1; }
     .hbi-lbl { display: block; font-size: .65rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: rgba(237,232,221,.3); margin-top: .3rem; }
 
-    /* SECTIONS — scroll-margin-top compense la nav fixe */
+    /* SECTIONS */
     .section { padding: 6rem 2.5rem; scroll-margin-top: 58px; }
     .inner { max-width: 1040px; margin: 0 auto; }
     .sec-label { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--ocre); margin-bottom: .7rem; }
@@ -284,7 +282,7 @@
   <div class="hero-inner">
     <span class="hero-eyebrow">Préparation physique dans le Gâtinais</span>
     <h1>Force.<br><em>Endurance.</em><br>Durée.</h1>
-    <p class="hero-sub">Squat, soulevé de terre, développé couché, HIIT, EMOM : des séances encadrées par un préparateur physique diplômé d'État dans trois salles du sud de l'Essonne.</p>
+    <p class="hero-sub">Du squat au soulevé de terre, du développé couché au HIIT et à l’EMOM : chaque séance est encadrée par un préparateur physique diplômé d’État, dans trois salles du sud de l’Essonne.</p>
     <div class="hero-actions">
       <a href="#contact" class="btn-ocre">Nous rejoindre</a>
       <a href="#programme" class="btn-ghost">Voir le programme ↓</a>
@@ -294,25 +292,25 @@
     <div class="hbi"><span class="hbi-num">3</span><span class="hbi-lbl">Séances par semaine</span></div>
     <div class="hbi"><span class="hbi-num">12</span><span class="hbi-lbl">Participants max</span></div>
     <div class="hbi"><span class="hbi-num">1h</span><span class="hbi-lbl">Par séance</span></div>
-    <div class="hbi"><span class="hbi-num">7 ans</span><span class="hbi-lbl">D'expérience</span></div>
+    <div class="hbi"><span class="hbi-num">7 ans</span><span class="hbi-lbl">D’expérience</span></div>
   </div>
 </section>
 
 <section class="section" id="programme">
   <div class="inner">
-    <span class="sec-label">L'association</span>
+    <span class="sec-label">L’association</span>
     <div class="prog-grid">
       <div class="prog-pull">
-        Un programme de préparation physique dans le Gâtinais, adapté à chacun, construit pour durer.
+        Ce programme de préparation physique s’adapte au niveau de chacun et s’inscrit dans la durée, au cœur du Gâtinais.
       </div>
       <div>
-        <p class="prog-body" style="font-size:.93rem;color:var(--pierre);line-height:1.8;margin-bottom:.9rem">Fitness Sud Essonne propose des séances de force et de conditionnement dans trois communes du sud de l'Essonne. Chaque séance combine des mouvements de force fondamentaux et des formats cardio structurés.</p>
-        <p style="font-size:.93rem;color:var(--pierre);line-height:1.8">L'idée est de progresser régulièrement, à son niveau, en travaillant à la fois la force et l'endurance. Une condition physique qui s'entretient dans la durée.</p>
+        <p class="prog-body" style="font-size:.93rem;color:var(--pierre);line-height:1.8;margin-bottom:.9rem">Fitness Sud Essonne propose des séances de force et de conditionnement dans trois communes du sud de l’Essonne. Chaque séance combine des mouvements de force fondamentaux et des formats cardio structurés.</p>
+        <p style="font-size:.93rem;color:var(--pierre);line-height:1.8">L’idée est de progresser régulièrement, à son niveau, en travaillant à la fois la force et l’endurance pour construire une condition physique qui dure.</p>
         <ul class="prog-list">
-          <li><span class="prog-dot"></span>Mouvements polyarticulaires : squat, soulevé de terre, développé couché, tirage</li>
-          <li><span class="prog-dot"></span>Formats cardio structurés : HIIT, LIT, EMOM, AMRAP</li>
-          <li><span class="prog-dot"></span>Groupes limités à 12 participants, chacun à son niveau</li>
-          <li><span class="prog-dot"></span>Encadrement diplômé d'État (BPJEPS, DEJEPS, Licence STAPS)</li>
+          <li><span class="prog-dot"></span>Les séances s’appuient sur des mouvements polyarticulaires : squat, soulevé de terre, développé couché, tirage</li>
+          <li><span class="prog-dot"></span>Le cardio s’organise autour de formats structurés : HIIT, LIT, EMOM, AMRAP</li>
+          <li><span class="prog-dot"></span>Chaque créneau accueille 12 participants au maximum, chacun à son niveau</li>
+          <li><span class="prog-dot"></span>L’encadrement est assuré par un préparateur diplômé d’État : BPJEPS, DEJEPS, Licence STAPS</li>
         </ul>
       </div>
     </div>
@@ -324,16 +322,16 @@
     <div class="disc-hdr">
       <div>
         <span class="sec-label dim">Les séances</span>
-        <h2 class="ttl" style="color:var(--craie)">Ce qu'on fait</h2>
+        <h2 class="ttl" style="color:var(--craie)">Ce qu’on fait</h2>
       </div>
-      <p class="disc-lead">La charge et l'intensité s'adaptent au niveau de chacun. Le contenu est le même pour tout le groupe.</p>
+      <p class="disc-lead">La charge et l’intensité s’adaptent au niveau de chacun. Le contenu est le même pour tout le groupe.</p>
     </div>
     <div class="disc-list">
       <div class="disc-item">
         <div class="disc-num">01</div>
         <div class="disc-body">
           <h3>Force fondamentale</h3>
-          <p>Les mouvements polyarticulaires qui construisent une force durable et utile au quotidien. Travail technique avec progression de charge, accessible à tous les niveaux.</p>
+          <p>Ces mouvements polyarticulaires construisent une force durable et utile au quotidien. Le travail est technique, avec une progression de charge accessible à tous les niveaux.</p>
           <div class="tags"><span class="tag">Squat</span><span class="tag">Soulevé de terre</span><span class="tag">Développé couché</span><span class="tag">Tirage barre</span><span class="tag">Pompes</span></div>
         </div>
       </div>
@@ -341,7 +339,7 @@
         <div class="disc-num">02</div>
         <div class="disc-body">
           <h3>Conditionnement métabolique</h3>
-          <p>Des formats d'intensité variée pour développer l'endurance, la puissance et la récupération.</p>
+          <p>Ces formats d’intensité variée développent l’endurance, la puissance et la capacité de récupération.</p>
           <div class="tags"><span class="tag">HIIT</span><span class="tag">LIT</span><span class="tag">EMOM</span><span class="tag">AMRAP</span></div>
         </div>
       </div>
@@ -349,7 +347,7 @@
         <div class="disc-num">03</div>
         <div class="disc-body">
           <h3>Performance adaptée</h3>
-          <p>Pas de comparaison entre participants. Chacun part de son niveau et progresse à son rythme, séance après séance.</p>
+          <p>Les participants ne se comparent pas entre eux. Chacun part de son niveau et progresse à son rythme, séance après séance.</p>
           <div class="tags"><span class="tag">Tous niveaux</span><span class="tag">Progression individuelle</span><span class="tag">Longévité</span></div>
         </div>
       </div>
@@ -389,7 +387,7 @@
         </tr>
       </tbody>
     </table>
-    <p class="sched-note">12 participants max par créneau. Le planning peut évoluer en cours d'année, contactez-nous pour confirmer.</p>
+    <p class="sched-note">Chaque créneau accueille 12 participants au maximum. Le planning peut évoluer en cours d’année : contactez-nous pour confirmer.</p>
   </div>
 </section>
 
@@ -397,11 +395,11 @@
   <div class="inner">
     <span class="sec-label">Cotisations</span>
     <h2 class="ttl">Tarifs</h2>
-    <p style="color:var(--pierre);font-size:.93rem;margin-bottom:0">L'adhésion est par salle. La première séance est offerte pour essayer.</p>
+    <p style="color:var(--pierre);font-size:.93rem;margin-bottom:0">L’adhésion est par salle. La première séance est offerte pour essayer.</p>
     <div class="tarif-grid">
       <div class="tc">
         <div class="tc-name">Découverte</div>
-        <div class="tc-sub">Séance à l'essai, sans engagement</div>
+        <div class="tc-sub">Séance à l’essai, sans engagement</div>
         <div class="tc-price" style="font-size:1.5rem;margin-top:.3rem">Gratuit</div>
         <div class="tc-period">1ʳᵉ séance offerte</div>
         <ul class="tc-feats">
@@ -421,7 +419,7 @@
           <li><span class="chk">✓</span> 12 participants max</li>
           <li><span class="chk">✓</span> Suivi numérique dès 2025–2026</li>
         </ul>
-        <a href="#contact" class="tc-btn lt">S'inscrire</a>
+        <a href="#contact" class="tc-btn lt">S’inscrire</a>
       </div>
       <div class="tc">
         <div class="tc-name">Boutigny-sur-Essonne</div>
@@ -433,7 +431,7 @@
           <li><span class="chk">✓</span> 12 participants max</li>
           <li><span class="chk">✓</span> Suivi numérique dès 2025–2026</li>
         </ul>
-        <a href="#contact" class="tc-btn lt">S'inscrire</a>
+        <a href="#contact" class="tc-btn lt">S’inscrire</a>
       </div>
       <div class="tc feat">
         <span class="tc-badge">Plus de séances</span>
@@ -446,10 +444,10 @@
           <li><span class="chk">✓</span> 12 participants max</li>
           <li><span class="chk">✓</span> Suivi numérique dès 2025–2026</li>
         </ul>
-        <a href="#contact" class="tc-btn dk">S'inscrire</a>
+        <a href="#contact" class="tc-btn dk">S’inscrire</a>
       </div>
     </div>
-    <p style="margin-top:1.2rem;font-size:.78rem;color:var(--pierre);text-align:center">Chèque, virement ou espèces. Chèques vacances et coupon sport bienvenus. Contactez-nous pour les formules famille.</p>
+    <p style="margin-top:1.2rem;font-size:.78rem;color:var(--pierre);text-align:center">Nous acceptons le chèque, le virement et les espèces. Les chèques vacances et coupons sport sont également bienvenus. Contactez-nous pour les formules famille.</p>
   </div>
 </section>
 
@@ -464,12 +462,12 @@
         <span class="coach-role">Préparateur physique, fondateur</span>
       </div>
       <div>
-        <p class="coach-bio">Ancien auditeur financier (KPMG France, Croix-Rouge), Vivien a basculé vers la préparation physique en 2017. Depuis 7 ans, il accompagne en individuel et en collectif des profils variés : dirigeants, chercheurs, enseignants, athlètes amateurs. Il a encadré des centaines de personnes en cours collectifs, dont plus de 40 en séances monitorées, et a été coach d'une équipe de volley-ball en Nationale 3.</p>
+        <p class="coach-bio">Ancien auditeur financier (KPMG France, Croix-Rouge), Vivien a basculé vers la préparation physique en 2017. Depuis 7 ans, il accompagne en individuel et en collectif des profils variés : dirigeants, chercheurs, enseignants, athlètes amateurs. Il a encadré des centaines de personnes en cours collectifs, dont plus de 40 en séances monitorées, et a été coach d’une équipe de volley-ball en Nationale 3.</p>
         <div class="certifs">
           <span class="certif">BPJEPS</span>
           <span class="certif">DEJEPS Perfectionnement Sportif</span>
           <span class="certif">Licence STAPS, Univ. Paris-Saclay</span>
-          <span class="certif">7 ans d'expérience</span>
+          <span class="certif">7 ans d’expérience</span>
         </div>
         <div class="coach-links">
           <a href="https://www.vivienstrudel.com" target="_blank" rel="noopener" class="coach-lnk">vivienstrudel.com</a>
@@ -484,23 +482,23 @@
   <div class="inner">
     <span class="sec-label">Valeurs</span>
     <h2 class="ttl">Ce en quoi on croit</h2>
-    <p class="val-intro">Trois mots qui décrivent comment on travaille, et pourquoi on le fait.</p>
+    <p class="val-intro">Ces trois mots décrivent comment on travaille, et pourquoi on le fait.</p>
     <div class="val-trio">
       <div class="val-card">
         <span class="val-word">Rigueur</span>
-        <p class="val-desc">La régularité est la seule chose qui fonctionne vraiment. Revenir chaque semaine, faire le travail, même sans inspiration particulière. Pas d'éclat, pas de raccourci.</p>
+        <p class="val-desc">La régularité est la seule chose qui fonctionne vraiment. On revient chaque semaine, on fait le travail, même sans inspiration particulière. Il n’y a pas d’éclat, pas de raccourci.</p>
       </div>
       <div class="val-card">
         <span class="val-word">Honnêteté</span>
-        <p class="val-desc">Sur ce qui marche et ce qui ne marche pas. Sur le niveau où on en est. Pas de promesse de résultat rapide. Un travail sérieux, progressif, avec des charges qui augmentent et un corps qui répond.</p>
+        <p class="val-desc">Nous disons clairement ce qui marche et ce qui ne marche pas, sans surestimer le niveau où chacun en est. Nous ne promettons pas de résultats rapides, mais un travail sérieux et progressif dont les effets se mesurent dans la durée.</p>
       </div>
       <div class="val-card">
         <span class="val-word">Discipline</span>
-        <p class="val-desc">Ce n'est pas toujours agréable. Les exercices de poussées, de tirage, répétition après répétition, ça demande un effort qu'on ne ressent pas forcément comme un plaisir. C'est justement là l'essentiel : se satisfaire de ce qu'on fait, même quand c'est dur.</p>
+        <p class="val-desc">Ce n’est pas toujours agréable. Les exercices de poussées, de tirage, répétition après répétition, ça demande un effort qu’on ne ressent pas forcément comme un plaisir. C’est justement là l’essentiel : apprendre à se satisfaire de ce qu’on fait, même quand c’est dur.</p>
       </div>
     </div>
     <div class="val-statement">
-      <p>Entretenir son corps est un exercice de volonté. Quelque chose qu'on maintient dans le temps, et qu'on peut transmettre. Pas seulement pour soi : pour ce que ça représente, pour les habitudes qu'on construit, pour l'exemple qu'on donne sans le formuler. Des choses simples, répétées. Se satisfaire de l'essentiel, même quand c'est dur.</p>
+      <p>Entretenir son corps est un exercice de volonté, que l’on maintient dans le temps et que l’on peut transmettre. Ce n’est pas seulement utile pour soi : c’est ce que ça représente pour les autres, les habitudes que l’on construit, l’exemple que l’on donne sans le formuler. On fait des choses simples, répétées. On apprend à se satisfaire de l’essentiel, même quand c’est dur.</p>
     </div>
   </div>
 </section>
@@ -513,7 +511,7 @@
       <div class="app-txt">
         <span class="app-badge">2025–2026</span>
         <h3>Une application dédiée aux adhérents</h3>
-        <p>Dès la prochaine année sportive, un espace personnel en ligne pour mesurer et visualiser votre évolution au fil des séances.</p>
+        <p>Dès la prochaine année sportive, vous disposerez d’un espace personnel en ligne pour mesurer et visualiser votre évolution au fil des séances.</p>
         <div class="app-feats">
           <div class="app-feat">Fréquence cardiaque en temps réel (capteur Bluetooth)</div>
           <div class="app-feat">Suivi de la force (charges, répétitions, 1RM estimée)</div>
@@ -566,7 +564,7 @@
           <label for="cS">Sujet</label>
           <select id="cS">
             <option value="">Choisir</option>
-            <option>Inscription à l'association</option>
+            <option>Inscription à l’association</option>
             <option>Renseignements tarifs</option>
             <option>Planning et horaires</option>
             <option>Séance découverte</option>
@@ -606,7 +604,7 @@
     e.preventDefault();
     const m = document.getElementById('formMsg');
     m.style.display = 'block';
-    m.textContent = '✔ Message envoyé. Nous vous répondrons dans les 48 h.';
+    m.textContent = '✔ Message envoyé. Nous vous répondrons dans les 48 h.';
     e.target.reset();
   });
 </script>
