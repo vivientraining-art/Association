@@ -1,18 +1,20 @@
 /* ==========================================================================
    Fitness Sud Essonne — feuille de styles
-   Palette régionale du Gâtinais : pinède (vert) + sable chaud
+   Palette régionale du Gâtinais : terres et grès chauds (fonds), sable et
+   craie (sections claires), or des blés en accent, pin en touche sur fond clair
    ========================================================================== */
 
 :root {
-  --terre:   #1D2F14; /* pinède profonde */
-  --humus:   #283E1A; /* sol forestier */
+  --terre:   #2E2319; /* terre torréfiée, brun chaud (fonds sombres) */
+  --humus:   #37291C; /* noyer foncé (bande disciplines) */
+  --cuir:    #5A4534; /* cuir / grès brun (section coach) */
   --ocre:    #C4922A; /* or des blés */
   --craie:   #EDE8DD; /* calcaire clair */
-  --foret:   #3D6030; /* canopée de pins */
+  --foret:   #3D6030; /* pin — accent sur fond clair uniquement, jamais en fond */
   --mousse:  #5E7A4A; /* mousse */
   --pierre:  #7A6E60; /* pierre chaude */
   --sable:   #F0E8D6; /* sable régional */
-  --rouille: #9E3F1C; /* fer rouillé */
+  --rouille: #9E3F1C; /* fer rouillé / terre cuite */
 
   --nav-h: 58px;
   --maxw: 1040px;
@@ -33,13 +35,15 @@ body {
 /* --------------------------------------------------------------------------
    Navigation
    -------------------------------------------------------------------------- */
-nav {
+/* Cible la barre principale uniquement. Le sélecteur d'élément « nav »
+   touchait aussi le <nav> du pied de page et le projetait en haut. */
+#mainNav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   display: flex; align-items: center;
   padding: 0 2.5rem; height: var(--nav-h);
   transition: background .25s, box-shadow .25s;
 }
-nav.scrolled { background: var(--terre); box-shadow: 0 1px 0 rgba(237,232,221,.07); }
+#mainNav.scrolled { background: var(--terre); box-shadow: 0 1px 0 rgba(237,232,221,.07); }
 .nav-brand {
   font-family: var(--serif); font-size: .88rem; font-weight: 700;
   color: var(--craie); text-decoration: none; line-height: 1.2;
@@ -209,7 +213,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .tc-feats li:first-child { border-top: none; }
 .tc.feat .tc-feats li { color: rgba(237,232,221,.55); border-color: rgba(237,232,221,.09); }
 .chk { color: #5A8A5F; flex-shrink: 0; }
-.tc.feat .chk { color: #8FD49A; }
+.tc.feat .chk { color: var(--ocre); }
 .tc-btn { display: block; text-align: center; margin-top: 1.2rem; padding: .6rem; border-radius: 8px; font-weight: 700; font-size: .81rem; text-decoration: none; transition: filter .15s; }
 .tc-btn.lt { background: rgba(0,0,0,.05); color: var(--terre); }
 .tc-btn.dk { background: var(--ocre); color: var(--terre); }
@@ -219,7 +223,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 /* --------------------------------------------------------------------------
    Coach
    -------------------------------------------------------------------------- */
-#coach { background: var(--foret); color: var(--craie); }
+#coach { background: var(--cuir); color: var(--craie); }
 .coach-grid { display: grid; grid-template-columns: auto 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
 .coach-av {
   width: 100px; height: 100px; border-radius: 50%; background: var(--ocre);
@@ -241,7 +245,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 #valeurs { background: var(--sable); }
 .val-intro { font-size: .97rem; color: var(--pierre); line-height: 1.8; max-width: 540px; margin: .5rem 0 3.5rem; }
 .val-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-bottom: 3.5rem; }
-.val-card { padding-top: 1.5rem; border-top: 2px solid rgba(29,47,20,.15); }
+.val-card { padding-top: 1.5rem; border-top: 2px solid rgba(46,35,25,.15); }
 .val-word { font-family: var(--serif); font-size: 1.65rem; color: var(--terre); display: block; margin-bottom: .85rem; }
 .val-desc { font-size: .87rem; color: var(--pierre); line-height: 1.78; }
 .val-statement { padding: 0 0 0 1.8rem; border-left: 3px solid var(--ocre); }
@@ -328,8 +332,8 @@ footer { background: var(--terre); color: rgba(237,232,221,.32); padding: 1.8rem
   .sched-tbl tr:first-child { border-top: none; }
   .sched-tbl td { padding: .25rem 0; }
   .val-trio { grid-template-columns: 1fr; gap: 0; }
-  .val-card { padding: 1.5rem 0; border-top: 1px solid rgba(29,47,20,.1); }
-  .val-card:first-child { border-top: 2px solid rgba(29,47,20,.15); }
+  .val-card { padding: 1.5rem 0; border-top: 1px solid rgba(46,35,25,.1); }
+  .val-card:first-child { border-top: 2px solid rgba(46,35,25,.15); }
   .coach-grid { grid-template-columns: 1fr; gap: 2rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .frow { grid-template-columns: 1fr; }
