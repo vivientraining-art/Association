@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fitness Sud Essonne, préparation physique en Gâtinais</title>
-  <meta name="description" content="Préparation physique dans le Gâtinais. Force, conditionnement, endurance encadrés par un préparateur physique diplômé d'État dans le sud de l'Essonne.">
+  <title>Fitness Sud Essonne — Préparation physique à Milly-la-Forêt, Boutigny et Gironville (91)</title>
+  <meta name="description" content="Association de préparation physique dans le Gâtinais : force et conditionnement encadrés par un préparateur diplômé d'État à Milly-la-Forêt, Boutigny-sur-Essonne et Gironville-sur-Essonne. Première séance offerte.">
+
+  <!-- Partage réseaux sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Fitness Sud Essonne">
+  <meta property="og:title" content="Fitness Sud Essonne — Préparation physique dans le Gâtinais (91)">
+  <meta property="og:description" content="Force et conditionnement encadrés par un préparateur diplômé d'État, dans trois communes du sud de l'Essonne. Première séance offerte.">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-25L0VD9JPE"></script>
@@ -22,10 +29,49 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Référencement local : données structurées -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SportsClub",
+    "name": "Fitness Sud Essonne",
+    "description": "Association loi 1901 de préparation physique dans le Gâtinais : force et conditionnement encadrés par un préparateur physique diplômé d'État.",
+    "email": "contact@fitnesssudessonne.fr",
+    "telephone": "+33648918609",
+    "priceRange": "0€ - 300€",
+    "areaServed": ["Milly-la-Forêt", "Boutigny-sur-Essonne", "Gironville-sur-Essonne", "Essonne", "Gâtinais"],
+    "location": [
+      {
+        "@type": "Place",
+        "name": "Stade Clovis Lelong",
+        "address": { "@type": "PostalAddress", "addressLocality": "Milly-la-Forêt", "postalCode": "91490", "addressCountry": "FR" }
+      },
+      {
+        "@type": "Place",
+        "name": "Gymnase des Singes Verts",
+        "address": { "@type": "PostalAddress", "addressLocality": "Boutigny-sur-Essonne", "postalCode": "91660", "addressCountry": "FR" }
+      },
+      {
+        "@type": "Place",
+        "name": "Salle des fêtes",
+        "address": { "@type": "PostalAddress", "addressLocality": "Gironville-sur-Essonne", "postalCode": "91690", "addressCountry": "FR" }
+      }
+    ],
+    "offers": [
+      { "@type": "Offer", "name": "Séance découverte", "price": "0", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Adhésion annuelle Milly-la-Forêt (35 séances)", "price": "275", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Adhésion annuelle Boutigny-sur-Essonne (35 séances)", "price": "275", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Adhésion annuelle Gironville-sur-Essonne (39 séances)", "price": "300", "priceCurrency": "EUR" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<nav id="mainNav">
+<a class="skip-link" href="#programme">Aller au contenu</a>
+
+<nav id="mainNav" aria-label="Navigation principale">
   <a class="nav-brand" href="#top">Fitness Sud Essonne<small>Gâtinais · Essonne (91)</small></a>
   <div class="nav-spacer"></div>
   <ul class="nav-links" id="navLinks">
@@ -34,30 +80,31 @@
     <li><a href="#tarifs">Tarifs</a></li>
     <li><a href="#coach">Vivien</a></li>
     <li><a href="#valeurs">Valeurs</a></li>
-    <li><a href="#contact" class="nav-cta">Nous rejoindre</a></li>
+    <li><a href="#essai" class="nav-cta">Séance offerte</a></li>
   </ul>
-  <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+  <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">☰</button>
 </nav>
 
 <header class="hero" id="top">
   <div class="hero-inner">
-    <span class="hero-eyebrow">Préparation physique dans le Gâtinais</span>
+    <span class="hero-eyebrow">Association sportive · Gâtinais, sud de l'Essonne</span>
     <h1>Force.<br><em>Endurance.</em><br>Durée.</h1>
     <p class="hero-sub">Du squat au soulevé de terre, du développé couché au HIIT et à l’EMOM : chaque séance est encadrée par un préparateur physique diplômé d’État, dans trois salles du sud de l’Essonne.</p>
+    <p class="hero-offer">★&nbsp;Votre première séance est offerte, sans engagement</p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-ocre">Nous rejoindre</a>
-      <a href="#programme" class="btn-ghost">Voir le programme ↓</a>
+      <a href="#essai" class="btn-ocre">Réserver ma séance d’essai</a>
+      <a href="#programme" class="btn-ghost">Découvrir le programme ↓</a>
     </div>
   </div>
   <div class="hero-bar">
     <div class="hbi"><span class="hbi-num">3</span><span class="hbi-lbl">Séances par semaine</span></div>
     <div class="hbi"><span class="hbi-num">12</span><span class="hbi-lbl">Participants max</span></div>
     <div class="hbi"><span class="hbi-num">1h</span><span class="hbi-lbl">Par séance</span></div>
-    <div class="hbi"><span class="hbi-num">7 ans</span><span class="hbi-lbl">D’expérience</span></div>
+    <div class="hbi"><span class="hbi-num">2017</span><span class="hbi-lbl">Encadrant depuis</span></div>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="section" id="programme">
   <div class="inner">
@@ -91,7 +138,7 @@
     </div>
     <div class="disc-list">
       <article class="disc-item">
-        <div class="disc-num">01</div>
+        <div class="disc-num" aria-hidden="true">01</div>
         <div class="disc-body">
           <h3>Force fondamentale</h3>
           <p>Ces mouvements polyarticulaires construisent une force durable et utile au quotidien. Le travail est technique, avec une progression de charge accessible à tous les niveaux.</p>
@@ -99,7 +146,7 @@
         </div>
       </article>
       <article class="disc-item">
-        <div class="disc-num">02</div>
+        <div class="disc-num" aria-hidden="true">02</div>
         <div class="disc-body">
           <h3>Conditionnement métabolique</h3>
           <p>Ces formats d’intensité variée développent l’endurance, la puissance et la capacité de récupération.</p>
@@ -107,13 +154,44 @@
         </div>
       </article>
       <article class="disc-item">
-        <div class="disc-num">03</div>
+        <div class="disc-num" aria-hidden="true">03</div>
         <div class="disc-body">
           <h3>Performance adaptée</h3>
           <p>Les participants ne se comparent pas entre eux. Chacun part de son niveau et progresse à son rythme, séance après séance.</p>
           <div class="tags"><span class="tag">Tous niveaux</span><span class="tag">Progression individuelle</span><span class="tag">Longévité</span></div>
         </div>
       </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="essai">
+  <div class="inner">
+    <div class="essai-hdr">
+      <span class="sec-label">Première séance offerte</span>
+      <h2 class="ttl">Venez essayer, tout simplement</h2>
+      <p>La meilleure façon de savoir si ces séances vous conviennent, c’est d’en vivre une. La première est offerte, sans engagement et sans inscription préalable.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <h3>Prévenez-nous</h3>
+        <p>Envoyez un message WhatsApp ou un e-mail en indiquant le créneau qui vous arrange : lundi à Milly, mardi à Boutigny ou jeudi à Gironville.</p>
+      </div>
+      <div class="step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <h3>Venez en tenue de sport</h3>
+        <p>Prévoyez simplement une tenue confortable, des chaussures propres et une bouteille d’eau. Le matériel est fourni sur place.</p>
+      </div>
+      <div class="step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <h3>Faites la séance</h3>
+        <p>Vous suivez la même séance que le groupe, à votre niveau. À la fin, vous décidez librement de vous inscrire ou non.</p>
+      </div>
+    </div>
+    <div class="essai-cta">
+      <a class="btn-vert" href="https://wa.me/33648918609?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20ma%20s%C3%A9ance%20d%E2%80%99essai%20gratuite." target="_blank" rel="noopener">💬 Réserver par WhatsApp</a>
+      <span class="essai-note">Réponse rapide, en général dans la journée.</span>
     </div>
   </div>
 </section>
@@ -158,7 +236,7 @@
   <div class="inner">
     <span class="sec-label">Cotisations</span>
     <h2 class="ttl">Tarifs</h2>
-    <p class="tarif-intro">L’adhésion est par salle. La première séance est offerte pour essayer.</p>
+    <p class="tarif-intro">L’adhésion est par salle et couvre toute la saison, de septembre à juin. La première séance est offerte pour essayer.</p>
     <div class="tarif-grid">
       <div class="tc">
         <div class="tc-name">Découverte</div>
@@ -166,11 +244,11 @@
         <div class="tc-price tc-price--free">Gratuit</div>
         <div class="tc-period">1ʳᵉ séance offerte</div>
         <ul class="tc-feats">
-          <li><span class="chk">✓</span> Accès à un cours au choix</li>
-          <li><span class="chk">✓</span> Accueil par le préparateur</li>
-          <li><span class="chk">✓</span> Sans inscription préalable</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Accès à un cours au choix</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Accueil par le préparateur</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Sans inscription préalable</li>
         </ul>
-        <a href="#contact" class="tc-btn lt">Réserver</a>
+        <a href="#essai" class="tc-btn lt">Réserver</a>
       </div>
       <div class="tc">
         <div class="tc-name">Milly-la-Forêt</div>
@@ -178,9 +256,9 @@
         <div class="tc-price">275 €</div>
         <div class="tc-period">par an, 35 séances, sept. à juin</div>
         <ul class="tc-feats">
-          <li><span class="chk">✓</span> Lundi 20h00 – 21h00</li>
-          <li><span class="chk">✓</span> 12 participants max</li>
-          <li><span class="chk">✓</span> Suivi numérique dès 2025–2026</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Lundi 20h00 – 21h00</li>
+          <li><span class="chk" aria-hidden="true">✓</span> 12 participants max</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Suivi numérique inclus</li>
         </ul>
         <a href="#contact" class="tc-btn lt">S’inscrire</a>
       </div>
@@ -190,9 +268,9 @@
         <div class="tc-price">275 €</div>
         <div class="tc-period">par an, 35 séances, sept. à juin</div>
         <ul class="tc-feats">
-          <li><span class="chk">✓</span> Mardi 20h30 – 21h30</li>
-          <li><span class="chk">✓</span> 12 participants max</li>
-          <li><span class="chk">✓</span> Suivi numérique dès 2025–2026</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Mardi 20h30 – 21h30</li>
+          <li><span class="chk" aria-hidden="true">✓</span> 12 participants max</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Suivi numérique inclus</li>
         </ul>
         <a href="#contact" class="tc-btn lt">S’inscrire</a>
       </div>
@@ -203,9 +281,9 @@
         <div class="tc-price">300 €</div>
         <div class="tc-period">par an, 39 séances, sept. à juin</div>
         <ul class="tc-feats">
-          <li><span class="chk">✓</span> Jeudi 20h30 – 21h30</li>
-          <li><span class="chk">✓</span> 12 participants max</li>
-          <li><span class="chk">✓</span> Suivi numérique dès 2025–2026</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Jeudi 20h30 – 21h30</li>
+          <li><span class="chk" aria-hidden="true">✓</span> 12 participants max</li>
+          <li><span class="chk" aria-hidden="true">✓</span> Suivi numérique inclus</li>
         </ul>
         <a href="#contact" class="tc-btn dk">S’inscrire</a>
       </div>
@@ -220,17 +298,17 @@
     <h2 class="ttl ttl--light">Votre préparateur physique</h2>
     <div class="coach-grid">
       <div>
-        <div class="coach-av">VS</div>
+        <div class="coach-av" aria-hidden="true">VS</div>
         <div class="coach-name">Vivien Strudel</div>
         <span class="coach-role">Préparateur physique, fondateur</span>
       </div>
       <div>
-        <p class="coach-bio">Ancien auditeur financier (KPMG France, Croix-Rouge), Vivien a basculé vers la préparation physique en 2017. Depuis 7 ans, il accompagne en individuel et en collectif des profils variés : dirigeants, chercheurs, enseignants, athlètes amateurs. Il a encadré des centaines de personnes en cours collectifs, dont plus de 40 en séances monitorées, et a été coach d’une équipe de volley-ball en Nationale 3.</p>
+        <p class="coach-bio">Ancien auditeur financier (KPMG France, Croix-Rouge), Vivien a basculé vers la préparation physique en 2017. Depuis, il accompagne en individuel et en collectif des profils variés : dirigeants, chercheurs, enseignants, athlètes amateurs. Il a encadré des centaines de personnes en cours collectifs, dont plus de 40 en séances monitorées, et a été coach d’une équipe de volley-ball en Nationale 3.</p>
         <div class="certifs">
           <span class="certif">BPJEPS</span>
           <span class="certif">DEJEPS Perfectionnement Sportif</span>
           <span class="certif">Licence STAPS, Univ. Paris-Saclay</span>
-          <span class="certif">7 ans d’expérience</span>
+          <span class="certif">Encadrant depuis 2017</span>
         </div>
         <div class="coach-links">
           <a href="https://www.vivienstrudel.com" target="_blank" rel="noopener" class="coach-lnk">vivienstrudel.com</a>
@@ -272,9 +350,9 @@
     <h2 class="ttl">Suivez votre progression</h2>
     <div class="app-box">
       <div class="app-txt">
-        <span class="app-badge">2025–2026</span>
+        <span class="app-badge">Espace adhérent</span>
         <h3>Une application dédiée aux adhérents</h3>
-        <p>Dès la prochaine année sportive, vous disposerez d’un espace personnel en ligne pour mesurer et visualiser votre évolution au fil des séances.</p>
+        <p>Chaque adhérent dispose d’un espace personnel en ligne pour mesurer et visualiser son évolution au fil des séances.</p>
         <div class="app-feats">
           <div class="app-feat">Fréquence cardiaque en temps réel (capteur Bluetooth)</div>
           <div class="app-feat">Suivi de la force (charges, répétitions, 1RM estimée)</div>
@@ -284,8 +362,37 @@
       </div>
       <div class="app-act">
         <a href="#contact" class="btn-outline">Nous contacter</a>
-        <div class="app-sub">Disponible à la rentrée 2025–2026</div>
+        <div class="app-sub">Inclus avec l’adhésion</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="inner">
+    <span class="sec-label">Questions fréquentes</span>
+    <h2 class="ttl">Vous hésitez encore ?</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Je n’ai jamais fait de musculation, est-ce pour moi ?</summary>
+        <p>Oui. Le contenu de la séance est le même pour tout le groupe, mais la charge et l’intensité s’adaptent à chacun. Les débutants commencent léger et apprennent d’abord la technique, sous l’œil du préparateur.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Comment se passe la séance d’essai gratuite ?</summary>
+        <p>Vous nous prévenez par WhatsApp ou par e-mail, vous venez au créneau de votre choix en tenue de sport, et vous faites la séance avec le groupe. Elle est offerte et n’engage à rien.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Que dois-je apporter ?</summary>
+        <p>Une tenue confortable, des chaussures de sport propres et une bouteille d’eau suffisent. Le matériel d’entraînement est fourni sur place.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je m’inscrire en cours d’année ?</summary>
+        <p>Oui, dans la limite des places disponibles (12 participants par créneau). Contactez-nous pour connaître les disponibilités et les conditions.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quels moyens de paiement acceptez-vous ?</summary>
+        <p>Nous acceptons le chèque, le virement et les espèces. Les chèques vacances et les coupons sport sont également bienvenus, et des formules famille existent sur demande.</p>
+      </details>
     </div>
   </div>
 </section>
@@ -297,47 +404,47 @@
     <div class="contact-grid">
       <ul class="ci-list">
         <li class="ci">
-          <span class="ci-icon">📍</span>
+          <span class="ci-icon" aria-hidden="true">📍</span>
           <div><span class="ci-lbl">Lundi, 20h00–21h00</span><span class="ci-val">Stade Clovis Lelong, Milly-la-Forêt (91)</span><a class="maps-lnk" href="https://maps.google.com/?q=Stade+Clovis+Lelong+Milly-la-For%C3%AAt+91490" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a></div>
         </li>
         <li class="ci">
-          <span class="ci-icon">📍</span>
+          <span class="ci-icon" aria-hidden="true">📍</span>
           <div><span class="ci-lbl">Mardi, 20h30–21h30</span><span class="ci-val">Gymnase des Singes Verts, Boutigny-sur-Essonne (91)</span><a class="maps-lnk" href="https://maps.google.com/?q=Gymnase+des+Singes+Verts+Boutigny-sur-Essonne+91660" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a></div>
         </li>
         <li class="ci">
-          <span class="ci-icon">📍</span>
+          <span class="ci-icon" aria-hidden="true">📍</span>
           <div><span class="ci-lbl">Jeudi, 20h30–21h30</span><span class="ci-val">Salle des fêtes, Gironville-sur-Essonne (91)</span><a class="maps-lnk" href="https://maps.google.com/?q=Salle+des+F%C3%AAtes+Gironville-sur-Essonne+91690" target="_blank" rel="noopener">🗺 Voir sur Google Maps</a></div>
         </li>
         <li class="ci">
-          <span class="ci-icon">💬</span>
+          <span class="ci-icon" aria-hidden="true">💬</span>
           <div><span class="ci-lbl">WhatsApp</span><span class="ci-val"><a href="https://wa.me/33648918609" target="_blank" rel="noopener">06 48 91 86 09</a></span></div>
         </li>
         <li class="ci">
-          <span class="ci-icon">✉️</span>
+          <span class="ci-icon" aria-hidden="true">✉️</span>
           <div><span class="ci-lbl">E-mail</span><span class="ci-val"><a href="mailto:contact@fitnesssudessonne.fr">contact@fitnesssudessonne.fr</a></span></div>
         </li>
       </ul>
       <form class="cf" id="contactForm">
         <div class="frow">
-          <div class="field"><label for="cP">Prénom</label><input type="text" id="cP" placeholder="Marie" autocomplete="given-name" required></div>
-          <div class="field"><label for="cN">Nom</label><input type="text" id="cN" placeholder="Dupont" autocomplete="family-name" required></div>
+          <div class="field"><label for="cP">Prénom</label><input type="text" id="cP" name="prenom" placeholder="Marie" autocomplete="given-name" required></div>
+          <div class="field"><label for="cN">Nom</label><input type="text" id="cN" name="nom" placeholder="Dupont" autocomplete="family-name" required></div>
         </div>
-        <div class="field"><label for="cE">E-mail</label><input type="email" id="cE" placeholder="marie@email.fr" autocomplete="email" required></div>
+        <div class="field"><label for="cE">E-mail</label><input type="email" id="cE" name="email" placeholder="marie@email.fr" autocomplete="email" required></div>
         <div class="field">
           <label for="cS">Sujet</label>
-          <select id="cS">
+          <select id="cS" name="sujet">
             <option value="">Choisir</option>
+            <option>Séance découverte</option>
             <option>Inscription à l’association</option>
             <option>Renseignements tarifs</option>
             <option>Planning et horaires</option>
-            <option>Séance découverte</option>
             <option>Application</option>
             <option>Autre</option>
           </select>
         </div>
-        <div class="field"><label for="cM">Message</label><textarea id="cM" rows="4" placeholder="Votre message…"></textarea></div>
+        <div class="field"><label for="cM">Message</label><textarea id="cM" name="message" rows="4" placeholder="Votre message…"></textarea></div>
         <button type="submit" class="sub-btn">Envoyer</button>
-        <p id="formMsg" class="form-msg"></p>
+        <p id="formMsg" class="form-msg" role="status"></p>
       </form>
     </div>
   </div>
@@ -348,15 +455,16 @@
 <footer>
   <div class="fi">
     <div class="fb">Fitness Sud Essonne<small>Association loi 1901, Essonne (91)</small></div>
-    <nav class="fn">
+    <nav class="fn" aria-label="Navigation pied de page">
       <a href="#programme">Programme</a>
       <a href="#horaires">Horaires</a>
       <a href="#tarifs">Tarifs</a>
       <a href="#coach">Équipe</a>
       <a href="#valeurs">Valeurs</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="fc">© 2025 Fitness Sud Essonne. Tous droits réservés.</div>
+    <div class="fc">© 2026 Fitness Sud Essonne. Tous droits réservés.</div>
   </div>
 </footer>
 
