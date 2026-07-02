@@ -173,6 +173,23 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
   border-bottom: 1px solid rgba(0,0,0,.07); font-size: .88rem; color: var(--encre);
 }
 .prog-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--ocre); flex-shrink: 0; margin-top: .58rem; }
+.prog-photo { margin-top: 2rem; }
+.prog-photo img { display: block; width: 100%; height: 380px; object-fit: cover; object-position: center 30%; border-radius: 14px; }
+
+/* Cycle annuel */
+.cycles { margin-top: 4.5rem; padding-top: 3rem; border-top: 1px solid rgba(0,0,0,.09); }
+.cycles-ttl { font-family: var(--serif); font-size: 1.35rem; color: var(--encre); margin-bottom: .5rem; }
+.cycles-intro { font-size: .9rem; color: var(--pierre); max-width: 520px; line-height: 1.7; }
+.cycles-grid { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.6rem; margin-top: 2.2rem; counter-reset: cycle; }
+.cycle { padding-top: 1.1rem; border-top: 2px solid rgba(30,47,35,.16); position: relative; counter-increment: cycle; }
+.cycle::before {
+  content: counter(cycle, decimal-leading-zero);
+  font-family: var(--serif); font-weight: 700; font-size: .8rem; color: var(--ocre);
+  display: block; margin-bottom: .5rem;
+}
+.cycle-when { display: block; font-size: .64rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--mousse); margin-bottom: .25rem; }
+.cycle-name { display: block; font-family: var(--serif); font-size: .98rem; color: var(--encre); line-height: 1.3; margin-bottom: .45rem; }
+.cycle p { font-size: .8rem; color: var(--pierre); line-height: 1.65; }
 
 /* --------------------------------------------------------------------------
    Disciplines
@@ -195,6 +212,8 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
    Séance d'essai — parcours en 3 étapes
    -------------------------------------------------------------------------- */
 #essai { background: var(--craie); }
+.essai-top { display: grid; grid-template-columns: 1fr 320px; gap: 3.5rem; align-items: center; }
+.essai-photo img { display: block; width: 100%; height: 340px; object-fit: cover; object-position: center 22%; border-radius: 14px; }
 .essai-hdr { max-width: 560px; }
 .essai-hdr p { color: var(--pierre); font-size: .95rem; line-height: 1.8; }
 .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.8rem; }
@@ -397,6 +416,10 @@ footer { background: var(--pin); color: rgba(237,232,221,.4); padding: 1.8rem 2.
   .hbi:nth-child(n+3) { border-top: 1px solid rgba(237,232,221,.07); }
   .section { padding: 4rem 1.4rem; }
   .prog-grid { grid-template-columns: 1fr; gap: 2.2rem; }
+  .prog-photo img { height: 260px; }
+  .cycles-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .essai-top { grid-template-columns: 1fr; gap: 1.8rem; }
+  .essai-photo img { height: 240px; }
   .disc-item { grid-template-columns: 60px 1fr; gap: 1rem; }
   .disc-num { font-size: 2.8rem; }
   .steps { grid-template-columns: 1fr; }
