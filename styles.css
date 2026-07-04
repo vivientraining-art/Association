@@ -298,9 +298,8 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 #coach { background: var(--foret); color: var(--craie); }
 .coach-grid { display: grid; grid-template-columns: auto 1fr; gap: 4rem; align-items: start; margin-top: 3rem; }
 .coach-av {
-  width: 100px; height: 100px; border-radius: 50%; background: var(--ocre);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--serif); font-size: 1.9rem; color: var(--pin); margin-bottom: 1rem;
+  width: 116px; height: 116px; border-radius: 50%; object-fit: cover;
+  display: block; border: 3px solid var(--ocre); margin-bottom: 1rem;
 }
 .coach-name { font-family: var(--serif); font-size: 1.5rem; color: var(--craie); }
 .coach-role { font-size: .67rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--ocre); margin-top: .15rem; margin-bottom: 1.4rem; display: block; }
