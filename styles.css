@@ -278,8 +278,10 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .tc-price { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--encre); line-height: 1; margin-bottom: .2rem; }
 .tc-price--free { font-size: 1.5rem; margin-top: .3rem; }
 .tc.feat .tc-price { color: var(--craie); }
-.tc-period { font-size: .74rem; color: var(--pierre); margin-bottom: 1.2rem; }
+.tc-period { font-size: .74rem; color: var(--pierre); margin-bottom: .35rem; }
 .tc.feat .tc-period { color: rgba(237,232,221,.5); }
+.tc-seance { font-size: .72rem; font-weight: 700; color: var(--foret); margin-bottom: 1.2rem; }
+.tc.feat .tc-seance { color: var(--ocre); }
 .tc-feats { list-style: none; }
 .tc-feats li { display: flex; gap: .4rem; font-size: .81rem; color: var(--pierre); padding: .28rem 0; border-top: 1px solid rgba(0,0,0,.06); }
 .tc-feats li:first-child { border-top: none; }
@@ -290,7 +292,10 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .tc-btn.lt { background: rgba(0,0,0,.05); color: var(--encre); }
 .tc-btn.dk { background: var(--ocre); color: var(--pin); }
 .tc-btn:hover { filter: brightness(.95); }
-.tarif-note { margin-top: 1.2rem; font-size: .78rem; color: var(--pierre); text-align: center; }
+.tarif-plus { display: flex; justify-content: center; flex-wrap: wrap; gap: .6rem 2.2rem; margin-top: 1.8rem; }
+.tarif-plus span { font-size: .82rem; font-weight: 600; color: var(--encre); display: inline-flex; align-items: center; gap: .45rem; }
+.tarif-plus span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--ocre); flex-shrink: 0; }
+.tarif-note { margin-top: 1rem; font-size: .78rem; color: var(--pierre); text-align: center; }
 
 /* --------------------------------------------------------------------------
    Coach
