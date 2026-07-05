@@ -292,6 +292,23 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .tc-btn.lt { background: rgba(0,0,0,.05); color: var(--encre); }
 .tc-btn.dk { background: var(--ocre); color: var(--pin); }
 .tc-btn:hover { filter: brightness(.95); }
+.pass {
+  display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap;
+  background: white; border: 2px solid var(--ocre); border-radius: 14px;
+  padding: 1.8rem 2rem; margin-top: 1.6rem;
+}
+.pass-txt { flex: 1; min-width: 260px; }
+.pass-badge {
+  display: inline-block; background: var(--ocre); color: var(--pin); border-radius: 999px;
+  font-size: .61rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: .17rem .6rem; margin-bottom: .6rem;
+}
+.pass-txt h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--encre); margin-bottom: .35rem; }
+.pass-txt p { font-size: .85rem; color: var(--pierre); line-height: 1.65; }
+.pass-price { text-align: center; }
+.pass-amount { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--encre); line-height: 1; }
+.pass-per { font-size: .72rem; color: var(--pierre); margin: .3rem 0 .8rem; }
+.pass-price .tc-btn { display: inline-block; padding: .6rem 1.6rem; margin-top: 0; }
 .tarif-plus { display: flex; justify-content: center; flex-wrap: wrap; gap: .6rem 2.2rem; margin-top: 1.8rem; }
 .tarif-plus span { font-size: .82rem; font-weight: 600; color: var(--encre); display: inline-flex; align-items: center; gap: .45rem; }
 .tarif-plus span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--ocre); flex-shrink: 0; }
