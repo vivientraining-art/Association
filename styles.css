@@ -415,6 +415,20 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--f
 .form-msg { font-size: .82rem; color: var(--foret); display: none; margin-top: .2rem; }
 
 /* --------------------------------------------------------------------------
+   Bouton WhatsApp flottant
+   -------------------------------------------------------------------------- */
+.wa-float {
+  position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 300;
+  width: 58px; height: 58px; border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,.28);
+  transition: transform .15s;
+}
+.wa-float:hover { transform: scale(1.07); }
+.wa-float svg { width: 32px; height: 32px; fill: #fff; }
+
+/* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
 footer { background: var(--pin); color: rgba(237,232,221,.4); padding: 1.8rem 2.5rem; }
