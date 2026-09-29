@@ -212,34 +212,34 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .disc-gallery img { display: block; width: 100%; height: 360px; object-fit: cover; border-radius: 14px; }
 
 /* --------------------------------------------------------------------------
-   Séance d'essai — parcours en 3 étapes
+   Pilates fonctionnel (créneau avec places disponibles)
    -------------------------------------------------------------------------- */
-#essai { background: var(--craie); }
-.essai-top { display: grid; grid-template-columns: 1fr 320px; gap: 3.5rem; align-items: center; }
-.essai-photo img { display: block; width: 100%; height: 340px; object-fit: cover; object-position: center 22%; border-radius: 14px; }
+#pilates { background: var(--craie); }
+.pil-grid { display: grid; grid-template-columns: 1fr 320px; gap: 3.5rem; align-items: center; }
+.pil-card {
+  background: white; border: 2px solid var(--ocre); border-radius: 14px;
+  padding: 1.8rem 1.6rem; text-align: center;
+}
+.pil-day { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--encre); margin-top: 1rem; }
+.pil-time { font-size: .95rem; font-weight: 700; color: var(--rouille); margin-top: .15rem; }
+.pil-venue { font-size: .85rem; color: var(--pierre); margin: .3rem 0 1.3rem; }
+
+/* Disponibilité des créneaux */
+.badge-complet, .badge-places {
+  display: inline-block; border-radius: 999px; font-size: .64rem; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; padding: .2rem .65rem;
+}
+.badge-complet { background: rgba(0,0,0,.07); color: var(--pierre); }
+.badge-places { background: var(--ocre); color: var(--pin); }
+.s-type + .badge-complet, .s-type + .badge-places { margin-top: .5rem; }
 .essai-hdr { max-width: 560px; }
 .essai-hdr p { color: var(--pierre); font-size: .95rem; line-height: 1.8; }
-.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin-top: 2.8rem; }
-.step {
-  background: white; border: 1.5px solid rgba(0,0,0,.07); border-radius: 14px;
-  padding: 1.8rem 1.6rem;
-}
-.step-num {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 34px; height: 34px; border-radius: 50%;
-  background: var(--ocre); color: var(--pin);
-  font-family: var(--serif); font-weight: 700; font-size: 1rem; margin-bottom: 1rem;
-}
-.step h3 { font-family: var(--serif); font-size: 1.05rem; color: var(--encre); margin-bottom: .5rem; }
-.step p { font-size: .85rem; color: var(--pierre); line-height: 1.7; }
-.essai-cta { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-top: 2.4rem; }
 .btn-vert {
   display: inline-flex; align-items: center; gap: .5rem; font-weight: 700; font-size: .88rem;
   background: var(--foret); color: var(--craie); border: none; border-radius: 8px;
   padding: .8rem 1.5rem; text-decoration: none; transition: filter .15s;
 }
 .btn-vert:hover { filter: brightness(1.12); }
-.essai-note { font-size: .8rem; color: var(--pierre); }
 
 /* --------------------------------------------------------------------------
    Horaires
@@ -283,9 +283,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .tc.feat .tc-price { color: var(--craie); }
 .tc-period { font-size: .74rem; color: var(--pierre); margin-bottom: .35rem; }
 .tc.feat .tc-period { color: rgba(237,232,221,.5); }
-.tc-seance { font-size: .72rem; font-weight: 700; color: var(--foret); margin-bottom: 1.2rem; }
-.tc.feat .tc-seance { color: var(--ocre); }
-.tc-feats { list-style: none; }
+.tc.feat .tc-feats { list-style: none; }
 .tc-feats li { display: flex; gap: .4rem; font-size: .81rem; color: var(--pierre); padding: .28rem 0; border-top: 1px solid rgba(0,0,0,.06); }
 .tc-feats li:first-child { border-top: none; }
 .tc.feat .tc-feats li { color: rgba(237,232,221,.62); border-color: rgba(237,232,221,.1); }
@@ -295,26 +293,9 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .tc-btn.lt { background: rgba(0,0,0,.05); color: var(--encre); }
 .tc-btn.dk { background: var(--ocre); color: var(--pin); }
 .tc-btn:hover { filter: brightness(.95); }
-.pass {
-  display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap;
-  background: white; border: 2px solid var(--ocre); border-radius: 14px;
-  padding: 1.8rem 2rem; margin-top: 1.6rem;
-}
-.pass-txt { flex: 1; min-width: 260px; }
-.pass-badge {
-  display: inline-block; background: var(--ocre); color: var(--pin); border-radius: 999px;
-  font-size: .61rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
-  padding: .17rem .6rem; margin-bottom: .6rem;
-}
-.pass-txt h3 { font-family: var(--serif); font-size: 1.15rem; color: var(--encre); margin-bottom: .35rem; }
-.pass-txt p { font-size: .85rem; color: var(--pierre); line-height: 1.65; }
-.pass-price { text-align: center; }
-.pass-amount { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--encre); line-height: 1; }
-.pass-per { font-size: .72rem; color: var(--pierre); margin: .3rem 0 .8rem; }
-.pass-price .tc-btn { display: inline-block; padding: .6rem 1.6rem; margin-top: 0; }
-.tarif-plus { display: flex; justify-content: center; flex-wrap: wrap; gap: .6rem 2.2rem; margin-top: 1.8rem; }
-.tarif-plus span { font-size: .82rem; font-weight: 600; color: var(--encre); display: inline-flex; align-items: center; gap: .45rem; }
-.tarif-plus span::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--ocre); flex-shrink: 0; }
+.tc-btn.off { background: rgba(0,0,0,.05); color: var(--pierre); cursor: default; }
+.tc-btn.off:hover { filter: none; }
+.tc-badge--complet { background: #E4DED2; color: var(--pierre); }
 .tarif-note { margin-top: 1rem; font-size: .78rem; color: var(--pierre); text-align: center; }
 
 /* --------------------------------------------------------------------------
@@ -458,16 +439,14 @@ footer { background: var(--pin); color: rgba(237,232,221,.4); padding: 1.8rem 2.
   .prog-grid { grid-template-columns: 1fr; gap: 2.2rem; }
   .prog-photo img { height: 260px; }
   .cycles-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-  .essai-top { grid-template-columns: 1fr; gap: 1.8rem; }
-  .essai-photo img { height: 240px; }
-  .disc-item { grid-template-columns: 60px 1fr; gap: 1rem; }
+      .disc-item { grid-template-columns: 60px 1fr; gap: 1rem; }
   .disc-num { font-size: 2.8rem; }
   .disc-gallery { grid-template-columns: 1fr; }
   .disc-gallery img { height: 240px; }
   .val-end { grid-template-columns: 1fr; gap: 2rem; }
+  .pil-grid { grid-template-columns: 1fr; gap: 1.8rem; }
   .val-photo img { height: 240px; }
-  .steps { grid-template-columns: 1fr; }
-  .sched-tbl, .sched-tbl tbody, .sched-tbl tr, .sched-tbl td { display: block; width: 100%; }
+    .sched-tbl, .sched-tbl tbody, .sched-tbl tr, .sched-tbl td { display: block; width: 100%; }
   .sched-tbl tr { padding: 1.4rem 0; border-top: 1px solid rgba(0,0,0,.08); }
   .sched-tbl tr:first-child { border-top: none; }
   .sched-tbl td { padding: .25rem 0; }
