@@ -223,6 +223,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .pil-day { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--encre); margin-top: 1rem; }
 .pil-time { font-size: .95rem; font-weight: 700; color: var(--rouille); margin-top: .15rem; }
 .pil-venue { font-size: .85rem; color: var(--pierre); margin: .3rem 0 1.3rem; }
+.pil-venue a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.15); }
 
 /* Disponibilité des créneaux */
 .badge-complet, .badge-places {
