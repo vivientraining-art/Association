@@ -319,6 +319,15 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .coach-links { display: flex; gap: .8rem; flex-wrap: wrap; }
 .coach-lnk { color: var(--ocre); text-decoration: none; font-size: .82rem; font-weight: 600; border-bottom: 1px solid rgba(196,146,42,.4); padding-bottom: .05rem; transition: border-color .15s; }
 .coach-lnk:hover { border-color: var(--ocre); }
+.bureau { margin-top: 3.5rem; padding-top: 2.8rem; border-top: 1px solid rgba(237,232,221,.18); }
+.bureau-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+.pres-label { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(237,232,221,.6); margin-bottom: 1.4rem; }
+.pres { display: flex; flex-direction: column; justify-content: space-between; }
+.pres-quote { padding-left: 1.4rem; border-left: 3px solid var(--ocre); }
+.pres-quote p { font-family: var(--serif); font-style: italic; font-size: .98rem; line-height: 1.75; color: var(--craie); }
+.pres figcaption { padding-left: 1.4rem; margin-top: 1.2rem; }
+.pres-name { display: block; font-family: var(--serif); font-size: 1.1rem; color: var(--craie); }
+.pres .coach-role { margin-bottom: 0; }
 
 /* --------------------------------------------------------------------------
    Valeurs
@@ -458,6 +467,7 @@ footer { background: var(--pin); color: rgba(237,232,221,.4); padding: 1.8rem 2.
   .val-card { padding: 1.5rem 0; border-top: 1px solid rgba(30,47,35,.12); }
   .val-card:first-child { border-top: 2px solid rgba(30,47,35,.18); }
   .coach-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .bureau-grid { grid-template-columns: 1fr; gap: 2.2rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .frow { grid-template-columns: 1fr; }
   .app-box { flex-direction: column; gap: 1.5rem; }
