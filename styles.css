@@ -4,7 +4,22 @@
    (sections claires), or des blés en accent.
    Règle de contraste : sur un fond vert, tout est crème ou or — jamais de
    vert sur vert. Le vert en texte n'apparaît que sur fond clair.
+   Petits textes : contraste d'au moins 4,5 pour 1 (norme WCAG AA).
    ========================================================================== */
+
+/* Polices hébergées sur le site (Libre Baskerville, Source Sans 3 : licence SIL OFL) */
+@font-face { font-family: 'Libre Baskerville'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('assets/fonts/libre-baskerville-400-italic-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Libre Baskerville'; font-style: italic; font-weight: 400; font-display: swap;
+  src: url('assets/fonts/libre-baskerville-400-italic-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Libre Baskerville'; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url('assets/fonts/libre-baskerville-variable-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Libre Baskerville'; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url('assets/fonts/libre-baskerville-variable-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Source Sans 3'; font-style: normal; font-weight: 300 700; font-display: swap;
+  src: url('assets/fonts/source-sans-3-variable-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Source Sans 3'; font-style: normal; font-weight: 300 700; font-display: swap;
+  src: url('assets/fonts/source-sans-3-variable-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
 :root {
   --pin:     #1E2F23; /* pinède profonde — hero, footer, encarts sombres */
@@ -13,7 +28,9 @@
   --ocre:    #C4922A; /* or des blés */
   --craie:   #EDE8DD; /* calcaire clair */
   --sable:   #F0E8D6; /* sable régional */
-  --pierre:  #75695A; /* pierre chaude — texte courant sur fond clair */
+  --pierre:  #665A4C; /* pierre chaude — texte courant sur fond clair */
+  --or-fonce: #81600F; /* or lisible en petit texte sur fond clair */
+  --or-clair: #EFCB7B; /* or lisible en petit texte sur la canopée */
   --mousse:  #5E7A4A; /* mousse — petites touches sur fond clair */
   --rouille: #9E3F1C; /* terre cuite — liens */
   --encre:   #22281F; /* texte principal sur fond clair */
@@ -25,6 +42,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+picture { display: contents; }
 html { scroll-behavior: smooth; }
 body {
   font-family: var(--sans);
@@ -69,7 +87,7 @@ body {
 }
 .nav-brand small {
   display: block; font-family: var(--sans); font-weight: 400; font-size: .6rem;
-  color: rgba(237,232,221,.45); letter-spacing: .08em; text-transform: uppercase;
+  color: rgba(237,232,221,.7); letter-spacing: .08em; text-transform: uppercase;
 }
 .nav-spacer { flex: 1; }
 .nav-links { list-style: none; display: flex; align-items: center; gap: .1rem; }
@@ -142,7 +160,7 @@ body {
 .hbi { padding: 1.4rem 2.5rem; border-right: 1px solid rgba(237,232,221,.07); }
 .hbi:last-child { border-right: none; }
 .hbi-num { display: block; font-family: var(--serif); font-size: 2rem; font-weight: 700; color: var(--craie); line-height: 1; }
-.hbi-lbl { display: block; font-size: .65rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: rgba(237,232,221,.38); margin-top: .3rem; }
+.hbi-lbl { display: block; font-size: .65rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: rgba(237,232,221,.62); margin-top: .3rem; }
 
 /* --------------------------------------------------------------------------
    Sections — base
@@ -151,10 +169,11 @@ body {
 .inner { max-width: var(--maxw); margin: 0 auto; }
 .sec-label {
   display: block; font-size: .66rem; font-weight: 700; letter-spacing: .16em;
-  text-transform: uppercase; color: var(--ocre); margin-bottom: .7rem;
+  text-transform: uppercase; color: var(--or-fonce); margin-bottom: .7rem;
 }
-.sec-label.dim { color: rgba(237,232,221,.6); }
-h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); line-height: 1.15; margin-bottom: 1rem; color: inherit; }
+.sec-label.dim { color: rgba(237,232,221,.9); }
+/* Sélecteur de classe seul : .ttl--light (déclaré après) doit pouvoir l'emporter */
+.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); line-height: 1.15; margin-bottom: 1rem; color: inherit; }
 .ttl--light { color: var(--craie); }
 
 /* --------------------------------------------------------------------------
@@ -184,10 +203,10 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .cycle { padding-top: 1.1rem; border-top: 2px solid rgba(30,47,35,.16); position: relative; counter-increment: cycle; }
 .cycle::before {
   content: counter(cycle, decimal-leading-zero);
-  font-family: var(--serif); font-weight: 700; font-size: .8rem; color: var(--ocre);
+  font-family: var(--serif); font-weight: 700; font-size: .8rem; color: var(--or-fonce);
   display: block; margin-bottom: .5rem;
 }
-.cycle-when { display: block; font-size: .64rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--mousse); margin-bottom: .25rem; }
+.cycle-when { display: block; font-size: .64rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--foret); margin-bottom: .25rem; }
 .cycle-name { display: block; font-family: var(--serif); font-size: .98rem; color: var(--encre); line-height: 1.3; margin-bottom: .45rem; }
 .cycle p { font-size: .8rem; color: var(--pierre); line-height: 1.65; }
 
@@ -199,7 +218,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .disc-lead { color: rgba(237,232,221,.6); font-size: .92rem; line-height: 1.7; max-width: 340px; }
 .disc-list { margin-top: 3.5rem; }
 .disc-item { display: grid; grid-template-columns: 90px 1fr; gap: 2rem; align-items: start; padding: 2.5rem 0; border-top: 1px solid rgba(237,232,221,.1); }
-.disc-num { font-family: var(--serif); font-size: 4rem; font-weight: 700; color: rgba(196,146,42,.38); line-height: 1; }
+.disc-num { font-family: var(--serif); font-size: 4rem; font-weight: 700; color: transparent; -webkit-text-stroke: 1px var(--ocre); line-height: 1; }
 .disc-body h3 { font-family: var(--serif); font-size: 1.4rem; color: var(--craie); margin-bottom: .5rem; }
 .disc-body p { font-size: .88rem; color: rgba(237,232,221,.6); line-height: 1.7; max-width: 520px; margin-bottom: .9rem; }
 .tags { display: flex; flex-wrap: wrap; gap: .3rem; }
@@ -222,15 +241,17 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 }
 .pil-day { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: var(--encre); margin-top: 1rem; }
 .pil-time { font-size: .95rem; font-weight: 700; color: var(--rouille); margin-top: .15rem; }
-.pil-venue { font-size: .85rem; color: var(--pierre); margin: .3rem 0 1.3rem; }
-.pil-venue a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.15); }
+.pil-venue { font-size: .85rem; color: var(--pierre); margin-top: .3rem; }
+.pil-map { display: inline-block; margin: .3rem 0 1.3rem; font-size: .78rem; font-weight: 600; color: var(--pierre); text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.2); }
+.pil-map:hover { color: var(--encre); }
+.ico { width: 18px; height: 18px; flex-shrink: 0; }
 
 /* Disponibilité des créneaux */
 .badge-complet, .badge-places {
   display: inline-block; border-radius: 999px; font-size: .64rem; font-weight: 700;
   letter-spacing: .08em; text-transform: uppercase; padding: .2rem .65rem;
 }
-.badge-complet { background: rgba(0,0,0,.07); color: var(--pierre); }
+.badge-complet { background: rgba(0,0,0,.07); color: var(--encre); }
 .badge-places { background: var(--ocre); color: var(--pin); }
 .s-type + .badge-complet, .s-type + .badge-places { margin-top: .5rem; }
 .wait-link {
@@ -264,7 +285,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
   border-bottom: 1px solid rgba(0,0,0,.13); display: inline-block; margin-top: .15rem; transition: color .15s;
 }
 .s-map:hover { color: var(--encre); }
-.s-type { font-size: .78rem; color: rgba(0,0,0,.38); font-style: italic; display: block; margin-top: .4rem; }
+.s-type { font-size: .78rem; color: var(--pierre); font-style: italic; display: block; margin-top: .4rem; }
 .sched-note { margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1px solid rgba(0,0,0,.08); font-size: .8rem; color: var(--pierre); }
 
 /* --------------------------------------------------------------------------
@@ -283,12 +304,12 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .tc-name { font-family: var(--serif); font-size: .96rem; color: var(--encre); margin-bottom: .2rem; }
 .tc.feat .tc-name { color: var(--craie); }
 .tc-sub { font-size: .76rem; color: var(--pierre); margin-bottom: 1rem; }
-.tc.feat .tc-sub { color: rgba(237,232,221,.5); }
+.tc.feat .tc-sub { color: rgba(237,232,221,.75); }
 .tc-price { font-family: var(--serif); font-size: 2.2rem; font-weight: 700; color: var(--encre); line-height: 1; margin-bottom: .2rem; }
 .tc-price--free { font-size: 1.5rem; margin-top: .3rem; }
 .tc.feat .tc-price { color: var(--craie); }
 .tc-period { font-size: .74rem; color: var(--pierre); margin-bottom: .35rem; }
-.tc.feat .tc-period { color: rgba(237,232,221,.5); }
+.tc.feat .tc-period { color: rgba(237,232,221,.75); }
 .tc.feat .tc-feats { list-style: none; }
 .tc-feats li { display: flex; gap: .4rem; font-size: .81rem; color: var(--pierre); padding: .28rem 0; border-top: 1px solid rgba(0,0,0,.06); }
 .tc-feats li:first-child { border-top: none; }
@@ -299,7 +320,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .tc-btn.lt { background: rgba(0,0,0,.05); color: var(--encre); }
 .tc-btn.dk { background: var(--ocre); color: var(--pin); }
 .tc-btn:hover { filter: brightness(.95); }
-.tc-badge--complet { background: #E4DED2; color: var(--pierre); }
+.tc-badge--complet { background: #E4DED2; color: var(--encre); }
 .tarif-note { margin-top: 1rem; font-size: .78rem; color: var(--pierre); text-align: center; }
 
 /* --------------------------------------------------------------------------
@@ -312,16 +333,16 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
   display: block; border: 3px solid var(--ocre); margin-bottom: 1rem;
 }
 .coach-name { font-family: var(--serif); font-size: 1.5rem; color: var(--craie); }
-.coach-role { font-size: .67rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--ocre); margin-top: .15rem; margin-bottom: 1.4rem; display: block; }
-.coach-bio { font-size: .92rem; color: rgba(237,232,221,.75); line-height: 1.78; margin-bottom: 1.2rem; }
+.coach-role { font-size: .67rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; color: var(--or-clair); margin-top: .15rem; margin-bottom: 1.4rem; display: block; }
+.coach-bio { font-size: .92rem; color: rgba(237,232,221,.88); line-height: 1.78; margin-bottom: 1.2rem; }
 .certifs { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: 1.2rem; }
-.certif { border: 1px solid rgba(237,232,221,.3); color: rgba(237,232,221,.75); border-radius: 999px; font-size: .67rem; font-weight: 700; padding: .14rem .58rem; letter-spacing: .04em; }
+.certif { border: 1px solid rgba(237,232,221,.3); color: rgba(237,232,221,.88); border-radius: 999px; font-size: .67rem; font-weight: 700; padding: .14rem .58rem; letter-spacing: .04em; }
 .coach-links { display: flex; gap: .8rem; flex-wrap: wrap; }
-.coach-lnk { color: var(--ocre); text-decoration: none; font-size: .82rem; font-weight: 600; border-bottom: 1px solid rgba(196,146,42,.4); padding-bottom: .05rem; transition: border-color .15s; }
-.coach-lnk:hover { border-color: var(--ocre); }
+.coach-lnk { color: var(--or-clair); text-decoration: none; font-size: .82rem; font-weight: 600; border-bottom: 1px solid rgba(239,203,123,.45); padding-bottom: .05rem; transition: border-color .15s; }
+.coach-lnk:hover { border-color: var(--or-clair); }
 .bureau { margin-top: 3.5rem; padding-top: 2.8rem; border-top: 1px solid rgba(237,232,221,.18); }
 .bureau-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: start; }
-.pres-label { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(237,232,221,.6); margin-bottom: 1.4rem; }
+.pres-label { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: rgba(237,232,221,.9); margin-bottom: 1.4rem; }
 .pres-quote { padding-left: 1.4rem; border-left: 3px solid var(--ocre); }
 .pres-quote p { font-family: var(--serif); font-style: italic; font-size: .98rem; line-height: 1.75; color: var(--craie); }
 .pres figcaption { padding-left: 1.4rem; margin-top: 1.2rem; display: flex; align-items: center; gap: .9rem; }
@@ -363,7 +384,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .app-act { flex-shrink: 0; text-align: center; }
 .btn-outline { display: inline-flex; font-family: inherit; font-weight: 700; font-size: .85rem; color: var(--craie); border: 1.5px solid rgba(237,232,221,.28); border-radius: 8px; padding: .7rem 1.3rem; text-decoration: none; transition: border-color .15s; }
 .btn-outline:hover { border-color: rgba(237,232,221,.6); }
-.app-sub { font-size: .72rem; color: rgba(237,232,221,.38); margin-top: .5rem; text-align: center; }
+.app-sub { font-size: .72rem; color: rgba(237,232,221,.62); margin-top: .5rem; text-align: center; }
 
 /* --------------------------------------------------------------------------
    FAQ
@@ -378,7 +399,7 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after {
-  content: '+'; font-family: var(--serif); font-size: 1.3rem; color: var(--ocre);
+  content: '+'; font-family: var(--serif); font-size: 1.3rem; color: var(--or-fonce);
   flex-shrink: 0; transition: transform .2s;
 }
 .faq-item[open] summary::after { transform: rotate(45deg); }
@@ -392,12 +413,12 @@ h2.ttl { font-family: var(--serif); font-size: clamp(1.7rem, 3.5vw, 2.6rem); lin
 .ci-list { list-style: none; }
 .ci { display: flex; gap: .8rem; padding: .85rem 0; border-top: 1px solid rgba(0,0,0,.08); font-size: .9rem; }
 .ci:first-child { border-top: none; padding-top: 0; }
-.ci-icon { flex-shrink: 0; margin-top: .1rem; }
+.ci-icon { flex-shrink: 0; width: 18px; height: 18px; margin-top: .1rem; color: var(--or-fonce); }
 .ci-lbl { display: block; font-weight: 700; font-size: .75rem; color: var(--encre); margin-bottom: .1rem; letter-spacing: .02em; }
-.ci-val { font-size: .84rem; color: var(--pierre); line-height: 1.6; }
+.ci-val { display: block; font-size: .84rem; color: var(--pierre); line-height: 1.6; }
 .ci-val a { color: var(--rouille); text-decoration: none; }
 .ci-val a:hover { text-decoration: underline; }
-.maps-lnk { display: inline-flex; gap: .25rem; margin-top: .28rem; font-size: .74rem; font-weight: 600; color: var(--pierre); text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.12); padding-bottom: .04rem; transition: color .15s; }
+.maps-lnk { display: table; margin-top: .3rem; font-size: .74rem; font-weight: 600; color: var(--pierre); text-decoration: none; border-bottom: 1px solid rgba(0,0,0,.12); padding-bottom: .04rem; transition: color .15s; }
 .maps-lnk:hover { color: var(--encre); }
 .cf { display: flex; flex-direction: column; gap: .75rem; }
 .frow { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
@@ -412,6 +433,7 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--f
 .sub-btn { background: var(--pin); color: var(--craie); border: none; border-radius: 8px; padding: .78rem; font: inherit; font-weight: 700; font-size: .88rem; cursor: pointer; transition: background .15s; }
 .sub-btn:hover { background: var(--sapin); }
 .form-msg { font-size: .82rem; color: var(--foret); display: none; margin-top: .2rem; }
+.form-msg a { color: var(--rouille); }
 
 /* --------------------------------------------------------------------------
    Bouton WhatsApp flottant
@@ -425,19 +447,56 @@ input:focus, textarea:focus, select:focus { outline: none; border-color: var(--f
   transition: transform .15s;
 }
 .wa-float:hover { transform: scale(1.07); }
-.wa-float svg { width: 32px; height: 32px; fill: #fff; }
+.wa-float svg { width: 32px; height: 32px; color: #fff; }
 
 /* --------------------------------------------------------------------------
    Footer
    -------------------------------------------------------------------------- */
-footer { background: var(--pin); color: rgba(237,232,221,.4); padding: 1.8rem 2.5rem; }
+footer { background: var(--pin); color: rgba(237,232,221,.7); padding: 1.8rem 2.5rem; }
 .fi { max-width: var(--maxw); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; }
 .fb { font-family: var(--serif); color: var(--craie); font-size: .86rem; }
-.fb small { display: block; font-family: var(--sans); font-size: .62rem; color: rgba(237,232,221,.35); margin-top: .1rem; letter-spacing: .05em; }
+.fb small { display: block; font-family: var(--sans); font-size: .62rem; color: rgba(237,232,221,.65); margin-top: .1rem; letter-spacing: .05em; }
 .fn { display: flex; gap: 1.2rem; flex-wrap: wrap; }
-.fn a { color: rgba(237,232,221,.4); font-size: .78rem; text-decoration: none; transition: color .15s; }
+.fn a { color: rgba(237,232,221,.75); font-size: .78rem; text-decoration: none; transition: color .15s; }
 .fn a:hover { color: var(--craie); }
-.fc { font-size: .7rem; width: 100%; text-align: center; border-top: 1px solid rgba(237,232,221,.07); padding-top: .9rem; margin-top: .4rem; }
+.fc {
+  font-size: .72rem; width: 100%; border-top: 1px solid rgba(237,232,221,.1); padding-top: .9rem; margin-top: .4rem;
+  display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem 1.4rem;
+}
+.fc a, .fc-btn { color: rgba(237,232,221,.75); text-decoration: underline; text-underline-offset: 2px; font: inherit; }
+.fc-btn { background: none; border: none; padding: 0; cursor: pointer; }
+.fc a:hover, .fc-btn:hover { color: var(--craie); }
+
+/* --------------------------------------------------------------------------
+   Bandeau de consentement aux cookies (Google Analytics)
+   -------------------------------------------------------------------------- */
+.cookie-banner {
+  position: fixed; left: 1.2rem; bottom: 1.2rem; z-index: 400; max-width: 430px;
+  background: var(--pin); color: var(--craie); border: 1px solid rgba(196,146,42,.5);
+  border-radius: 14px; padding: 1.2rem 1.3rem; box-shadow: 0 8px 30px rgba(0,0,0,.3);
+}
+.cookie-banner p { font-size: .86rem; line-height: 1.6; color: rgba(237,232,221,.9); }
+.cookie-banner a { color: var(--or-clair); }
+.cookie-actions { display: flex; gap: .7rem; margin-top: 1rem; }
+/* Accepter et refuser ont exactement le même poids visuel (recommandation CNIL) */
+.cookie-btn {
+  flex: 1; font: inherit; font-weight: 700; font-size: .85rem; cursor: pointer;
+  background: transparent; color: var(--craie); border: 1.5px solid rgba(237,232,221,.55);
+  border-radius: 8px; padding: .6rem 1rem; transition: background .15s, color .15s;
+}
+.cookie-btn:hover { background: var(--craie); color: var(--pin); }
+
+/* Pages secondaires (mentions légales) */
+#mainNav.nav-solid { background: var(--pin); }
+.nav-back { color: rgba(237,232,221,.85); text-decoration: none; font-size: .85rem; font-weight: 600; }
+.nav-back:hover { color: var(--craie); }
+.legal { max-width: 760px; }
+.legal h2 { font-family: var(--serif); font-size: 1.25rem; color: var(--encre); margin: 2.6rem 0 .8rem; }
+.legal p, .legal li { font-size: .92rem; color: var(--pierre); line-height: 1.75; }
+.legal p + p { margin-top: .7rem; }
+.legal ul { padding-left: 1.2rem; margin-top: .5rem; }
+.legal a { color: var(--rouille); }
+.legal .btn-vert { margin-top: 1rem; border: none; cursor: pointer; font-family: inherit; }
 
 /* --------------------------------------------------------------------------
    Responsive
@@ -477,4 +536,6 @@ footer { background: var(--pin); color: rgba(237,232,221,.4); padding: 1.8rem 2.
   .frow { grid-template-columns: 1fr; }
   .app-box { flex-direction: column; gap: 1.5rem; }
   footer { padding: 1.8rem 1.4rem; }
+  .cookie-banner { left: 0; right: 0; bottom: 0; max-width: none; border-radius: 14px 14px 0 0; }
+  body.cookie-open .wa-float { display: none; }
 }
