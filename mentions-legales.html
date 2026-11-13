@@ -12,8 +12,7 @@
   <link rel="icon" href="assets/icone-arbre.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=2">
 
-  <link rel="preload" href="assets/fonts/libre-baskerville-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/source-sans-3-variable-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,16 +20,17 @@
 <a class="skip-link" href="#main">Aller au contenu</a>
 
 <nav id="mainNav" class="nav-solid" aria-label="Navigation principale">
-  <a class="nav-brand" href="index.html">Fitness Sud Essonne<small>Gâtinais · Essonne (91)</small></a>
-  <div class="nav-spacer"></div>
-  <a class="nav-back" href="index.html">← Retour au site</a>
+  <a class="brand" href="index.html">
+    <img src="assets/icone-arbre.svg" alt="" width="34" height="34">
+    <span>Fitness Sud Essonne<small>Association · Sud Essonne (91)</small></span>
+  </a>
+  <a class="nav-back" href="index.html">Retour au site</a>
 </nav>
 
 <main id="main">
 <section class="section">
   <div class="inner legal">
-    <span class="sec-label">Informations légales</span>
-    <h1 class="ttl">Mentions légales et confidentialité</h1>
+    <h1>Mentions légales et confidentialité</h1>
 
     <h2>Éditeur du site</h2>
     <p>Association Fitness Sud Essonne, association loi 1901.<br>
@@ -57,24 +57,27 @@
     <h2 id="cookies">Cookies et mesure d’audience</h2>
     <p>Avec votre accord uniquement, ce site utilise Google Analytics (Google Ireland Ltd) pour mesurer sa fréquentation : nombre de visites, pages consultées, type d’appareil. Ces statistiques nous aident à améliorer le site. Les cookies concernés (<code>_ga</code> et <code>_ga_*</code>) ont une durée de vie limitée à 13 mois.</p>
     <p>Si vous refusez, aucun cookie de mesure n’est déposé. Votre choix est conservé 6 mois, puis vous sera redemandé. Vous pouvez le modifier à tout moment :</p>
-    <button type="button" class="btn-vert" data-cookie-settings>Gérer mes choix de cookies</button>
+    <button type="button" class="btn btn-dark" data-cookie-settings>Gérer mes choix de cookies</button>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="fi">
-    <div class="fb">Fitness Sud Essonne<small>Association loi 1901, Essonne (91)</small></div>
-    <nav class="fn" aria-label="Navigation pied de page">
-      <a href="index.html#programme">Programme</a>
-      <a href="index.html#horaires">Horaires</a>
-      <a href="index.html#tarifs">Tarifs</a>
+  <div class="inner footer">
+    <div class="footer-brand">
+      <img src="assets/icone-arbre.svg" alt="" width="34" height="34">
+      <span>Fitness Sud Essonne<small>Association loi 1901 · Sud Essonne (91)</small></span>
+    </div>
+    <nav class="footer-nav" aria-label="Navigation pied de page">
+      <a href="index.html#cours">Les cours</a>
+      <a href="index.html#horaires">Horaires et tarifs</a>
+      <a href="index.html#equipe">L’équipe</a>
       <a href="index.html#contact">Contact</a>
     </nav>
-    <div class="fc">
+    <div class="footer-legal">
       <span>© 2026 Fitness Sud Essonne</span>
       <a href="mentions-legales.html" aria-current="page">Mentions légales et confidentialité</a>
-      <button type="button" class="fc-btn" data-cookie-settings>Gérer les cookies</button>
+      <button type="button" class="link-btn" data-cookie-settings>Gérer les cookies</button>
     </div>
   </div>
 </footer>
