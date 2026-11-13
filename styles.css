@@ -207,8 +207,6 @@ strong { color: var(--texte); font-weight: 700; }
 .coach-photo { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid var(--or); }
 .coach p { color: rgba(237,232,221,.92); max-width: 70ch; }
 .section-dark .role { color: var(--or-clair); font-weight: 700; margin-bottom: .8rem; }
-.coach-links { display: flex; flex-wrap: wrap; gap: 1.2rem; }
-.coach-links a { color: var(--or-clair); font-weight: 600; text-underline-offset: 3px; }
 .bureau-title { margin: 3.5rem 0 1.2rem; }
 .bureau { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; align-items: start; }
 .quote { background: rgba(237,232,221,.07); border-radius: var(--rayon); padding: 1.8rem; }
