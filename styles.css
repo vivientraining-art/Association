@@ -175,8 +175,10 @@ strong { color: var(--texte); font-weight: 700; }
 .courses { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
 .course { background: var(--blanc); border-radius: var(--rayon); padding: 2rem; }
 .course-where { font-size: .95rem; padding-top: 1rem; border-top: 1px solid var(--ligne); }
-.gallery { display: grid; grid-template-columns: 5fr 3fr; gap: 1.2rem; margin: 1.2rem 0 4rem; }
-.gallery img { width: 100%; height: 380px; object-fit: cover; border-radius: var(--rayon); }
+.gallery { display: grid; grid-template-columns: 3fr 5fr; gap: 1.2rem; margin: 1.2rem 0 4rem; }
+.gallery img { width: 100%; height: 420px; object-fit: cover; border-radius: var(--rayon); }
+.gallery figure:first-child img { object-position: center 44%; }
+.gallery figure:last-child img { object-position: center 55%; }
 .season-lead { max-width: 640px; margin-bottom: 1.6rem; }
 .cycles { list-style: none; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
 .cycles li { background: var(--blanc); border-radius: 18px; padding: 1.2rem; font-size: .95rem; line-height: 1.5; }
@@ -355,7 +357,8 @@ footer { background: var(--pin); color: rgba(237,232,221,.85); padding: 3rem 2re
   .hero-photo img { height: 300px; border-radius: 80px 22px 22px 22px; }
   .section { padding: 4rem 1.2rem; }
   .courses, .bureau, .values, .app, .contact, .manifesto, .gallery { grid-template-columns: 1fr; }
-  .gallery img { height: 260px; }
+  .gallery img { height: 280px; }
+  .gallery figure:first-child img { height: 380px; }
   .manifesto p { padding: 1.8rem; font-size: 1.1rem; }
   .manifesto img { min-height: 300px; height: 340px; object-position: center 38%; }
   .coach { grid-template-columns: 1fr; gap: 1.2rem; }
