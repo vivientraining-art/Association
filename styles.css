@@ -229,7 +229,7 @@ strong { color: var(--texte); font-weight: 700; }
   background: var(--vert); border-radius: var(--rayon); overflow: hidden;
 }
 .manifesto p { color: var(--creme); font-size: 1.2rem; font-weight: 600; line-height: 1.6; padding: 2.4rem; align-self: center; }
-.manifesto img { width: 100%; height: 100%; min-height: 300px; object-fit: cover; }
+.manifesto img { width: 100%; height: 100%; min-height: 380px; object-fit: cover; object-position: center 42%; }
 
 /* Espace adhérent */
 .app { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
@@ -357,7 +357,7 @@ footer { background: var(--pin); color: rgba(237,232,221,.85); padding: 3rem 2re
   .courses, .bureau, .values, .app, .contact, .manifesto, .gallery { grid-template-columns: 1fr; }
   .gallery img { height: 260px; }
   .manifesto p { padding: 1.8rem; font-size: 1.1rem; }
-  .manifesto img { min-height: 220px; height: 240px; }
+  .manifesto img { min-height: 300px; height: 340px; object-position: center 38%; }
   .coach { grid-template-columns: 1fr; gap: 1.2rem; }
   .coach-photo { width: 120px; height: 120px; }
   .footer { grid-template-columns: 1fr; }
